@@ -40,7 +40,7 @@ export const sweeperApp: AppDef = {
     function check() { if (over) return; const closed = grid.flat().filter(c => !c.open).length; if (closed === B) { over = true; clearInterval(timer); face.textContent = '🏆'; sound.quest(); grantXp(diff === 'Artisan' ? 150 : diff === 'Journeyman' ? 80 : 40, 'sweeper'); achievements.unlock('sweeper-win'); bus.emit('sweeper:win', diff); const best = store.get<number>('sweeper.best.' + diff, 0); if (!best || secs < best) store.set('sweeper.best.' + diff, secs); notify('Field cleared', `${diff} in ${secs}s. The gnomes are impressed.`, 'sweeper'); } }
     function render() {
       board.style.gridTemplateColumns = `repeat(${W}, 24px)`; board.innerHTML = '';
-      bombsEl.textContent = String(B - flags).padStart(3, '0'); timeEl.textContent = String(secs).padStart(3, '0');
+      { const n = B - flags; bombsEl.textContent = n < 0 ? '-' + String(-n).padStart(2, '0') : String(n).padStart(3, '0'); } timeEl.textContent = String(secs).padStart(3, '0');
       const colors = ['', '#4d8bff', '#1eff00', '#ff4d4d', '#a374ff', '#ff8000', '#3ec7b0', '#fff', '#9d9d9d'];
       for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
         const c = grid[y][x];
