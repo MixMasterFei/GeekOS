@@ -1,7 +1,7 @@
 /**
  * Scribe — a parchment text editor bound to the Bags filesystem.
  */
-import { h, bus, type AppDef } from '../os/kernel';
+import { h, bus, esc, type AppDef } from '../os/kernel';
 import { fs, type FsNode } from '../os/fs';
 import { prompt, notify, confirm } from '../os/ui';
 import { sound } from '../os/sound';
@@ -19,7 +19,7 @@ export const scribeApp: AppDef = {
       if (readonly) return;
       if (!file) { const n = await prompt('Save scroll as', 'Name', 'New scroll.txt'); if (!n) return; file = fs.create('docs', n, 'text', ta.value); }
       else fs.write(file.id, ta.value);
-      dirty = false; sound.coin(); grantXp(3, 'scribe'); bus.emit('scribe:save'); notify('Scroll saved', `${name()} is in your Bags.`, 'scribe', { timeout: 2000, sound: false }); upd();
+      dirty = false; sound.coin(); grantXp(3, 'scribe'); bus.emit('scribe:save'); notify('Scroll saved', `${esc(name())} is in your Bags.`, 'scribe', { timeout: 2000, sound: false }); upd();
     };
     const renameBtn = h('button', { class: 'btn sm ghost', onclick: async () => { if (!file) return; const n = await prompt('Rename scroll', 'Name', file.name); if (n) { fs.rename(file.id, n); upd(); } } }, 'Rename');
     const tb = h('div', { class: 'row', style: { padding: '6px 10px', borderBottom: '1px solid var(--gold-700)', background: 'rgba(0,0,0,.25)' } },
@@ -30,7 +30,7 @@ export const scribeApp: AppDef = {
       h('select', { class: 'input', style: { width: '150px' }, onchange: (e: Event) => { ta.style.fontFamily = (e.target as HTMLSelectElement).value; } }, h('option', { value: 'var(--font-body)' }, 'Plain script'), h('option', { value: 'var(--font-quest)' }, 'Quest script'), h('option', { value: 'var(--font-rune)' }, 'Rune script'), h('option', { value: 'var(--font-mono)' }, 'Engineer script')));
     ctx.body.append(tb, ta);
     ta.addEventListener('input', () => { dirty = true; upd(); });
-    ta.addEventListener('keydown', (e) => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') { e.preventDefault(); save(); } if (e.key === 'Tab') { e.preventDefault(); const s = ta.selectionStart; ta.setRangeText('  ', s, ta.selectionEnd, 'end'); } });
+    ta.addEventListener('keydown', (e) => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') { e.preventDefault(); save(); } if (e.key === 'Tab') { e.preventDefault(); if (readonly) return; const s = ta.selectionStart; ta.setRangeText('  ', s, ta.selectionEnd, 'end'); dirty = true; upd(); } });
     const off = bus.on('fs:change', () => { if (file) { const f = fs.get(file.id); if (!f) { file = undefined; } else file = f; upd(); } });
     upd(); setTimeout(() => ta.focus(), 50);
     ctx.onClose(() => { if (dirty && file) fs.write(file.id, ta.value); });

@@ -1,7 +1,7 @@
 /**
  * Quest Log — story and daily quests tracked by the system, plus your own to-dos.
  */
-import { h, bus, type AppDef } from '../os/kernel';
+import { h, bus, esc, type AppDef } from '../os/kernel';
 import { sound } from '../os/sound';
 import { prompt, confirm, contextMenu, bindTooltip } from '../os/ui';
 import { icon, glyph } from '../os/icons';
@@ -30,7 +30,7 @@ export const questlogApp: AppDef = {
         ...(q.kind === 'player' ? [{ label: q.done ? 'Reopen quest' : 'Complete quest', icon: 'check', action: () => { questEngine.completePlayer(q); } }] : []),
         { label: q.kind === 'player' ? 'Delete quest' : 'Abandon quest', icon: 'trash', action: () => abandon(q) },
       ]); });
-      bindTooltip(el, { name: q.title, sub: `${q.kind === 'story' ? 'Story quest' : q.kind === 'daily' ? 'Daily quest' : 'Your quest'} · ${q.xp} XP`, lines: q.objectives.map(o => `<span style="color:${o.done ? 'var(--q-uncommon)' : 'var(--parch-300)'}">${o.done ? '✓' : '–'} ${o.text}</span>`), quality: q.priority === 'legendary' ? 'legendary' : q.priority === 'elite' ? 'epic' : 'common' });
+      bindTooltip(el, { name: q.title, sub: `${q.kind === 'story' ? 'Story quest' : q.kind === 'daily' ? 'Daily quest' : 'Your quest'} · ${q.xp} XP`, lines: q.objectives.map(o => `<span style="color:${o.done ? 'var(--q-uncommon)' : 'var(--parch-300)'}">${o.done ? '✓' : '–'} ${esc(o.text)}</span>`), quality: q.priority === 'legendary' ? 'legendary' : q.priority === 'elite' ? 'epic' : 'common' });
       return el;
     };
     const section = (label: string, qs: Quest[]) => { if (!qs.length) return; left.append(h('div', { class: 'eyebrow', style: { margin: '10px 4px 2px' } }, label)); qs.forEach(q => left.append(item(q))); };
@@ -61,8 +61,10 @@ export const questlogApp: AppDef = {
       });
       const addObj = system ? null : h('input', { class: 'input', placeholder: 'Add an objective and press Enter…', style: { background: 'rgba(255,255,255,.4)', color: '#2e2010', borderColor: '#a3874e', fontFamily: 'var(--font-quest)' } });
       addObj?.addEventListener('keydown', (e) => { if (e.key === 'Enter' && addObj.value.trim()) { questEngine.addObjective(q, addObj.value.trim()); addObj.value = ''; sound.click(); } });
-      const desc = h('div', { contenteditable: system ? undefined : 'true', style: { whiteSpace: 'pre-wrap', outline: 'none', minHeight: '40px', margin: '8px 0' }, spellcheck: 'false' }, q.text || (system ? '' : 'Click to write the quest description…'));
-      desc.addEventListener('blur', () => { if (!system) questEngine.update(q, { text: desc.textContent ?? '' }); });
+      const PH = 'Click to write the quest description…';
+      const desc = h('div', { contenteditable: system ? undefined : 'true', style: { whiteSpace: 'pre-wrap', outline: 'none', minHeight: '40px', margin: '8px 0', opacity: !q.text && !system ? '.55' : '1' }, spellcheck: 'false' }, q.text || (system ? '' : PH));
+      desc.addEventListener('focus', () => { if (!q.text && desc.textContent === PH) { desc.textContent = ''; desc.style.opacity = '1'; } });
+      desc.addEventListener('blur', () => { if (system) return; const t = (desc.textContent ?? '').trim(); if (t === PH) return; questEngine.update(q, { text: t }); if (!t) { desc.textContent = PH; desc.style.opacity = '.55'; } });
       right.append(h('div', { class: 'parchment' },
         h('div', { class: 'row', style: { alignItems: 'flex-start' } },
           h('div', { class: 'grow' }, h('h3', {}, q.title), h('div', { class: 'small', style: { color: '#7a6238', fontFamily: 'var(--font-body)' } }, `${q.kind === 'story' ? 'Story' : q.kind === 'daily' ? 'Daily' : q.zone} · ${q.priority === 'legendary' ? 'Legendary' : q.priority === 'elite' ? 'Elite' : 'Normal'} · Reward: ${q.xp} XP${q.giver ? ' · From ' + q.giver : ''}${q.expires && !q.done ? ' · Expires ' + new Date(q.expires).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : ''}`)),

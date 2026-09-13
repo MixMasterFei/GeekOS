@@ -3,14 +3,14 @@
  * objectives listen to real activity on the event bus and complete themselves.
  * Player-written quests keep manual objectives (they are a to-do list).
  */
-import { store, bus, uid, grantXp, rand } from './kernel';
+import { store, bus, uid, grantXp, rand, esc } from './kernel';
 import { sound } from './sound';
 import { notify } from './ui';
 import { achievements, bump } from './achievements';
 
 export interface Track { event: string; match?: string; count?: number; }
 export interface Objective { text: string; done: boolean; track?: Track; progress?: number; }
-export interface Quest { id: string; title: string; zone: string; text: string; objectives: Objective[]; done: boolean; created: number; completed?: number; xp: number; priority: 'normal' | 'elite' | 'legendary'; kind: 'story' | 'daily' | 'player'; giver?: string; next?: string; expires?: number; }
+export interface Quest { rewarded?: boolean; id: string; title: string; zone: string; text: string; objectives: Objective[]; done: boolean; created: number; completed?: number; xp: number; priority: 'normal' | 'elite' | 'legendary'; kind: 'story' | 'daily' | 'player'; giver?: string; next?: string; expires?: number; }
 
 const T = (event: string, match?: string, count = 1): Track => ({ event, match, count });
 
@@ -59,7 +59,7 @@ function offerStory(id: string) {
   const s = STORY.find(x => x.id === id); if (!s) return;
   const q: Quest = { ...structuredClone(s), done: false, created: Date.now(), kind: 'story' };
   quests.unshift(q); save();
-  sound.quest(); notify('New quest', `<b>${q.title}</b> from ${q.giver ?? 'Azeroth'}.`, 'quest', { sound: false, timeout: 5000 });
+  sound.quest(); notify('New quest', `<b>${esc(q.title)}</b> from ${esc(q.giver ?? 'Azeroth')}.`, 'quest', { sound: false, timeout: 5000 });
 }
 function rollDailies() {
   const today = dayKey();
@@ -73,8 +73,9 @@ function rollDailies() {
 }
 function complete(q: Quest) {
   q.done = true; q.completed = Date.now(); q.objectives.forEach(o => o.done = true);
-  save(); sound.quest(); grantXp(q.xp, 'quest:' + q.id);
-  notify('Quest complete', `<b>${q.title}</b> · +${q.xp} XP`, 'quest', { sound: false, timeout: 5000 });
+  const first = !q.rewarded; q.rewarded = true;
+  save(); sound.quest(); if (first) grantXp(q.xp, 'quest:' + q.id);
+  notify('Quest complete', `<b>${esc(q.title)}</b>${first ? ` · +${q.xp} XP` : ''}`, 'quest', { sound: false, timeout: 5000 });
   achievements.unlock('quest-first'); bump('quests-done', 10, 'quest-10');
   if (q.next) setTimeout(() => offerStory(q.next!), 1500);
 }

@@ -24,6 +24,7 @@ export const bagsApp: AppDef = {
   id: 'bags', name: 'Bags', subtitle: 'Your files and folders', icon: 'bag', category: 'tools', width: 820, height: 520, singleton: false, noScroll: true,
   mount(ctx) {
     let cur = ctx.args?.folder ?? 'root'; let view: 'grid' | 'list' = 'grid'; let selId: string | null = null; let q = '';
+    const inTrash = () => fs.path(cur).some(p => p.id === 'trash');
     const crumbs = h('div', { class: 'row grow', style: { gap: '4px', overflow: 'hidden' } });
     const search = h('input', { class: 'input', placeholder: 'Search…', style: { width: '180px' }, oninput: (e: Event) => { q = (e.target as HTMLInputElement).value; render(); } });
     const toolbar = h('div', { class: 'row', style: { padding: '8px 10px', borderBottom: '1px solid var(--gold-700)', background: 'rgba(0,0,0,.25)' } },
@@ -47,9 +48,9 @@ export const bagsApp: AppDef = {
       el.addEventListener('dblclick', () => { if (n.type === 'folder') { cur = n.id; render(); } else openNode(n); });
       el.addEventListener('contextmenu', (e) => { e.preventDefault(); e.stopPropagation(); selId = n.id; render(); contextMenu(e.clientX, e.clientY, [
         { label: 'Open', icon: 'play', action: () => n.type === 'folder' ? (cur = n.id, render()) : openNode(n) },
-        { label: 'Rename', icon: 'star', disabled: n.id === 'trash' || n.id === 'root', action: async () => { const v = await prompt('Rename', 'New name', n.name); if (v) { fs.rename(n.id, v); } } },
+        { label: 'Rename', icon: 'star', disabled: n.id === 'trash' || n.id === 'root', action: async () => { const v = (await prompt('Rename', 'New name', n.name))?.trim(); if (v) { fs.rename(n.id, v); } } },
         { sep: true },
-        ...(cur === 'trash' ? [{ label: 'Restore to Backpack', icon: 'up', action: () => fs.move(n.id, 'root') }, { label: 'Destroy forever', icon: 'trash', disabled: n.id === 'scarlet' || n.id === 'murloc', action: async () => { if (await confirm('Destroy item?', `${n.name} will be gone. Forever.`, 'Destroy', 'Keep')) fs.remove(n.id); } }]
+        ...(inTrash() ? [{ label: 'Restore to Backpack', icon: 'up', action: () => fs.move(n.id, 'root') }, { label: 'Destroy forever', icon: 'trash', disabled: n.id === 'scarlet' || n.id === 'murloc', action: async () => { if (await confirm('Destroy item?', `${n.name} will be gone. Forever.`, 'Destroy', 'Keep')) fs.remove(n.id); } }]
           : [{ label: 'Move to Grave', icon: 'trash', disabled: n.id === 'trash' || n.parent === null, action: () => { fs.trash(n.id); sound.close(); } }]),
       ]); });
       const lines = [`<span class="dim">${n.type === 'folder' ? fs.children(n.id).length + ' items' : n.type}</span>`, `<span class="dim">Modified ${new Date(n.modified).toLocaleDateString()}</span>`];
@@ -71,8 +72,8 @@ export const bagsApp: AppDef = {
       ctx.setStatus(`<span>${items.length} item${items.length !== 1 ? 's' : ''}</span>${selId ? `<span class="gold">${esc(fs.get(selId)?.name ?? '')}</span>` : ''}<span class="dim" style="margin-left:auto">${fs.all().length} items in all bags</span>`);
     };
     main.addEventListener('contextmenu', (e) => { if ((e.target as HTMLElement).closest('.dicon,.list-item')) return; e.preventDefault(); contextMenu(e.clientX, e.clientY, [
-      { label: 'New scroll', icon: 'plus', disabled: cur === 'trash', action: async () => { const v = await prompt('New scroll', 'Name', 'New scroll.txt'); if (v) { const n = fs.create(cur, v, 'text', ''); launch('scribe', { file: n.id }); } } },
-      { label: 'New bag', icon: 'plus', disabled: cur === 'trash', action: async () => { const v = await prompt('New bag', 'Name', 'New bag'); if (v) fs.create(cur, v, 'folder'); } },
+      { label: 'New scroll', icon: 'plus', disabled: inTrash(), action: async () => { const v = (await prompt('New scroll', 'Name', 'New scroll.txt'))?.trim(); if (v) { const n = fs.create(cur, v, 'text', ''); launch('scribe', { file: n.id }); } } },
+      { label: 'New bag', icon: 'plus', disabled: inTrash(), action: async () => { const v = (await prompt('New bag', 'Name', 'New bag'))?.trim(); if (v) fs.create(cur, v, 'folder'); } },
       { sep: true },
       ...(cur === 'trash' ? [{ label: 'Empty the Grave', icon: 'trash', action: async () => { if (await confirm('Empty the Grave?', 'Everything inside will be destroyed. Well. Almost everything.', 'Empty', 'Keep')) { fs.emptyTrash(); sound.boom(); notify('Grave emptied', 'Something in there refused to leave.', 'trash'); } } }] : []),
       { label: 'Refresh', icon: 'refresh', action: render },

@@ -58,7 +58,7 @@ export const mailboxApp: AppDef = {
         pane.append(h('div', { class: 'col' }, h('h3', {}, 'Write a Letter'), to, subj, body,
           h('div', { class: 'row' }, h('span', { class: 'dim small grow' }, 'Postage: 30c · Delivery: instant (it is your own mailbox)'),
             h('button', { class: 'btn ghost', onclick: () => { compose = false; renderPane(); } }, 'Discard'),
-            h('button', { class: 'btn primary', onclick: () => { if (!subj.value.trim() && !body.value.trim()) { sound.error(); return; } mails.unshift({ id: uid(), from: `${session.user?.name ?? 'You'} → ${to.value || 'Nobody'}`, subject: subj.value || '(no subject)', body: body.value, date: Date.now(), read: true }); save(); compose = false; sel = mails[0].id; sound.mail(); grantXp(10, 'mail'); bus.emit('mail:send'); renderList(); renderPane(); } }, 'Send'))));
+            h('button', { class: 'btn primary', onclick: () => { if (!subj.value.trim() && !body.value.trim()) { sound.error(); return; } mails.unshift({ id: uid(), from: `${session.user?.name ?? 'You'} → ${to.value || 'Nobody'}`, subject: subj.value.trim() || '(no subject)', body: body.value.trim(), date: Date.now(), read: true }); save(); compose = false; sel = mails[0].id; sound.mail(); grantXp(10, 'mail'); bus.emit('mail:send'); renderList(); renderPane(); } }, 'Send'))));
         setTimeout(() => subj.focus(), 30); return;
       }
       const m = mails.find(x => x.id === sel);

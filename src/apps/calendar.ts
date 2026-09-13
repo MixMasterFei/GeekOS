@@ -1,7 +1,7 @@
 /**
  * Calendar — the Forever roadmap plus your own events.
  */
-import { h, store, uid, pad2, bus, type AppDef } from '../os/kernel';
+import { h, store, uid, pad2, bus, esc, type AppDef } from '../os/kernel';
 import { content } from '../os/content';
 import { achievements } from '../os/achievements';
 import { prompt, contextMenu, bindTooltip } from '../os/ui';
@@ -29,7 +29,8 @@ export const calendarApp: AppDef = {
   mount(ctx) {
     let mine = store.get<CalEvent[]>('cal.mine', []);
     const today = new Date(); let y = today.getFullYear(), m = today.getMonth(); let selKey = toKey(today);
-    if (ctx.args?.date) { const d = new Date(ctx.args.date); y = d.getFullYear(); m = d.getMonth(); selKey = toKey(d); if (selKey === '2026-11-04') { achievements.unlock('calendar-launch'); bus.emit('calendar:launch'); } }
+    const goTo = (date: string) => { const [yy, mm, dd] = date.split('-').map(Number); if (!yy || !mm || !dd) return; y = yy; m = mm - 1; selKey = toKey(new Date(yy, mm - 1, dd)); if (selKey === '2026-11-04') { achievements.unlock('calendar-launch'); bus.emit('calendar:launch'); } };
+    if (ctx.args?.date) goTo(String(ctx.args.date));
     const save = () => store.set('cal.mine', mine);
     const remote = () => (content.manifest?.events ?? []).map(e => ({ ...e, id: 'r-' + e.id })) as CalEvent[];
     const all = () => [...FOREVER_EVENTS, ...remote(), ...mine];
@@ -61,7 +62,7 @@ export const calendarApp: AppDef = {
         cell.addEventListener('click', () => { selKey = key; sound.click(); render(); if (isLaunch) { achievements.unlock('calendar-launch'); bus.emit('calendar:launch'); } });
         cell.addEventListener('dblclick', () => addEvent(key));
         cell.addEventListener('contextmenu', (e) => { e.preventDefault(); contextMenu(e.clientX, e.clientY, [{ label: 'Add event…', icon: 'plus', action: () => addEvent(key) }]); });
-        if (evs.length) bindTooltip(cell, { name: new Date(y, m, d).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }), lines: evs.map(e => `<span style="color:${KIND_COLOR[e.kind]}">• ${e.title}</span>`) });
+        if (evs.length) bindTooltip(cell, { name: new Date(y, m, d).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }), lines: evs.map(e => `<span style="color:${KIND_COLOR[e.kind]}">• ${esc(e.title)}</span>`) });
         grid.append(cell);
       }
       renderSide();
@@ -84,6 +85,8 @@ export const calendarApp: AppDef = {
     const showRoadmap = () => { const bg = h('div', { class: 'modal-bg', onclick: (e: Event) => { if (e.target === bg) bg.remove(); } }, h('div', { class: 'modal frame', style: { width: '1100px', maxWidth: '94vw', padding: '10px' } }, h('img', { class: 'roadmap-img', src: '/art/roadmap.jpg', alt: 'World of Warcraft: Forever 2026–2027 roadmap', draggable: 'false' }), h('div', { class: 'row', style: { marginTop: '8px', justifyContent: 'space-between' } }, h('span', { class: 'dim small' }, 'Official 2026 | 2027 roadmap from the What\'s Next panel (BlizzCon 2026).'), h('button', { class: 'btn sm ghost', onclick: () => bg.remove() }, 'Close')))); document.getElementById('os')!.append(bg); };
     const addEvent = async (key: string) => { const t = await prompt('New event', 'Title', ''); if (!t) return; mine.push({ id: uid(), date: key, title: t, kind: 'mine' }); save(); selKey = key; sound.quest(); render(); };
     render();
+    const offArgs = bus.on('app:args', ({ win, args }: any) => { if (win === ctx.win && args?.date) { goTo(String(args.date)); render(); } });
     ctx.setStatus(`<span>${FOREVER_EVENTS.length} roadmap events</span><span class="dim">Double-click a day to add your own</span>`);
+    return () => offArgs();
   },
 };

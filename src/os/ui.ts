@@ -72,12 +72,16 @@ export function contextMenu(x: number, y: number, items: MenuItem[]) {
 
 // ---------- Modal dialog ----------
 export interface DialogOpts { title: string; message?: string; html?: string; buttons?: { label: string; kind?: 'primary' | 'gold' | 'danger' | 'ghost'; value: any }[]; input?: { placeholder?: string; value?: string }; }
+const openDialogs = new Map<HTMLElement, { owner: Element | null; kill: () => void }>();
+bus.on('win:close', (w: any) => { for (const [el, d] of openDialogs) if (d.owner && d.owner === w?.el) { d.kill(); el.remove(); openDialogs.delete(el); } });
 export function dialog(opts: DialogOpts): Promise<any> {
   return new Promise(resolve => {
     const bg = h('div', { class: 'modal-bg' });
+    const owner = document.querySelector('.win.focus');
+    openDialogs.set(bg, { owner, kill: () => resolve(null) });
     const inputEl = opts.input ? h('input', { class: 'input', placeholder: opts.input.placeholder ?? '', value: opts.input.value ?? '' }) : null;
     const acts = h('div', { class: 'acts' });
-    const done = (v: any) => { bg.remove(); resolve(inputEl && v !== null && v !== false ? (v === true ? inputEl.value : v) : v); };
+    const done = (v: any) => { openDialogs.delete(bg); bg.remove(); resolve(inputEl && v !== null && v !== false ? (v === true ? inputEl.value : v) : v); };
     const buttons = opts.buttons ?? [{ label: 'Okay', kind: 'primary', value: true }];
     for (const b of buttons) {
       const btn = h('button', { class: 'btn ' + (b.kind ?? ''), onclick: () => { sound.click(); done(b.value); } }, b.label);

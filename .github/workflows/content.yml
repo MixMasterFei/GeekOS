@@ -20,10 +20,10 @@ jobs:
         id: scrape
         run: node scripts/update-content.mjs
       - name: Commit manifest if it changed
-        if: steps.scrape.outputs.changed == 'true'
         run: |
+          git add public/data/manifest.json content/official
+          if git diff --cached --quiet; then echo 'nothing to commit'; exit 0; fi
           git config user.name "geekos-bot"
           git config user.email "geekos-bot@users.noreply.github.com"
-          git add public/data/manifest.json
           git commit -m "content: refresh Forever news and dates ($(date -u +%Y-%m-%dT%H:%MZ))"
           git push
