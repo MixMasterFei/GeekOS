@@ -98,7 +98,7 @@ export function grantXp(amount: number, reason?: string) {
   session.save();
 }
 
-export const VERSION = '1.0.0-forever';
+export const VERSION = '1.0.1';
 export const BUILD = '60.0.0 (Nov 4, 2026)';
 export const LAUNCH_UTC = Date.UTC(2026, 10, 4, 23, 0, 0); // Nov 4 2026, 3:00 PM PST (UTC-8) => 23:00 UTC
 

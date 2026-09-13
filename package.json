@@ -2,7 +2,7 @@
   "name": "geekos",
   "productName": "GeekOS",
   "description": "A fan-made desktop OS built as a love letter to World of Warcraft: Forever.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "main": "electron/main.cjs",
