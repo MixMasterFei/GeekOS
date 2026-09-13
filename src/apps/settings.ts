@@ -1,7 +1,7 @@
 /**
  * Settings — vistas, sound, interface, Battle.net connection, data.
  */
-import { h, store, bus, VERSION, BUILD, type AppDef } from '../os/kernel';
+import { h, store, bus, session, VERSION, BUILD, type AppDef } from '../os/kernel';
 import { WALLPAPERS } from '../os/wallpaper';
 import { wallpaper, launch } from '../os/shell';
 import { sound } from '../os/sound';
@@ -81,10 +81,10 @@ export const settingsApp: AppDef = {
       if (tab === 'data') {
         pane.append(
           row('Export GeekOS data', h('button', { class: 'btn sm', onclick: () => { const data: Record<string, unknown> = {}; store.keys().forEach(k => data[k] = store.get(k, null)); const a = document.createElement('a'); a.download = 'geekos-backup.json'; a.href = 'data:application/json,' + encodeURIComponent(JSON.stringify(data, null, 2)); a.click(); } }, 'Export JSON'), 'Characters, quests, mail, bags, achievements, settings.'),
-          row('Import GeekOS data', (() => { const i = h('input', { type: 'file', accept: '.json', style: { display: 'none' }, onchange: async (e: Event) => { const f = (e.target as HTMLInputElement).files?.[0]; if (!f) return; try { const data = JSON.parse(await f.text()); Object.entries(data).forEach(([k, v]) => store.set(k, v)); notify('Imported', 'Reloading GeekOS…', 'bag'); setTimeout(() => location.reload(), 800); } catch { notify('Import failed', 'That was not a GeekOS backup.', 'faq'); } } }); const b = h('button', { class: 'btn sm', onclick: () => i.click() }, 'Import JSON'); b.append(i); return b; })()),
+          row('Import GeekOS data', (() => { const i = h('input', { type: 'file', accept: '.json', style: { display: 'none' }, onchange: async (e: Event) => { const f = (e.target as HTMLInputElement).files?.[0]; if (!f) return; try { const data = JSON.parse(await f.text()); session.frozen = true; Object.entries(data).forEach(([k, v]) => store.set(k, v)); notify('Imported', 'Reloading GeekOS…', 'bag'); setTimeout(() => location.reload(), 800); } catch { notify('Import failed', 'That was not a GeekOS backup.', 'faq'); } } }); const b = h('button', { class: 'btn sm', onclick: () => i.click() }, 'Import JSON'); b.append(i); return b; })()),
           row('Reset bags', h('button', { class: 'btn sm ghost', onclick: async () => { if (await confirm('Reset bags?', 'All scrolls and folders return to the starting set.', 'Reset', 'Keep')) { fs.reset(); notify('Bags reset', 'Fresh seed. The Grave keeps its secret.', 'bag'); } } }, 'Reset')),
           row('Reset achievements', h('button', { class: 'btn sm ghost', onclick: async () => { if (await confirm('Reset achievements?', 'All achievement progress will be lost.', 'Reset', 'Keep')) { achievements.reset(); bus.emit('achievement', null); notify('Achievements reset', 'Back to zero. Good luck.', 'achievements'); } } }, 'Reset')),
-          row('Wipe everything', h('button', { class: 'btn sm danger', onclick: async () => { if (await confirm('Wipe GeekOS?', 'Characters, quests, mail, bags, achievements and settings. There is no undo.', 'Wipe', 'Keep')) { store.wipe(); location.reload(); } } }, 'Wipe'), 'Equivalent to /reset everything in the Console.'),
+          row('Wipe everything', h('button', { class: 'btn sm danger', onclick: async () => { if (await confirm('Wipe GeekOS?', 'Characters, quests, mail, bags, achievements and settings. There is no undo.', 'Wipe', 'Keep')) { session.frozen = true; store.wipe(); location.reload(); } } }, 'Wipe'), 'Equivalent to /reset everything in the Console.'),
           h('div', { class: 'dim small', style: { marginTop: '14px' } }, `${store.keys().length} keys in local storage.`));
       }
       if (tab === 'about') { launch('about'); tab = 'vista'; render(); }

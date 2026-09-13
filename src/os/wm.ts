@@ -5,7 +5,7 @@ import { h, bus, store, type AppDef, type AppContext } from './kernel';
 import { icon, glyph } from './icons';
 import { sound } from './sound';
 import { bump, achievements } from './achievements';
-import { hideTooltip, contextMenu } from './ui';
+import { hideTooltip, contextMenu, confirm } from './ui';
 
 let z = 20;
 const wins: Win[] = [];
@@ -87,7 +87,8 @@ export class Win {
     else { this.maximized = false; Object.assign(this, this.restore); }
     this.apply(); sound.click(); bus.emit('win:max', this);
   }
-  close() {
+  close(force = false) {
+    if (!force && store.get('ui.hardcore', false) && !this.el.classList.contains('closing')) { confirm('Hardcore: close this window?', `${this.def.name} will be closed. One life.`, 'Close', 'Keep').then(ok => { if (ok) this.close(true); }); return; }
     this.closers.forEach(f => { try { f(); } catch {} });
     this.el.classList.add('closing'); hideTooltip();
     setTimeout(() => this.el.remove(), 170);
@@ -158,7 +159,7 @@ export const wm = {
   list(): Win[] { return [...wins]; },
   focused(): Win | undefined { return wins.filter(w => !w.minimized).sort((a, b) => +b.el.style.zIndex - +a.el.style.zIndex)[0]; },
   byApp(id: string) { return wins.filter(w => w.appId === id); },
-  closeAll() { [...wins].forEach(w => w.close()); openedThisSession = 0; },
+  closeAll() { [...wins].forEach(w => w.close(true)); openedThisSession = 0; },
   minimizeAll() { wins.forEach(w => w.minimize()); },
   cascade() { wins.forEach((w, i) => { w.maximized = false; w.moveTo(40 + i * 30, 30 + i * 30); }); },
 };

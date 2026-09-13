@@ -8,7 +8,7 @@ import { launch } from '../os/shell';
 import { FOREVER_EVENTS } from './calendar';
 
 export const countdownApp: AppDef = {
-  id: 'countdown', name: 'Forever Countdown', subtitle: 'November 4, 2026 · 3:00 PM PST', icon: 'countdown', category: 'adventure', width: 640, height: 520, noScroll: true,
+  id: 'countdown', name: 'Forever Countdown', subtitle: 'November 4, 2026 · 3:00 PM PST', icon: 'countdown', category: 'adventure', width: 640, height: 720, minHeight: 520,
   mount(ctx) {
     const nums = ['days', 'hours', 'minutes', 'seconds'].map(k => h('div', { style: { textAlign: 'center', minWidth: '110px' } }, h('div', { class: 'display', dataset: { k }, style: { fontSize: '52px', lineHeight: '1' } }, '00'), h('div', { class: 'eyebrow', style: { marginTop: '6px' } }, k)));
     const ring = h('img', { src: LOGO_URL, alt: 'World of Warcraft: Forever', draggable: 'false', style: { width: '300px', maxWidth: '80%', height: 'auto', margin: '0 auto', display: 'block', filter: 'drop-shadow(0 8px 24px rgba(0,0,0,.85))' } });

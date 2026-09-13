@@ -106,7 +106,7 @@ export const consoleApp: AppDef = {
       xp: { run(a) { if (a.trim() === 'cheat') { say('err', 'No.'); return; } sys(`XP: ${u.xp}`); } },
       forever: { run() { say('gold', '<b>Adventure. Forever.</b>'); grantXp(20, 'forever'); } },
       fps: { run() { let f = 0; const t0 = performance.now(); const c = () => { f++; if (performance.now() - t0 < 1000) requestAnimationFrame(c); else sys(`~${f} FPS`); }; requestAnimationFrame(c); } },
-      reset: { run(a) { if (a.trim() !== 'everything') { say('err', 'Type /reset everything to wipe GeekOS (characters, achievements, bags).'); return; } store.wipe(); location.reload(); } },
+      reset: { run(a) { if (a.trim() !== 'everything') { say('err', 'Type /reset everything to wipe GeekOS (characters, achievements, bags).'); return; } session.frozen = true; store.wipe(); location.reload(); } },
     };
     const reply = (text: string) => { const t = text.toLowerCase(); setTimeout(() => { if (t.includes('hello') || t.includes('hi')) say('say', `[Innkeeper Allison] says: Welcome, ${esc(u.name)}! Rooms upstairs.`); else if (t.includes('forever')) say('say', `[Innkeeper Allison] says: November 4. I have the date carved above the door.`); else if (t.includes('hogger')) say('yell', '[Hogger] yells: GRRR!'); }, 700); };
 

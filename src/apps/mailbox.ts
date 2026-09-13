@@ -17,7 +17,7 @@ const SEED: Mail[] = [
 ];
 
 export const mailboxApp: AppDef = {
-  id: 'mailbox', name: 'Mailbox', subtitle: 'Letters and notes', icon: 'mail', category: 'social', width: 880, height: 540, noScroll: true,
+  id: 'mailbox', name: 'Mailbox', subtitle: 'Letters and notes', icon: 'mail', category: 'social', width: 880, height: 540, minWidth: 600, noScroll: true,
   mount(ctx) {
     let mails = store.get<Mail[]>('mail', SEED);
     let sel: string | null = mails[0]?.id ?? null; let compose = false;

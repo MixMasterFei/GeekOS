@@ -41,7 +41,8 @@ function openStartMenu() {
   const grid = h('div', { class: 'apps' });
   const render = () => {
     grid.innerHTML = '';
-    const list = appList().filter(a => !a.hidden && (cat === 'all' || a.category === cat) && (!q || (a.name + ' ' + (a.subtitle ?? '')).toLowerCase().includes(q)));
+    const rank = (a: any) => { const n = a.name.toLowerCase(), s = (a.subtitle ?? '').toLowerCase(); return n === q ? 0 : n.startsWith(q) ? 1 : n.includes(q) ? 2 : s.includes(q) ? 3 : 9; };
+    const list = appList().filter(a => !a.hidden && (cat === 'all' || a.category === cat) && (!q || rank(a) < 9)).sort((a, b) => q ? rank(a) - rank(b) : 0);
     if (!list.length) grid.append(h('div', { class: 'dim', style: { gridColumn: '1/-1', textAlign: 'center', padding: '20px' } }, 'No spell matches. Try /help in the Console.'));
     for (const a of list) {
       const el = h('div', { class: 'app', tabindex: '0', role: 'button' }, h('div', { class: 'ico', html: icon(a.icon) }), h('div', { class: 'lbl' }, a.name, h('small', {}, a.subtitle ?? '')));

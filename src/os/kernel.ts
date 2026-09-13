@@ -81,8 +81,9 @@ export function appList(): AppDef[] { return [...apps.values()]; }
 export const session = {
   user: null as User | null,
   bootedAt: Date.now(),
+  frozen: false, // set before a reload that must not re-save the in-memory user (wipe, import)
   get playedTotal(): number { const u = this.user; return u ? u.played + Math.floor((Date.now() - this.bootedAt) / 1000) : 0; },
-  save() { if (this.user) { this.user.played = this.playedTotal; this.bootedAt = Date.now(); store.set('user', this.user); const chars = store.get<User[]>('characters', []); const i = store.get<number>('lastChar', 0); if (chars[i]) { chars[i] = this.user; store.set('characters', chars); } } },
+  save() { if (this.frozen) return; if (this.user) { this.user.played = this.playedTotal; this.bootedAt = Date.now(); store.set('user', this.user); const chars = store.get<User[]>('characters', []); const i = store.get<number>('lastChar', 0); if (chars[i]) { chars[i] = this.user; store.set('characters', chars); } } },
 };
 
 /** XP curve loosely inspired by the old 1–60 curve; the OS levels you up as you use it. */

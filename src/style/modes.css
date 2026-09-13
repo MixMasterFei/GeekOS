@@ -2,7 +2,8 @@
 html.no-tips .tooltip { display: none !important; }
 html.reduced *, html.reduced *::before, html.reduced *::after { animation-duration: .01s !important; transition-duration: .01s !important; }
 html.reduced .desktop .wall canvas { filter: none; }
-html.big .win, html.big .startmenu, html.big .ctx, html.big .toast, html.big .tooltip { zoom: 1.12; }
+html.big .win > .tb, html.big .win > .body, html.big .win > .sb, html.big .startmenu > .left, html.big .startmenu > .right, html.big .ctx > .it, html.big .toast, html.big .modal { zoom: 1.12; }
+html.big .tooltip { font-size: 14px; }
 
 /* Classic preset: squarer, denser, dimmer glow, 2004 energy */
 html.classic { --radius: 0; --shadow-window: 0 8px 20px rgba(0,0,0,.8), 0 0 0 1px #000; --glow-gold: none; }

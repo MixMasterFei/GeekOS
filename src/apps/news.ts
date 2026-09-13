@@ -11,7 +11,7 @@ import { notify } from '../os/ui';
 const rel = (iso: string | null) => { if (!iso) return ''; const d = (Date.now() - Date.parse(iso)) / 864e5; if (d < 1) return 'today'; if (d < 2) return 'yesterday'; if (d < 30) return `${Math.floor(d)} days ago`; return new Date(iso).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }); };
 
 export const newsApp: AppDef = {
-  id: 'news', name: 'Herald', subtitle: 'Official news, auto-refreshed', icon: 'bell', category: 'adventure', width: 900, height: 620, noScroll: true,
+  id: 'news', name: 'Herald', subtitle: 'Official news, auto-refreshed', icon: 'bell', category: 'adventure', width: 900, height: 620, minWidth: 640, noScroll: true,
   mount(ctx) {
     let onlyForever = true; let sel: NewsItem | null = null;
     const head = h('div', { class: 'row', style: { padding: '8px 12px', borderBottom: '1px solid var(--gold-700)', background: 'rgba(0,0,0,.25)' } });

@@ -30,7 +30,7 @@ const REPLIES: [RegExp, string[]][] = [
 ];
 
 export const guildApp: AppDef = {
-  id: 'guild', name: 'Guild Hall', subtitle: '<Forever Ready> guild chat', icon: 'guild', category: 'social', width: 820, height: 520, noScroll: true,
+  id: 'guild', name: 'Guild Hall', subtitle: '<Forever Ready> guild chat', icon: 'guild', category: 'social', width: 820, height: 520, minWidth: 540, noScroll: true,
   mount(ctx) {
     const u = session.user!;
     const log = h('div', { class: 'log grow', style: { background: 'rgba(0,0,0,.3)' } });

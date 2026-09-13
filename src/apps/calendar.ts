@@ -25,7 +25,7 @@ const KIND_COLOR: Record<CalEvent['kind'], string> = { launch: 'var(--q-legendar
 const toKey = (d: Date) => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
 
 export const calendarApp: AppDef = {
-  id: 'calendar', name: 'Calendar', subtitle: 'Roadmap and your own events', icon: 'calendar', category: 'tools', width: 900, height: 600, noScroll: true,
+  id: 'calendar', name: 'Calendar', subtitle: 'Roadmap and your own events', icon: 'calendar', category: 'tools', width: 900, height: 600, minWidth: 640, minHeight: 420, noScroll: true,
   mount(ctx) {
     let mine = store.get<CalEvent[]>('cal.mine', []);
     const today = new Date(); let y = today.getFullYear(), m = today.getMonth(); let selKey = toKey(today);

@@ -18,7 +18,7 @@ export interface BookOpts {
 export function makeBookApp(o: BookOpts): AppDef {
   const COUNT = o.data.reduce((n, s) => n + s.entries.length, 0);
   return {
-    id: o.id, name: o.name, subtitle: o.subtitle, icon: o.icon, category: o.category ?? 'adventure', width: o.width ?? 940, height: o.height ?? 600, noScroll: true,
+    id: o.id, name: o.name, subtitle: o.subtitle, icon: o.icon, category: o.category ?? 'adventure', width: o.width ?? 940, height: o.height ?? 600, minWidth: 560, noScroll: true,
     mount(ctx) {
       const read = new Set<string>(store.get<string[]>(o.readKey, []));
       let secId = ctx.args?.section ?? o.data[0].id; let entryId: string | null = ctx.args?.entry ?? null; let q = '';

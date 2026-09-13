@@ -21,7 +21,7 @@ export function openNode(n: FsNode) {
 }
 
 export const bagsApp: AppDef = {
-  id: 'bags', name: 'Bags', subtitle: 'Your files and folders', icon: 'bag', category: 'tools', width: 820, height: 520, singleton: false, noScroll: true,
+  id: 'bags', name: 'Bags', subtitle: 'Your files and folders', icon: 'bag', category: 'tools', width: 820, height: 520, minWidth: 480, singleton: false, noScroll: true,
   mount(ctx) {
     let cur = ctx.args?.folder ?? 'root'; let view: 'grid' | 'list' = 'grid'; let selId: string | null = null; let q = '';
     const inTrash = () => fs.path(cur).some(p => p.id === 'trash');

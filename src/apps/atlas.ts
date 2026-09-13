@@ -108,5 +108,7 @@ export const atlasApp: AppDef = {
     wrap.addEventListener('wheel', (e) => { e.preventDefault(); const f = e.deltaY > 0 ? 1.12 : 0.89; const nw = Math.min(900, Math.max(200, vb.w * f)); const nh = nw * 480 / 900; const r = wrap.getBoundingClientRect(); const mx = (e.clientX - r.left) / r.width, my = (e.clientY - r.top) / r.height; vb.x = Math.max(0, Math.min(900 - nw, vb.x + (vb.w - nw) * mx)); vb.y = Math.max(0, Math.min(480 - nh, vb.y + (vb.h - nh) * my)); vb.w = nw; vb.h = nh; applyVb(); }, { passive: false });
     wrap.addEventListener('mousedown', (e) => { if (e.button !== 0) return; const sx = e.clientX, sy = e.clientY, ox = vb.x, oy = vb.y; const r = wrap.getBoundingClientRect(); const mv = (ev: MouseEvent) => { vb.x = Math.max(0, Math.min(900 - vb.w, ox - (ev.clientX - sx) * vb.w / r.width)); vb.y = Math.max(0, Math.min(480 - vb.h, oy - (ev.clientY - sy) * vb.h / r.height)); applyVb(); }; const up = () => { removeEventListener('mousemove', mv); removeEventListener('mouseup', up); }; addEventListener('mousemove', mv); addEventListener('mouseup', up); });
     ctx.setStatus(`<span>${PINS.filter(p => p.kind !== 'city').length} Forever locations</span><span class="dim">Scroll to zoom · drag to pan · click a pin</span>`);
+    const offArgs = bus.on('app:args', ({ win, args }: any) => { if (win === ctx.win && args?.zone) { focus = args.zone; filter = 'all'; renderPins(); renderLegend(); } });
+    return () => offArgs();
   },
 };

@@ -11,7 +11,7 @@ const ZONES = ['Player', 'Home', 'Work', 'Study', 'Errands', 'Guild'];
 const pcol = (q: Quest) => q.done ? 'var(--q-uncommon)' : q.priority === 'legendary' ? 'var(--q-legendary)' : q.priority === 'elite' ? 'var(--q-epic)' : '#ffe14d';
 
 export const questlogApp: AppDef = {
-  id: 'questlog', name: 'Quest Log', subtitle: 'Story, dailies, and your own tasks', icon: 'quest', category: 'adventure', width: 880, height: 580, noScroll: true,
+  id: 'questlog', name: 'Quest Log', subtitle: 'Story, dailies, and your own tasks', icon: 'quest', category: 'adventure', width: 880, height: 580, minWidth: 600, noScroll: true,
   mount(ctx) {
     let sel: string | null = questEngine.active()[0]?.id ?? null; let showDone = false;
     const left = h('div', { class: 'col', style: { width: '300px', flex: 'none', borderRight: '1px solid var(--gold-700)', padding: '10px', overflow: 'auto', background: 'rgba(0,0,0,.2)', gap: '2px' } });

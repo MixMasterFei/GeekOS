@@ -16,7 +16,7 @@ const LOOT = [
 ];
 
 export const dungeonsApp: AppDef = {
-  id: 'dungeons', name: 'Dungeon Journal', subtitle: 'Nine dungeons, two raids', icon: 'dungeon', category: 'adventure', width: 880, height: 580, noScroll: true,
+  id: 'dungeons', name: 'Dungeon Journal', subtitle: 'Nine dungeons, two raids', icon: 'dungeon', category: 'adventure', width: 880, height: 580, minWidth: 560, noScroll: true,
   mount(ctx) {
     const entries = [...CODEX.find(s => s.id === 'dungeons')!.entries.map(e => ({ ...e, kind: 'Dungeon' })), ...CODEX.find(s => s.id === 'raids')!.entries.filter(e => e.id === 'summit' || e.id === 'barrow').map(e => ({ ...e, kind: 'Raid' }))];
     let sel = ctx.args?.id ?? entries[0].id;
