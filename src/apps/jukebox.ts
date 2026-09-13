@@ -145,7 +145,8 @@ export const jukeboxApp: AppDef = {
     };
     draw();
     select(cur, !!ctx.args?.track);
-    return () => { cancelAnimationFrame(raf); b.onStep = undefined; /* keep music playing after close */ };
+    const offArgs = bus.on('app:args', ({ win, args }: any) => { if (win === ctx.win && args?.track) { const t = TRACKS.find(x => x.id === args.track); if (t) select(t, true); } });
+    return () => { offArgs(); cancelAnimationFrame(raf); b.onStep = undefined; /* keep music playing after close */ };
   },
 };
 export function stopMusic() { band?.stop(); }

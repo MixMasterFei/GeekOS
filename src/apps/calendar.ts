@@ -29,7 +29,7 @@ export const calendarApp: AppDef = {
   mount(ctx) {
     let mine = store.get<CalEvent[]>('cal.mine', []);
     const today = new Date(); let y = today.getFullYear(), m = today.getMonth(); let selKey = toKey(today);
-    if (ctx.args?.date) { const d = new Date(ctx.args.date); y = d.getFullYear(); m = d.getMonth(); selKey = toKey(d); }
+    if (ctx.args?.date) { const d = new Date(ctx.args.date); y = d.getFullYear(); m = d.getMonth(); selKey = toKey(d); if (selKey === '2026-11-04') { achievements.unlock('calendar-launch'); bus.emit('calendar:launch'); } }
     const save = () => store.set('cal.mine', mine);
     const remote = () => (content.manifest?.events ?? []).map(e => ({ ...e, id: 'r-' + e.id })) as CalEvent[];
     const all = () => [...FOREVER_EVENTS, ...remote(), ...mine];
@@ -37,7 +37,7 @@ export const calendarApp: AppDef = {
 
     const head = h('div', { class: 'row', style: { padding: '10px 14px', borderBottom: '1px solid var(--gold-700)', background: 'rgba(0,0,0,.25)' } });
     const grid = h('div', { style: { display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gridAutoRows: 'minmax(70px, 1fr)', gap: '2px', padding: '8px', flex: '1', minHeight: '0' } });
-    const side = h('div', { class: 'col', style: { width: '280px', borderLeft: '1px solid var(--gold-700)', padding: '12px', overflow: 'auto', background: 'rgba(0,0,0,.2)' } });
+    const side = h('div', { class: 'col', style: { width: '280px', flex: 'none', borderLeft: '1px solid var(--gold-700)', padding: '12px', overflow: 'auto', background: 'rgba(0,0,0,.2)' } });
     ctx.body.append(head, h('div', { class: 'row grow', style: { alignItems: 'stretch', gap: '0', minHeight: '0' } }, h('div', { class: 'col grow', style: { gap: '0', minHeight: '0' } }, h('div', { style: { display: 'grid', gridTemplateColumns: 'repeat(7,1fr)', padding: '6px 8px 0' } }, ...['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(d => h('div', { class: 'eyebrow', style: { textAlign: 'center', fontSize: '10px' } }, d))), grid), side));
 
     const render = () => {

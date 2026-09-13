@@ -35,7 +35,7 @@ export const guildApp: AppDef = {
     const u = session.user!;
     const log = h('div', { class: 'log grow', style: { background: 'rgba(0,0,0,.3)' } });
     const input = h('input', { class: 'input', placeholder: 'Say something to the guild…', style: { borderRadius: '0', borderLeft: 'none', borderRight: 'none', borderBottom: 'none' } });
-    const roster = h('div', { style: { width: '220px', borderLeft: '1px solid var(--gold-700)', padding: '10px', overflow: 'auto', background: 'rgba(0,0,0,.2)' } });
+    const roster = h('div', { style: { width: '220px', flex: 'none', borderLeft: '1px solid var(--gold-700)', padding: '10px', overflow: 'auto', background: 'rgba(0,0,0,.2)' } });
     ctx.body.append(h('div', { class: 'row grow', style: { alignItems: 'stretch', gap: '0', minHeight: '0' } }, h('div', { class: 'col grow', style: { gap: '0', minHeight: '0' } }, log, input), roster));
     const motd = store.get('guild.motd', 'MOTD: Forever launches Nov 4. Hyjal Summit Dec 9. Be kind, be ready.');
     writeLine(log, 'guild', `<b>Guild Message of the Day:</b> ${esc(motd)}`);

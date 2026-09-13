@@ -39,7 +39,7 @@ export const settingsApp: AppDef = {
         pane.append(
           row('Classic preset', toggle(() => document.documentElement.classList.contains('classic'), v => { document.documentElement.classList.toggle('classic', v); store.set('ui.classic', v); }), 'Squarer corners, denser text, dimmer glow. Also in Talents.'),
           row('Tooltips', toggle(() => !document.documentElement.classList.contains('no-tips'), v => { document.documentElement.classList.toggle('no-tips', !v); store.set('ui.tips', v); }), 'WoW-style item tooltips on hover.'),
-          row('Large runes', toggle(() => store.get('ui.big', false), v => { document.documentElement.style.fontSize = v ? '16px' : ''; store.set('ui.big', v); }), 'Bigger interface text.'),
+          row('Large runes', toggle(() => store.get('ui.big', false), v => { document.documentElement.classList.toggle('big', v); store.set('ui.big', v); }), 'Bigger interface text.'),
           row('Reduced motion', toggle(() => document.documentElement.classList.contains('reduced'), v => { document.documentElement.classList.toggle('reduced', v); store.set('ui.reduced', v); }), 'Fewer animations.'),
           row('NPC whispers', toggle(() => store.get('ui.whispers', true), v => store.set('ui.whispers', v)), 'Occasional letters and whispers from Azeroth.'),
           row('Reset window positions', h('button', { class: 'btn sm ghost', onclick: () => { store.keys().filter(k => k.startsWith('win.')).forEach(k => store.del(k)); notify('Windows reset', 'Next time they open, they will cascade.', 'settings'); } }, 'Reset')),

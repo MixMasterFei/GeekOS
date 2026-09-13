@@ -5,7 +5,7 @@ import './style/art.css';
 import { h, bus, session, store, grantXp, rand, VERSION } from './os/kernel';
 import { runBoot } from './os/boot';
 import { runLogin } from './os/login';
-import { mountDesktop, mountActionBar, mountHotkeys, launch, closeStartMenu } from './os/shell';
+import { mountDesktop, mountActionBar, mountHotkeys, launch, closeStartMenu, unmountShell } from './os/shell';
 import { registerAllApps } from './apps';
 import { achievements } from './os/achievements';
 import { notify, dialog } from './os/ui';
@@ -64,7 +64,7 @@ async function startSession(fastBoot = false) {
   addEventListener('beforeunload', () => session.save());
 
   const offContent = bus.on('content:update', ({ fresh }: any) => { if (fresh?.length) { const f = fresh.filter((n: any) => n.forever); notify(f.length ? 'Forever news from Blizzard' : 'News from Azeroth', `<b>${(f[0] ?? fresh[0]).title}</b>${fresh.length > 1 ? ` and ${fresh.length - 1} more` : ''}`, 'bell', { onClick: () => launch('news'), timeout: 10000 }); } });
-  const teardown = () => { offContent(); content.stop(); clearInterval(whisperTimer); clearInterval(restedTimer); clearInterval(saveTimer); session.save(); stopMusic(); wm.closeAll(); closeStartMenu(); };
+  const teardown = () => { offContent(); content.stop(); unmountShell(); clearInterval(whisperTimer); clearInterval(restedTimer); clearInterval(saveTimer); session.save(); stopMusic(); wm.closeAll(); closeStartMenu(); };
   bus.once('logout', () => { teardown(); startSession(true); });
   bus.once('shutdown', async () => {
     teardown();
@@ -73,9 +73,10 @@ async function startSession(fastBoot = false) {
     root.append(el); sound.hearth();
     if (window.geekos?.isElectron) setTimeout(() => (window as any).geekos?.quit?.(), 2500);
   });
-  bus.on('lock', () => lockScreen(user.name));
-  bus.on('leeroy', () => { const el = h('div', { style: { position: 'absolute', inset: '0', zIndex: '9500', pointerEvents: 'none', display: 'grid', placeItems: 'center' } }, h('div', { class: 'display', style: { fontSize: '72px', animation: 'pop .6s cubic-bezier(.2,.9,.3,1.3)', textAlign: 'center' } }, 'LEEEEEROY', h('div', { style: { fontSize: '40px' } }, 'JENKINS!'))); root.append(el); sound.horn(); setTimeout(() => el.remove(), 2600); });
 }
+
+bus.on('lock', () => { if (!document.querySelector('.lock')) lockScreen(session.user?.name ?? 'Adventurer'); });
+bus.on('leeroy', () => { const el = h('div', { style: { position: 'absolute', inset: '0', zIndex: '9500', pointerEvents: 'none', display: 'grid', placeItems: 'center' } }, h('div', { class: 'display', style: { fontSize: '72px', animation: 'pop .6s cubic-bezier(.2,.9,.3,1.3)', textAlign: 'center' } }, 'LEEEEEROY', h('div', { style: { fontSize: '40px' } }, 'JENKINS!'))); root.append(el); sound.horn(); setTimeout(() => el.remove(), 2600); });
 
 function lockScreen(name: string) {
   closeStartMenu();

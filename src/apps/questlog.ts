@@ -14,7 +14,7 @@ export const questlogApp: AppDef = {
   id: 'questlog', name: 'Quest Log', subtitle: 'Story, dailies, and your own tasks', icon: 'quest', category: 'adventure', width: 880, height: 580, noScroll: true,
   mount(ctx) {
     let sel: string | null = questEngine.active()[0]?.id ?? null; let showDone = false;
-    const left = h('div', { class: 'col', style: { width: '300px', borderRight: '1px solid var(--gold-700)', padding: '10px', overflow: 'auto', background: 'rgba(0,0,0,.2)', gap: '2px' } });
+    const left = h('div', { class: 'col', style: { width: '300px', flex: 'none', borderRight: '1px solid var(--gold-700)', padding: '10px', overflow: 'auto', background: 'rgba(0,0,0,.2)', gap: '2px' } });
     const right = h('div', { class: 'grow scroll', style: { padding: '16px' } });
     ctx.body.append(h('div', { class: 'row grow', style: { alignItems: 'stretch', gap: '0', height: '100%' } }, left, right));
     const q$ = () => questEngine.all().find(x => x.id === sel) ?? null;
@@ -79,7 +79,7 @@ export const questlogApp: AppDef = {
           system ? null : h('button', { class: 'btn sm ' + (q.done ? 'ghost' : 'gold'), onclick: () => questEngine.completePlayer(q) }, q.done ? 'Reopen' : 'Complete Quest'))));
     };
     const abandon = async (q: Quest) => { if (await confirm(q.kind === 'player' ? 'Delete quest?' : 'Abandon quest?', `"${q.title}" will be removed from your log.${q.kind === 'story' ? ' It will be offered again.' : ''}`, q.kind === 'player' ? 'Delete' : 'Abandon', 'Keep')) { questEngine.abandon(q); if (sel === q.id) sel = questEngine.active()[0]?.id ?? null; } };
-    const newQuest = async () => { const title = await prompt('New Quest', 'Quest title…'); if (!title) return; const q = questEngine.addPlayerQuest(title); sel = q.id; };
+    const newQuest = async () => { const title = await prompt('New Quest', 'Quest title…'); if (!title) return; const q = questEngine.addPlayerQuest(title); sel = q.id; renderList(); renderDetail(); };
     const rerender = () => { if (!q$()) sel = questEngine.active()[0]?.id ?? null; renderList(); renderDetail(); };
     rerender();
     if (ctx.args?.new) newQuest();

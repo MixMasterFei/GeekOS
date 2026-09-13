@@ -101,6 +101,7 @@ export class Win {
   private drag(handle: HTMLElement) {
     handle.addEventListener('mousedown', (e) => {
       if (e.button !== 0 || (e.target as HTMLElement).closest('.ctl')) return;
+      if (this.maximized && e.detail > 1) return; // let dblclick toggle maximize
       e.preventDefault();
       let sx = e.clientX, sy = e.clientY;
       if (this.maximized) { // un-maximize while dragging
@@ -111,7 +112,7 @@ export class Win {
       document.querySelector('.desktop')!.append(snap);
       let edge: 'l' | 'r' | 't' | null = null;
       const mv = (ev: MouseEvent) => {
-        this.x = ox + ev.clientX - sx; this.y = Math.max(0, oy + ev.clientY - sy); this.apply();
+        this.x = Math.min(Math.max(ox + ev.clientX - sx, -this.w + 80), innerWidth - 80); this.y = Math.min(Math.max(0, oy + ev.clientY - sy), innerHeight - 64 - 34); this.apply();
         edge = ev.clientX <= 4 ? 'l' : ev.clientX >= innerWidth - 4 ? 'r' : ev.clientY <= 2 ? 't' : null;
         if (edge) { snap.style.display = ''; const half = innerWidth / 2; const H = innerHeight - 64; Object.assign(snap.style, edge === 'l' ? { left: '0', top: '0', width: half + 'px', height: H + 'px' } : edge === 'r' ? { left: half + 'px', top: '0', width: half + 'px', height: H + 'px' } : { left: '0', top: '0', width: '100%', height: H + 'px' }); }
         else snap.style.display = 'none';
@@ -136,7 +137,7 @@ export class Win {
           if (dir.includes('e')) this.w = Math.max(minW, o.w + dx);
           if (dir.includes('s')) this.h = Math.max(minH, o.h + dy);
           if (dir === 'w') { const nw = Math.max(minW, o.w - dx); this.x = o.x + (o.w - nw); this.w = nw; }
-          if (dir === 'n') { const nh = Math.max(minH, o.h - dy); this.y = o.y + (o.h - nh); this.h = nh; }
+          if (dir === 'n') { const nh = Math.min(o.y + o.h, Math.max(minH, o.h - dy)); this.y = Math.max(0, o.y + (o.h - nh)); this.h = nh; }
           this.apply();
         };
         const up = () => { removeEventListener('mousemove', mv); removeEventListener('mouseup', up); this.persist(); bus.emit('win:resize', this); };

@@ -49,7 +49,7 @@
 .login .side h2 { text-align: center; font-size: 22px; }
 .login .realm { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border: 1px solid var(--gold-700); background: rgba(0,0,0,.35); font-size: 12px; }
 .login .realm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--q-uncommon); box-shadow: 0 0 6px var(--q-uncommon); }
-.login .chars { display: flex; flex-direction: column; gap: 6px; }
+.login .chars { display: flex; flex-direction: column; gap: 6px; overflow: auto; min-height: 0; flex: 1 1 auto; padding-right: 2px; }
 .login .char { display: flex; gap: 12px; align-items: center; padding: 10px; border: 1px solid var(--gold-700); background: rgba(0,0,0,.3); cursor: pointer; transition: all .15s; }
 .login .char:hover, .login .char.sel { border-color: var(--gold-300); background: rgba(233,200,116,.08); box-shadow: var(--glow-gold); }
 .login .char .portrait { width: 44px; height: 44px; border: 1px solid var(--gold-500); border-radius: 50%; background: radial-gradient(circle at 40% 35%, var(--ink-400), var(--ink-900)); display: grid; place-items: center; }
@@ -166,30 +166,32 @@
 
 /* ---------- START MENU (Hearth menu) ---------- */
 .startmenu {
-  position: absolute; left: 12px; bottom: calc(var(--taskbar-h) + 8px); z-index: 3500;
-  width: 560px; max-height: calc(100vh - var(--taskbar-h) - 40px);
-  display: grid; grid-template-columns: 200px 1fr; overflow: hidden;
+  position: absolute; left: 12px; top: 14px; bottom: calc(var(--taskbar-h) + 8px); z-index: 3500;
+  width: 480px; max-width: calc(100vw - 24px);
+  display: grid; grid-template-columns: 160px 1fr; overflow: hidden;
   animation: riseIn .18s ease;
 }
-.startmenu .left { border-right: 1px solid var(--gold-700); padding: 14px 12px; background: rgba(0,0,0,.25); display: flex; flex-direction: column; gap: 6px; }
+.startmenu .left { border-right: 1px solid var(--gold-700); padding: 14px 10px; background: rgba(0,0,0,.25); display: flex; flex-direction: column; gap: 4px; min-height: 0; }
 .startmenu .me { display: flex; gap: 10px; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--gold-700); margin-bottom: 6px; }
-.startmenu .me .portrait { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--gold-400); display: grid; place-items: center; background: radial-gradient(circle at 40% 35%, var(--ink-400), var(--ink-900)); }
+.startmenu .me .portrait { width: 40px; height: 40px; flex: none; border-radius: 50%; border: 1px solid var(--gold-400); display: grid; place-items: center; background: radial-gradient(circle at 40% 35%, var(--ink-400), var(--ink-900)); }
 .startmenu .me .portrait svg { width: 28px; height: 28px; }
-.startmenu .me .n { font-family: var(--font-display); font-weight: 700; font-size: 13px; }
-.startmenu .me .l { font-size: 11px; color: var(--text-dim); }
-.startmenu .cat { display: flex; align-items: center; gap: 8px; padding: 7px 8px; border-radius: 3px; cursor: pointer; font-family: var(--font-display); font-size: 12px; letter-spacing: .06em; color: var(--parch-200); border: 1px solid transparent; }
+.startmenu .me .n { font-family: var(--font-display); font-weight: 700; font-size: 12.5px; }
+.startmenu .me .l { font-size: 10.5px; color: var(--text-dim); line-height: 1.2; }
+.startmenu .cat { display: flex; align-items: center; gap: 9px; padding: 7px 8px; border-radius: 3px; cursor: pointer; font-family: var(--font-display); font-size: 11.5px; letter-spacing: .06em; color: var(--parch-200); border: 1px solid transparent; }
+.startmenu .cat .icon-img { width: 20px; height: 20px; flex: none; border: 1px solid var(--gold-700); }
 .startmenu .cat:hover, .startmenu .cat.active { background: rgba(233,200,116,.08); border-color: rgba(233,200,116,.25); color: var(--gold-200); }
 .startmenu .cat svg { width: 16px; height: 16px; }
-.startmenu .power { margin-top: auto; display: flex; gap: 6px; }
-.startmenu .right { padding: 14px; display: flex; flex-direction: column; gap: 10px; overflow: auto; }
+.startmenu .power { margin-top: auto; display: flex; gap: 4px; }
+.startmenu .power .btn { flex: 1; padding: 5px 4px; font-size: 10.5px; }
+.startmenu .right { padding: 12px; display: flex; flex-direction: column; gap: 10px; overflow: auto; min-height: 0; }
 .startmenu .search { position: relative; }
-.startmenu .apps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.startmenu .app { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 4px; border-radius: 4px; cursor: pointer; border: 1px solid transparent; text-align: center; }
+.startmenu .apps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px 4px; align-content: start; }
+.startmenu .app { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 8px 2px; border-radius: 4px; cursor: pointer; border: 1px solid transparent; text-align: center; }
 .startmenu .app:hover { background: rgba(233,200,116,.08); border-color: rgba(233,200,116,.3); }
-.startmenu .app .ico { width: 42px; height: 42px; border: 1px solid var(--gold-600); background: #0a1d26; border-radius: 4px; padding: 3px; box-shadow: inset 0 0 0 1px #000; }
+.startmenu .app .ico { width: 44px; height: 44px; border: 1px solid var(--gold-600); background: #0a1d26; border-radius: 4px; padding: 3px; box-shadow: inset 0 0 0 1px #000; }
 .startmenu .app .ico svg { width: 100%; height: 100%; }
-.startmenu .app .lbl { font-size: 11px; line-height: 1.15; color: var(--parch-200); }
-.startmenu .app .lbl small { display: block; color: var(--text-dim); font-size: 9.5px; }
+.startmenu .app .lbl { font-size: 10.5px; line-height: 1.15; color: var(--parch-100); font-weight: 600; }
+.startmenu .app .lbl small { display: block; color: var(--text-dim); font-size: 9px; font-weight: 400; margin-top: 2px; line-height: 1.15; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
 /* ---------- CONTEXT MENU ---------- */
 .ctx { position: fixed; z-index: 8000; min-width: 190px; padding: 5px; animation: fadeIn .1s; }

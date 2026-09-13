@@ -15,7 +15,7 @@ export const newsApp: AppDef = {
   mount(ctx) {
     let onlyForever = true; let sel: NewsItem | null = null;
     const head = h('div', { class: 'row', style: { padding: '8px 12px', borderBottom: '1px solid var(--gold-700)', background: 'rgba(0,0,0,.25)' } });
-    const list = h('div', { class: 'col', style: { width: '340px', borderRight: '1px solid var(--gold-700)', overflow: 'auto', gap: '0', background: 'rgba(0,0,0,.2)' } });
+    const list = h('div', { class: 'col', style: { width: '340px', flex: 'none', borderRight: '1px solid var(--gold-700)', overflow: 'auto', gap: '0', background: 'rgba(0,0,0,.2)' } });
     const pane = h('div', { class: 'grow scroll' });
     ctx.body.append(head, h('div', { class: 'row grow', style: { alignItems: 'stretch', gap: '0', minHeight: '0' } }, list, pane));
     const status = () => { const m = content.manifest; ctx.setStatus(`<span>${m ? m.news.length + ' articles' : 'No content yet'}</span><span class="dim">Checked ${content.lastChecked ? rel(new Date(content.lastChecked).toISOString()) : 'never'} · source: ${content.source}</span><span class="dim" style="margin-left:auto">${m?.checkedAt ? 'Manifest ' + new Date(m.checkedAt).toLocaleString() : ''}</span>`); };

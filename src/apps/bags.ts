@@ -32,7 +32,7 @@ export const bagsApp: AppDef = {
       h('button', { class: 'btn sm icon', title: 'Grid', html: glyph.grid, onclick: () => { view = 'grid'; render(); } }),
       h('button', { class: 'btn sm icon', title: 'List', html: glyph.list, onclick: () => { view = 'list'; render(); } }),
       search);
-    const side = h('div', { class: 'col', style: { width: '170px', borderRight: '1px solid var(--gold-700)', padding: '10px 8px', gap: '2px', background: 'rgba(0,0,0,.15)' } });
+    const side = h('div', { class: 'col', style: { width: '170px', flex: 'none', borderRight: '1px solid var(--gold-700)', padding: '10px 8px', gap: '2px', background: 'rgba(0,0,0,.15)' } });
     const main = h('div', { class: 'grow scroll', style: { padding: '12px' } });
     ctx.body.append(toolbar, h('div', { class: 'row grow', style: { alignItems: 'stretch', gap: '0' } }, side, main));
 
@@ -49,7 +49,7 @@ export const bagsApp: AppDef = {
         { label: 'Open', icon: 'play', action: () => n.type === 'folder' ? (cur = n.id, render()) : openNode(n) },
         { label: 'Rename', icon: 'star', disabled: n.id === 'trash' || n.id === 'root', action: async () => { const v = await prompt('Rename', 'New name', n.name); if (v) { fs.rename(n.id, v); } } },
         { sep: true },
-        ...(cur === 'trash' ? [{ label: 'Restore to Backpack', icon: 'up', action: () => fs.move(n.id, 'root') }, { label: 'Destroy forever', icon: 'trash', disabled: n.id === 'scarlet', action: async () => { if (await confirm('Destroy item?', `${n.name} will be gone. Forever.`, 'Destroy', 'Keep')) fs.remove(n.id); } }]
+        ...(cur === 'trash' ? [{ label: 'Restore to Backpack', icon: 'up', action: () => fs.move(n.id, 'root') }, { label: 'Destroy forever', icon: 'trash', disabled: n.id === 'scarlet' || n.id === 'murloc', action: async () => { if (await confirm('Destroy item?', `${n.name} will be gone. Forever.`, 'Destroy', 'Keep')) fs.remove(n.id); } }]
           : [{ label: 'Move to Grave', icon: 'trash', disabled: n.id === 'trash' || n.parent === null, action: () => { fs.trash(n.id); sound.close(); } }]),
       ]); });
       const lines = [`<span class="dim">${n.type === 'folder' ? fs.children(n.id).length + ' items' : n.type}</span>`, `<span class="dim">Modified ${new Date(n.modified).toLocaleDateString()}</span>`];

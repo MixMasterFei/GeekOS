@@ -99,7 +99,7 @@ export const atlasApp: AppDef = {
     };
     const renderLegend = () => {
       legend.innerHTML = '';
-      (['all', 'zone', 'dungeon', 'raid', 'bg', 'city'] as const).forEach(k => { const b = h('button', { class: 'btn sm ' + (filter === k ? 'gold' : 'ghost'), onclick: () => { filter = k; renderPins(); renderLegend(); } }, k === 'all' ? 'Everything' : k === 'bg' ? 'Battleground' : k[0].toUpperCase() + k.slice(1) + 's'); if (k !== 'all') b.style.borderColor = COLORS[k]; legend.append(b); });
+      (['all', 'zone', 'dungeon', 'raid', 'bg', 'city'] as const).forEach(k => { const b = h('button', { class: 'btn sm ' + (filter === k ? 'gold' : 'ghost'), onclick: () => { filter = k; renderPins(); renderLegend(); } }, k === 'all' ? 'Everything' : k === 'bg' ? 'Battleground' : k === 'city' ? 'Cities' : k[0].toUpperCase() + k.slice(1) + 's'); if (k !== 'all') b.style.borderColor = COLORS[k]; legend.append(b); });
       legend.append(h('span', { class: 'dim small', style: { marginLeft: 'auto' } }, 'Dashed pins: location not yet announced. Map is a stylised approximation.'));
     };
     renderPins(); renderLegend();

@@ -10,6 +10,9 @@ import { bindTooltip, contextMenu, notify, confirm, closeContextMenu } from './u
 import { achievements } from './achievements';
 
 export let wallpaper: WallpaperEngine;
+const shellOffs: (() => void)[] = [];
+/** Removes every bus listener / interval the shell registered for the current session. */
+export function unmountShell() { shellOffs.splice(0).forEach(f => { try { f(); } catch {} }); closeStartMenu(); }
 
 export function launch(id: string, args?: any): Win | undefined {
   const def = apps.get(id); if (!def) { notify('Unknown spell', `No app named <b>${esc(id)}</b>.`, 'faq'); sound.error(); return; }
@@ -60,7 +63,7 @@ function openStartMenu() {
   const search = h('input', { class: 'input', placeholder: 'Search spells, apps, quests…', oninput: (e: Event) => { q = (e.target as HTMLInputElement).value.toLowerCase(); render(); } });
   search.addEventListener('keydown', (e) => { if (e.key === 'Enter') { const first = grid.querySelector('.app') as HTMLElement; first?.click(); } if (e.key === 'Escape') closeStartMenu(); });
   const right = h('div', { class: 'right' }, h('div', { class: 'search' }, search), grid,
-    h('div', { class: 'dim small', style: { marginTop: 'auto', textAlign: 'center' } }, `${achievements.points()} / ${achievements.totalPoints()} achievement points · ${WALLPAPERS.length} vistas · `, h('a', { href: '#', onclick: (e: Event) => { e.preventDefault(); launch('about'); } }, 'About GeekOS')));
+    h('div', { class: 'dim small', style: { marginTop: 'auto', textAlign: 'center', fontSize: '10.5px' } }, `${achievements.points()} / ${achievements.totalPoints()} pts · ${WALLPAPERS.length} vistas · `, h('a', { href: '#', onclick: (e: Event) => { e.preventDefault(); launch('about'); } }, 'About GeekOS')));
   startEl = h('div', { class: 'startmenu frame' }, left, right);
   document.querySelector('.desktop')!.append(startEl);
   document.querySelector('.hearth')?.classList.add('active');
@@ -109,11 +112,11 @@ export function mountDesktop(root: HTMLElement) {
     }
   };
   renderIcons();
-  bus.on('desktop:change', renderIcons);
+  shellOffs.push(bus.on('desktop:change', renderIcons));
 
   desk.addEventListener('mousedown', (e) => { if (e.target === desk || (e.target as HTMLElement).classList.contains('vignette') || e.target === iconsEl) { iconsEl.querySelectorAll('.dicon').forEach(x => x.classList.remove('sel')); closeStartMenu(); } });
   desk.addEventListener('contextmenu', (e) => {
-    if ((e.target as HTMLElement).closest('.win, .actionbar, .startmenu, .dicon')) return;
+    if (e.composedPath().some(n => n instanceof HTMLElement && n.matches('.win, .actionbar, .startmenu, .dicon, .ctx'))) return;
     e.preventDefault();
     contextMenu(e.clientX, e.clientY, [
       { label: 'Next vista', icon: 'refresh', key: 'F7', action: () => wallpaper.next() },
@@ -166,13 +169,13 @@ export function mountActionBar(root: HTMLElement) {
       running.append(s);
     }
   };
-  ['win:open', 'win:close', 'win:focus', 'win:min', 'win:title'].forEach(ev => bus.on(ev, renderRunning));
-  bus.on('pins:change', renderSlots);
+  ['win:open', 'win:close', 'win:focus', 'win:min', 'win:title'].forEach(ev => shellOffs.push(bus.on(ev, renderRunning)));
+  shellOffs.push(bus.on('pins:change', renderSlots));
 
   const soundTray = h('div', { class: 'ti', html: icon('audio'), title: 'Sound' });
   const upd = () => soundTray.style.opacity = sound.muted ? '.35' : '1';
   soundTray.addEventListener('click', () => { sound.muted = !sound.muted; upd(); if (!sound.muted) sound.click(); notify(sound.muted ? 'Sound muted' : 'Sound on', sound.muted ? 'The tavern falls silent.' : 'The tavern is lively again.', 'audio', { sound: false, timeout: 2000 }); });
-  upd();
+  upd(); shellOffs.push(bus.on('sound:change', upd));
   bindTooltip(soundTray, () => ({ name: sound.muted ? 'Sound: Muted' : 'Sound: On', sub: 'Click to toggle' }));
   const achTray = h('div', { class: 'ti', html: icon('achievements'), title: 'Achievements' });
   achTray.addEventListener('click', () => launch('achievements'));
@@ -182,25 +185,29 @@ export function mountActionBar(root: HTMLElement) {
   const clock = h('div', { class: 'clock' }, h('div', { class: 't' }, fmtTime()), h('div', { class: 'd' }, fmtDate()));
   clock.addEventListener('click', () => launch('calendar'));
   bindTooltip(clock, () => ({ name: new Date().toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }), sub: `Realm time · ${Intl.DateTimeFormat().resolvedOptions().timeZone}`, lines: [`<span class="dim">Played this session: ${Math.floor((Date.now() - session.bootedAt) / 60000)} min</span>`] }));
-  setInterval(() => { (clock.firstChild as HTMLElement).textContent = fmtTime(); (clock.lastChild as HTMLElement).textContent = fmtDate(); const d = new Date(); if (d.getHours() === 11 && d.getMinutes() === 11) achievements.unlock('eleven-eleven'); if (d.getHours() === 3) achievements.unlock('night-owl'); if (d.getFullYear() === 2026 && d.getMonth() === 10 && d.getDate() === 4) achievements.unlock('launch-day'); }, 1000);
+  const clockIv = setInterval(() => { (clock.firstChild as HTMLElement).textContent = fmtTime(); (clock.lastChild as HTMLElement).textContent = fmtDate(); const d = new Date(); if (d.getHours() === 11 && d.getMinutes() === 11) achievements.unlock('eleven-eleven'); if (d.getHours() === 3) achievements.unlock('night-owl'); if (d.getFullYear() === 2026 && d.getMonth() === 10 && d.getDate() === 4) achievements.unlock('launch-day'); }, 1000);
+  shellOffs.push(() => clearInterval(clockIv));
 
   const xp = h('div', { class: 'xpbar' }, h('i'));
   const updXp = () => { const uu = session.user!; (xp.firstChild as HTMLElement).style.width = (100 * uu.xp / xpToLevel(uu.level)).toFixed(1) + '%'; };
-  updXp(); bus.on('xp', updXp);
+  updXp(); shellOffs.push(bus.on('xp', updXp));
   bindTooltip(xp, () => { const uu = session.user!; return { name: `Level ${uu.level}`, sub: `${uu.xp} / ${xpToLevel(uu.level)} XP`, lines: [uu.level >= 60 ? '<span class="gold">You are Forever Ready.</span>' : '<span class="dim">Use GeekOS to gain experience.</span>'] }; });
 
   const bar = h('div', { class: 'actionbar' }, xp, h('div', { class: 'end left' }, hearth), slots, running, h('div', { class: 'end right' }, tray, clock));
   root.append(bar);
   renderSlots();
 
-  bus.on('levelup', (lvl: number) => { sound.levelup(); notify(`Level ${lvl}!`, `You feel more experienced. ${lvl >= 60 ? 'Welcome to the endgame.' : 'Keep adventuring.'}`, 'legacy', { sound: false, timeout: 5000 }); if (lvl >= 10) achievements.unlock('level-10'); if (lvl >= 60) achievements.unlock('level-60'); });
+  shellOffs.push(bus.on('levelup', (lvl: number) => { sound.levelup(); notify(`Level ${lvl}!`, `You feel more experienced. ${lvl >= 60 ? 'Welcome to the endgame.' : 'Keep adventuring.'}`, 'legacy', { sound: false, timeout: 5000 }); if (lvl >= 10) achievements.unlock('level-10'); if (lvl >= 60) achievements.unlock('level-60'); }));
   void u;
 }
 
 // ---------- Hotkeys & easter-egg listeners ----------
+let hotkeysMounted = false;
 export function mountHotkeys() {
+  if (hotkeysMounted) return; hotkeysMounted = true;
   const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a']; let ki = 0;
   addEventListener('keydown', (e) => {
+    if (!document.querySelector('.actionbar') || document.querySelector('.lock')) return; // no session, or locked
     // konami
     if (e.key === konami[ki] || e.key.toLowerCase() === konami[ki]) { ki++; if (ki === konami.length) { ki = 0; achievements.unlock('konami'); bus.emit('leeroy'); } } else ki = e.key === konami[0] ? 1 : 0;
 

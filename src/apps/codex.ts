@@ -13,7 +13,7 @@ export const codexApp: AppDef = {
   mount(ctx) {
     const read = new Set<string>(store.get<string[]>('codex.read', []));
     let secId = ctx.args?.section ?? CODEX[0].id; let entryId: string | null = ctx.args?.entry ?? null; let q = '';
-    const nav = h('div', { class: 'col', style: { width: '230px', borderRight: '1px solid var(--gold-700)', padding: '10px', overflow: 'auto', background: 'rgba(0,0,0,.2)', gap: '2px' } });
+    const nav = h('div', { class: 'col', style: { width: '230px', flex: 'none', borderRight: '1px solid var(--gold-700)', padding: '10px', overflow: 'auto', background: 'rgba(0,0,0,.2)', gap: '2px' } });
     const page = h('div', { class: 'grow scroll', style: { padding: '20px 26px' } });
     ctx.body.append(h('div', { class: 'row grow', style: { alignItems: 'stretch', gap: '0', height: '100%' } }, nav, page));
 

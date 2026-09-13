@@ -20,12 +20,12 @@ export const dungeonsApp: AppDef = {
   mount(ctx) {
     const entries = [...CODEX.find(s => s.id === 'dungeons')!.entries.map(e => ({ ...e, kind: 'Dungeon' })), ...CODEX.find(s => s.id === 'raids')!.entries.filter(e => e.id === 'summit' || e.id === 'barrow').map(e => ({ ...e, kind: 'Raid' }))];
     let sel = ctx.args?.id ?? entries[0].id;
-    const list = h('div', { class: 'list', style: { width: '260px', borderRight: '1px solid var(--gold-700)', padding: '8px', overflow: 'auto', background: 'rgba(0,0,0,.2)' } });
+    const list = h('div', { class: 'list', style: { width: '260px', flex: 'none', borderRight: '1px solid var(--gold-700)', padding: '8px', overflow: 'auto', background: 'rgba(0,0,0,.2)' } });
     const pane = h('div', { class: 'grow scroll', style: { padding: '18px 22px' } });
     ctx.body.append(h('div', { class: 'row grow', style: { alignItems: 'stretch', gap: '0', height: '100%' } }, list, pane));
     const renderList = () => { list.innerHTML = ''; ['Dungeon', 'Raid'].forEach(k => { list.append(h('div', { class: 'eyebrow', style: { margin: '6px 6px 2px' } }, k + 's')); entries.filter(e => e.kind === k).forEach(e => { const el = h('div', { class: 'list-item' + (e.id === sel ? ' active' : '') }, h('span', { style: { width: '20px', height: '20px', flex: 'none' }, html: icon(k === 'Raid' ? 'guild' : 'dungeon') }), h('span', { class: 'grow' }, e.name)); el.addEventListener('click', () => { sel = e.id; sound.click(); renderList(); renderPane(); }); list.append(el); }); }); };
     const renderPane = () => {
-      const e = entries.find(x => x.id === sel)!; const loot = LOOT.filter(l => l.src === e.id); const kills = store.get<number>('dj.kills.' + e.id, 0);
+      const e = entries.find(x => x.id === sel)!; const loot = LOOT.filter(l => l.src === e.id);
       pane.innerHTML = '';
       if (e.image) pane.append(h('div', { class: 'art-hero', style: { margin: '-18px -22px 16px', height: '230px' } }, h('img', { src: e.image, alt: e.name, draggable: 'false' })));
       pane.append(h('div', { class: 'row', style: { alignItems: 'flex-start', gap: '16px' } },
@@ -37,7 +37,7 @@ export const dungeonsApp: AppDef = {
         h('div', { class: 'eyebrow', style: { margin: '14px 0 8px' } }, 'Loot table (GeekOS flavour — not datamined)'),
         h('div', { class: 'col', style: { gap: '4px' } }, ...(loot.length ? loot : [{ name: 'Nothing catalogued yet', q: 'poor', slot: '—', src: '' }]).map(l => { const row = h('div', { class: 'row', style: { padding: '6px 10px', border: '1px solid rgba(233,200,116,.15)', background: 'rgba(0,0,0,.25)' } }, h('span', { style: { width: '10px', height: '10px', background: `var(--q-${l.q})`, borderRadius: '2px' } }), h('span', { class: 'q-' + l.q, style: { fontWeight: '700' } }, l.name), h('span', { class: 'dim small', style: { marginLeft: 'auto' } }, l.slot)); bindTooltip(row, { name: l.name, quality: l.q, bind: 'Binds when picked up', sub: l.slot, lines: ['<span class="dim">Drops from: ' + e.name + '</span>'], flavor: l.q === 'legendary' ? 'Details pending. Blizzard said so.' : undefined }); return row; })),
         h('div', { class: 'row', style: { marginTop: '16px' } },
-          h('button', { class: 'btn gold', onclick: () => { const n = 1 + Math.floor(Math.random() * 100); const l = loot[Math.floor(Math.random() * loot.length)]; store.set('dj.kills.' + e.id, kills + 1); grantXp(15, 'dj'); sound.coin(); bus.emit('dj:roll', e.id); const res = h('div', { class: 'small', style: { marginTop: '8px' } }, `You roll ${n} (1-100) — `, h('span', { class: 'q-' + (l?.q ?? 'poor') }, n >= 50 && l ? `${l.name} is yours.` : 'Greed. Better luck next reset.')); pane.querySelector('.rollres')?.remove(); res.className += ' rollres'; pane.append(res); renderStatus(); } }, 'Roll for loot'),
+          h('button', { class: 'btn gold', onclick: () => { const n = 1 + Math.floor(Math.random() * 100); const l = loot[Math.floor(Math.random() * loot.length)]; store.set('dj.kills.' + e.id, store.get<number>('dj.kills.' + e.id, 0) + 1); grantXp(15, 'dj'); sound.coin(); bus.emit('dj:roll', e.id); const res = h('div', { class: 'small', style: { marginTop: '8px' } }, `You roll ${n} (1-100) — `, h('span', { class: 'q-' + (l?.q ?? 'poor') }, n >= 50 && l ? `${l.name} is yours.` : 'Greed. Better luck next reset.')); pane.querySelector('.rollres')?.remove(); res.className += ' rollres'; pane.append(res); renderStatus(); } }, 'Roll for loot'),
           h('button', { class: 'btn', onclick: () => launch('atlas', { zone: e.id }) }, 'Find on Atlas'),
           h('button', { class: 'btn ghost', onclick: () => launch('codex', { section: e.kind === 'Raid' ? 'raids' : 'dungeons', entry: e.id }) }, 'Codex entry')));
       renderStatus();

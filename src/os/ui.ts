@@ -104,7 +104,7 @@ export const prompt = (title: string, placeholder = '', value = '') =>
 // ---------- Toasts ----------
 let toastRoot: HTMLElement | null = null;
 export function notify(title: string, message: string, iconName = 'mail', opts: { timeout?: number; onClick?: () => void; sound?: boolean } = {}) {
-  if (!toastRoot) { toastRoot = h('div', { class: 'toasts' }); document.getElementById('os')!.append(toastRoot); }
+  if (!toastRoot || !toastRoot.isConnected) { toastRoot = h('div', { class: 'toasts' }); document.getElementById('os')!.append(toastRoot); }
   const t = h('div', { class: 'toast frame' },
     h('div', { class: 'ti', html: icon(iconName) }),
     h('div', { class: 'grow' }, h('div', { class: 'h' }, title), h('div', { class: 'm', html: message })));

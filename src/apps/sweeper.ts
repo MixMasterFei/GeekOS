@@ -47,7 +47,7 @@ export const sweeperApp: AppDef = {
         const el = h('div', { style: { width: '24px', height: '24px', display: 'grid', placeItems: 'center', fontFamily: 'var(--font-display)', fontWeight: '900', fontSize: '13px', cursor: 'pointer', border: '1px solid ' + (c.open ? 'rgba(233,200,116,.15)' : 'var(--gold-700)'), background: c.open ? (c.bomb ? '#6b1111' : 'rgba(0,0,0,.35)') : 'linear-gradient(180deg,#2a4a5a,#142d3a)', boxShadow: c.open ? 'inset 0 1px 3px #000' : 'inset 0 1px 0 rgba(255,255,255,.12)', color: colors[c.n] } },
           c.open ? (c.bomb ? '💣' : c.n ? String(c.n) : '') : c.flag ? '🚩' : '');
         el.addEventListener('click', () => { open(x, y); sound.tick(); check(); render(); });
-        el.addEventListener('contextmenu', (e) => { e.preventDefault(); if (c.open || over) return; c.flag = !c.flag; flags += c.flag ? 1 : -1; sound.click(); render(); });
+        el.addEventListener('contextmenu', (e) => { e.preventDefault(); e.stopPropagation(); if (c.open || over) return; c.flag = !c.flag; flags += c.flag ? 1 : -1; sound.click(); render(); });
         el.addEventListener('dblclick', () => { if (!c.open || !c.n) return; let f = 0; for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) if (grid[y + dy]?.[x + dx]?.flag) f++; if (f === c.n) { for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) open(x + dx, y + dy); check(); render(); } });
         board.append(el);
       }

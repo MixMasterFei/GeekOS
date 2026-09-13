@@ -3,7 +3,7 @@
  * Nothing here is sampled from any game; it evokes the idiom (wood clicks,
  * bell chimes, a low horn) with oscillators and noise.
  */
-import { store } from './kernel';
+import { store, bus } from './kernel';
 
 let ctx: AudioContext | null = null;
 let master: GainNode | null = null;
@@ -44,7 +44,7 @@ function noise(dur: number, gain = 0.15, t0 = 0, filterHz = 1200, q = 0.7) {
 
 export const sound = {
   get muted() { return muted; },
-  set muted(v: boolean) { muted = v; store.set('sound.muted', v); if (master) master.gain.value = v ? 0 : volume; },
+  set muted(v: boolean) { muted = v; store.set('sound.muted', v); if (master) master.gain.value = v ? 0 : volume; bus.emit('sound:change', v); },
   get volume() { return volume; },
   set volume(v: number) { volume = v; store.set('sound.volume', v); if (master && !muted) master.gain.value = v; },
   unlock() { try { ac(); } catch { /* no audio */ } },

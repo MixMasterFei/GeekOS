@@ -83,7 +83,7 @@ export const fs = {
   move(id: string, parent: string) { const n = this.get(id); if (n && id !== parent) { n.parent = parent; save(); } },
   trash(id: string) { this.move(id, 'trash'); },
   remove(id: string) { const kill = (x: string) => { nodes.filter(n => n.parent === x).forEach(c => kill(c.id)); nodes = nodes.filter(n => n.id !== x); }; kill(id); save(); },
-  emptyTrash() { nodes.filter(n => n.parent === 'trash' && n.id !== 'scarlet').forEach(n => this.remove(n.id)); },
+  emptyTrash() { nodes.filter(n => n.parent === 'trash' && n.id !== 'scarlet' && n.id !== 'murloc').forEach(n => this.remove(n.id)); },
   reset() { nodes = seed(); save(); },
   find: (q: string) => nodes.filter(n => n.name.toLowerCase().includes(q.toLowerCase())),
 };

@@ -82,14 +82,15 @@ function onEvent(event: string, payload?: any) {
   const match = typeof payload === 'string' ? payload : payload?.id ?? payload?.appId ?? payload?.match ?? '';
   let changed = false;
   for (const q of quests) {
-    if (q.done) continue;
+    if (q.done || q.kind === 'player') continue;
+    let touched = false;
     for (const o of q.objectives) {
       if (o.done || !o.track || o.track.event !== event) continue;
       if (o.track.match && o.track.match !== match) continue;
-      o.progress = (o.progress ?? 0) + 1; changed = true;
+      o.progress = (o.progress ?? 0) + 1; changed = true; touched = true;
       if (o.progress >= (o.track.count ?? 1)) { o.done = true; sound.tick(); }
     }
-    if (q.objectives.length && q.objectives.every(o => o.done)) complete(q);
+    if (touched && q.objectives.length && q.objectives.every(o => o.done)) complete(q);
   }
   if (changed) save();
 }
@@ -109,7 +110,7 @@ export const questEngine = {
   },
   addPlayerQuest(title: string): Quest { const q: Quest = { id: uid(), title, zone: 'Player', text: '', objectives: [], done: false, created: Date.now(), xp: 60, priority: 'normal', kind: 'player' }; quests.unshift(q); save(); sound.quest(); return q; },
   toggleObjective(q: Quest, i: number) { if (q.kind !== 'player') return; const o = q.objectives[i]; o.done = !o.done; sound.click(); if (o.done) grantXp(5, 'objective'); if (q.objectives.length && q.objectives.every(x => x.done)) complete(q); else save(); },
-  completePlayer(q: Quest) { if (q.kind !== 'player') return; if (q.done) { q.done = false; q.completed = undefined; save(); } else complete(q); },
+  completePlayer(q: Quest) { if (q.kind !== 'player') return; if (q.done) { q.done = false; q.completed = undefined; q.objectives.forEach(o => o.done = false); save(); } else complete(q); },
   abandon(q: Quest) { quests = quests.filter(x => x !== q); save(); if (q.kind === 'story') offerStory(q.id); },
   update(q: Quest, patch: Partial<Quest>) { Object.assign(q, patch); save(); },
   addObjective(q: Quest, text: string) { if (q.kind !== 'player') return; q.objectives.push({ text, done: false }); save(); },

@@ -22,12 +22,13 @@ export const mailboxApp: AppDef = {
     let mails = store.get<Mail[]>('mail', SEED);
     let sel: string | null = mails[0]?.id ?? null; let compose = false;
     const save = () => { store.set('mail', mails); bus.emit('mail:change'); };
-    const list = h('div', { class: 'col', style: { width: '300px', borderRight: '1px solid var(--gold-700)', overflow: 'auto', background: 'rgba(0,0,0,.2)', gap: '0' } });
+    const list = h('div', { class: 'col', style: { width: '300px', flex: 'none', borderRight: '1px solid var(--gold-700)', overflow: 'auto', background: 'rgba(0,0,0,.2)', gap: '0' } });
     const pane = h('div', { class: 'grow scroll', style: { padding: '18px' } });
     ctx.body.append(h('div', { class: 'row grow', style: { alignItems: 'stretch', gap: '0', height: '100%' } }, list, pane));
 
     const renderList = () => {
       list.innerHTML = '';
+      ctx.setStatus(`<span>${mails.filter(m => !m.read).length} unread</span><span class="dim">${mails.length} letters</span>`);
       list.append(h('div', { class: 'row', style: { padding: '8px' } }, h('button', { class: 'btn sm gold grow', onclick: () => { compose = true; renderPane(); }, html: glyph.plus + ' Write Letter' })));
       const sorted = [...mails].sort((a, b) => (b.starred ? 1 : 0) - (a.starred ? 1 : 0) || b.date - a.date);
       for (const m of sorted) {
@@ -46,7 +47,8 @@ export const mailboxApp: AppDef = {
       }
       if (!mails.length) list.append(h('div', { class: 'dim small', style: { padding: '14px' } }, 'No mail. Not even from the Auctioneer.'));
     };
-    const del = async (m: Mail) => { if (await confirm('Delete letter?', `"${m.subject}" from ${m.from}.`, 'Delete', 'Keep')) { mails = mails.filter(x => x !== m); if (sel === m.id) sel = mails[0]?.id ?? null; save(); renderList(); renderPane(); } };
+    const del = async (m: Mail) => { if (await confirm('Delete letter?', `"${m.subject}" from ${m.from}.`, 'Delete', 'Keep')) { mails = mails.filter(x => x.id !== m.id); if (sel === m.id) sel = mails[0]?.id ?? null; save(); renderList(); renderPane(); } };
+    const live = (m: Mail) => mails.find(x => x.id === m.id) ?? m;
     const renderPane = () => {
       pane.innerHTML = '';
       if (compose) {
@@ -67,14 +69,13 @@ export const mailboxApp: AppDef = {
         h('button', { class: 'btn sm gold', onclick: () => { if (m.attachment?.app) launch(m.attachment.app, m.attachment.args); sound.coin(); } }, 'Take')) : null;
       pane.append(h('div', { class: 'parchment' },
         h('div', { class: 'row', style: { alignItems: 'flex-start' } }, h('div', { class: 'grow' }, h('h3', {}, m.subject), h('div', { class: 'small', style: { color: '#7a6238', fontFamily: 'var(--font-body)' } }, `From ${m.from} · ${new Date(m.date).toLocaleString()}`)),
-          h('button', { class: 'btn sm ghost', style: { color: '#5a3a08', borderColor: '#a3874e' }, html: glyph.star, title: 'Star', onclick: () => { m.starred = !m.starred; save(); renderList(); } }),
+          h('button', { class: 'btn sm ghost', style: { color: '#5a3a08', borderColor: '#a3874e' }, html: glyph.star, title: 'Star', onclick: () => { const x = live(m); x.starred = !x.starred; save(); renderList(); } }),
           h('button', { class: 'btn sm ghost', style: { color: '#5a3a08', borderColor: '#a3874e' }, html: glyph.trash, title: 'Delete', onclick: () => del(m) })),
         h('div', { class: 'hr', style: { background: 'linear-gradient(90deg,transparent,#a3874e,transparent)' } }),
         h('div', { style: { whiteSpace: 'pre-wrap', lineHeight: '1.55' } }, m.body), att));
     };
     renderList(); renderPane();
-    const off = bus.on('mail:change', () => { mails = store.get<Mail[]>('mail', mails); renderList(); });
-    ctx.setStatus(`<span>${mails.filter(m => !m.read).length} unread</span><span class="dim">${mails.length} letters</span>`);
+    const off = bus.on('mail:change', () => { mails = store.get<Mail[]>('mail', mails); renderList(); if (!compose) renderPane(); });
     return () => off();
     void esc;
   },
