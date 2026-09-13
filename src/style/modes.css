@@ -1,0 +1,15 @@
+/* Interface modes toggled from Talents / Settings */
+html.no-tips .tooltip { display: none !important; }
+html.reduced *, html.reduced *::before, html.reduced *::after { animation-duration: .01s !important; transition-duration: .01s !important; }
+html.reduced .desktop .wall canvas { filter: none; }
+
+/* Classic preset: squarer, denser, dimmer glow, 2004 energy */
+html.classic { --radius: 0; --shadow-window: 0 8px 20px rgba(0,0,0,.8), 0 0 0 1px #000; --glow-gold: none; }
+html.classic .win, html.classic .btn, html.classic .frame, html.classic .slot, html.classic .dicon .ico, html.classic .startmenu .app .ico { border-radius: 0; }
+html.classic .win .tb { height: 28px; background: linear-gradient(180deg, #1c3b48, #0b2430); }
+html.classic .win { background: linear-gradient(180deg, #0f2f3c, #071c26); }
+html.classic .actionbar { backdrop-filter: none; background: linear-gradient(180deg, #0b2733, #04141b); }
+html.classic body, html.classic .win .body { font-size: 13px; }
+html.classic .hearth:hover { animation: none; }
+html.classic .display { filter: none; }
+html.classic .win.focus { box-shadow: var(--shadow-window); }

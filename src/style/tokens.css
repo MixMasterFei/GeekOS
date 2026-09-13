@@ -1,0 +1,69 @@
+/* ============================================================
+   GeekOS design tokens — derived from the WoW: Forever direction
+   (deep teal/navy ground, gold filigree, parchment text, painterly
+   warm key-art accents). All values original; palette sampled by eye
+   from the official Forever site, not copied assets.
+   ============================================================ */
+:root {
+  /* ground */
+  --ink-900: #04141b;
+  --ink-800: #071c26;
+  --ink-700: #0b2733;
+  --ink-600: #0f3241;
+  --ink-500: #164253;
+  --ink-400: #1e5468;
+
+  /* gold filigree */
+  --gold-100: #fff1c2;
+  --gold-200: #f6dd95;
+  --gold-300: #e9c874;
+  --gold-400: #d4ac4e;
+  --gold-500: #b8933f;
+  --gold-600: #8a6a25;
+  --gold-700: #5b4415;
+
+  /* parchment & text */
+  --parch-100: #f3ead4;
+  --parch-200: #e6dcc3;
+  --parch-300: #cdbf9d;
+  --text: var(--parch-200);
+  --text-dim: #9fb3bd;
+  --text-gold: var(--gold-300);
+
+  /* CTA teal (Blizzard "Pre-Purchase" green-teal) */
+  --teal-500: #1d8f7d;
+  --teal-400: #23a893;
+  --teal-300: #3ec7b0;
+
+  /* factions */
+  --horde: #b30000;
+  --horde-bright: #ff3b3b;
+  --alliance: #1f4aa8;
+  --alliance-bright: #4d8bff;
+
+  /* item quality */
+  --q-poor: #9d9d9d;
+  --q-common: #ffffff;
+  --q-uncommon: #1eff00;
+  --q-rare: #0070dd;
+  --q-epic: #a335ee;
+  --q-legendary: #ff8000;
+  --q-artifact: #e6cc80;
+
+  /* class colors */
+  --c-warrior: #c69b6d; --c-paladin: #f48cba; --c-hunter: #aad372; --c-rogue: #fff468;
+  --c-priest: #ffffff; --c-shaman: #0070dd; --c-mage: #3fc7eb; --c-warlock: #8788ee; --c-druid: #ff7c0a;
+
+  /* type */
+  --font-display: 'Cinzel', 'Palatino Linotype', 'Book Antiqua', serif;
+  --font-quest: 'MedievalSharp', 'Uncial Antiqua', 'Cinzel', serif;
+  --font-rune: 'Uncial Antiqua', 'MedievalSharp', serif;
+  --font-body: 'Open Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Cascadia Code', 'Consolas', ui-monospace, monospace;
+
+  /* geometry */
+  --radius: 4px;
+  --taskbar-h: 64px;
+  --shadow-window: 0 18px 50px rgba(0,0,0,.65), 0 0 0 1px rgba(0,0,0,.8);
+  --glow-gold: 0 0 12px rgba(233,200,116,.45);
+}

@@ -1,0 +1,75 @@
+{
+  "name": "geekos",
+  "productName": "GeekOS",
+  "description": "A fan-made desktop OS built as a love letter to World of Warcraft: Forever.",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "desktop": "npm run build && electron .",
+    "desktop:dev": "cross-env GEEKOS_DEV_URL=http://localhost:5173 electron .",
+    "dist": "npm run build && electron-builder --win --x64",
+    "dist:all": "npm run build && electron-builder -mwl",
+    "content": "node scripts/update-content.mjs",
+    "release": "npm version patch -m \"release: v%s\" && git push --follow-tags"
+  },
+  "build": {
+    "appId": "com.geekos.forever",
+    "productName": "GeekOS",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "build/icon.icns",
+      "category": "public.app-category.games"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "GeekOS"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "MixMasterFei",
+      "repo": "GeekOS"
+    }
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.0",
+    "electron-updater": "^6.8.9",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MixMasterFei/GeekOS.git"
+  }
+}

@@ -1,0 +1,53 @@
+/* =========================================================
+   Official art integration: textures, icon images, logo
+   ========================================================= */
+
+/* icon images (official 56px icons) */
+.icon-img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 3px; image-rendering: auto; }
+.sigil-img { object-fit: contain; border-radius: 0; }
+.dicon .ico, .startmenu .app .ico, .slot, .toast .ti, .win .tb .ti { overflow: hidden; }
+.dicon .ico { padding: 0; box-shadow: inset 0 0 0 1px #000, 0 2px 6px rgba(0,0,0,.7), 0 0 0 1px var(--gold-700); }
+.dicon .ico .icon-img { border-radius: 3px; }
+.dicon:hover .ico { box-shadow: inset 0 0 0 1px #000, 0 2px 8px rgba(0,0,0,.8), 0 0 10px rgba(233,200,116,.5); }
+.slot { padding: 2px; }
+.slot .icon-img { border-radius: 2px; }
+.startmenu .app .ico { padding: 0; }
+.win .tb .ti { border: 1px solid var(--gold-700); border-radius: 3px; }
+.toast .ti { padding: 0; }
+.ach .shield { border: 2px solid var(--gold-300); border-radius: 4px; overflow: hidden; }
+.login .char .portrait, .startmenu .me .portrait { overflow: hidden; padding: 0; }
+.login .char .portrait .icon-img, .startmenu .me .portrait .icon-img { border-radius: 50%; }
+
+/* Hearth (start) button carries the official W mark */
+.hearth { padding: 0; background: radial-gradient(circle at 50% 40%, #1a4152, #071c26 70%); overflow: hidden; }
+.hearth .sigil-img { width: 100%; height: 100%; padding: 4px; filter: drop-shadow(0 0 4px rgba(233,200,116,.5)); }
+.hearth.active { box-shadow: 0 0 0 2px #000, 0 0 0 3px var(--gold-300), 0 0 18px rgba(233,200,116,.6); }
+
+/* boot & login logo */
+.boot .logo { width: 440px; max-width: 80vw; height: auto; filter: drop-shadow(0 8px 28px rgba(0,0,0,.8)); animation: pop 1.1s cubic-bezier(.2,.9,.3,1.2); }
+.boot .title { font-size: 26px; margin-top: -4px; }
+.boot { background: radial-gradient(ellipse at 50% 30%, rgba(38,100,120,.55), transparent 60%), radial-gradient(ellipse at 50% 110%, rgba(180,120,40,.25), transparent 55%), url('/art/pane-dirt.jpg') center/cover, var(--ink-900); }
+.boot::before { content: ""; position: absolute; inset: 0; background: url('/art/texture-seamless.jpg'); opacity: .06; mix-blend-mode: overlay; pointer-events: none; }
+.login .side .logo { width: 260px; height: auto; align-self: center; filter: drop-shadow(0 6px 18px rgba(0,0,0,.8)); margin-bottom: -6px; }
+.login .side h2 { font-size: 18px; letter-spacing: .3em; text-transform: uppercase; }
+.login .side { background: linear-gradient(180deg, rgba(7,28,38,.94), rgba(4,20,27,.97)), url('/art/pane-dirt.jpg') center/cover; }
+
+/* Blizzard-style textured surfaces */
+.win { background: linear-gradient(180deg, rgba(14,46,60,.93), rgba(7,26,36,.96)), url('/art/pane-dirt.jpg') center/cover; }
+.frame { background: linear-gradient(180deg, rgba(15,50,65,.94), rgba(7,28,38,.96)), url('/art/pane-dirt.jpg') center/cover; }
+.startmenu.frame { background: linear-gradient(180deg, rgba(12,40,52,.97), rgba(5,22,30,.98)), url('/art/pane-dirt.jpg') center/cover; }
+.actionbar { background: linear-gradient(180deg, rgba(8,30,40,.9), rgba(4,18,25,.96)), url('/art/pane-dirt.jpg') center/cover; }
+.parchment {
+  background: linear-gradient(180deg, rgba(255,246,222,.62), rgba(236,216,170,.55)), url('/art/parchment.jpg') center top / 100% auto;
+  color: #2e2010;
+  box-shadow: inset 0 0 40px rgba(120,80,20,.35), 0 2px 6px rgba(0,0,0,.5);
+}
+.lock { background: rgba(2,10,14,.55); }
+
+/* art headers inside apps */
+.art-hero { position: relative; height: 200px; overflow: hidden; border-bottom: 1px solid var(--gold-600); background: #000; }
+.art-hero img { width: 100%; height: 100%; object-fit: cover; display: block; animation: fadeIn .4s ease; }
+.art-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,20,27,0) 40%, rgba(4,20,27,.92) 100%); pointer-events: none; }
+.art-hero .cap { position: absolute; left: 22px; right: 22px; bottom: 14px; z-index: 1; }
+.art-thumb { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; border: 1px solid var(--gold-700); border-radius: 3px; background: #000; }
+.roadmap-img { width: 100%; height: auto; display: block; border: 1px solid var(--gold-600); }
