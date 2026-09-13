@@ -8,6 +8,7 @@ import { sound } from './sound';
 import { WallpaperEngine, WALLPAPERS } from './wallpaper';
 import { bindTooltip, contextMenu, notify, confirm, closeContextMenu } from './ui';
 import { achievements } from './achievements';
+import { content } from './content';
 
 export let wallpaper: WallpaperEngine;
 const shellOffs: (() => void)[] = [];
@@ -43,8 +44,9 @@ function openStartMenu() {
     const list = appList().filter(a => !a.hidden && (cat === 'all' || a.category === cat) && (!q || (a.name + ' ' + (a.subtitle ?? '')).toLowerCase().includes(q)));
     if (!list.length) grid.append(h('div', { class: 'dim', style: { gridColumn: '1/-1', textAlign: 'center', padding: '20px' } }, 'No spell matches. Try /help in the Console.'));
     for (const a of list) {
-      const el = h('div', { class: 'app' }, h('div', { class: 'ico', html: icon(a.icon) }), h('div', { class: 'lbl' }, a.name, h('small', {}, a.subtitle ?? '')));
+      const el = h('div', { class: 'app', tabindex: '0', role: 'button' }, h('div', { class: 'ico', html: icon(a.icon) }), h('div', { class: 'lbl' }, a.name, h('small', {}, a.subtitle ?? '')));
       el.addEventListener('click', () => launch(a.id));
+      el.addEventListener('keydown', (e) => { const tiles = Array.from(grid.querySelectorAll('.app')) as HTMLElement[]; const i = tiles.indexOf(el); const go = (j: number) => { tiles[Math.max(0, Math.min(tiles.length - 1, j))]?.focus(); e.preventDefault(); }; if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); launch(a.id); } else if (e.key === 'ArrowRight') go(i + 1); else if (e.key === 'ArrowLeft') go(i - 1); else if (e.key === 'ArrowDown') go(i + 4); else if (e.key === 'ArrowUp') { if (i < 4) { search.focus(); e.preventDefault(); } else go(i - 4); } });
       el.addEventListener('contextmenu', (e) => { e.preventDefault(); contextMenu(e.clientX, e.clientY, [
         { label: 'Open', icon: 'play', action: () => launch(a.id) },
         { label: pinned().includes(a.id) ? 'Unpin from action bar' : 'Pin to action bar', icon: 'star', action: () => togglePin(a.id) },
@@ -55,13 +57,13 @@ function openStartMenu() {
   };
   const left = h('div', { class: 'left' },
     h('div', { class: 'me' }, h('div', { class: 'portrait', html: icon(classIcon(u.cls)) }), h('div', {}, h('div', { class: 'n' }, u.name), h('div', { class: 'l' }, `Level ${u.level} ${u.race} ${u.cls}`))),
-    ...CATEGORIES.map(c => { const el = h('div', { class: 'cat' + (c.id === cat ? ' active' : ''), html: icon(c.icon) + `<span>${c.label}</span>` }); el.addEventListener('click', () => { cat = c.id; left.querySelectorAll('.cat').forEach(x => x.classList.remove('active')); el.classList.add('active'); render(); }); return el; }),
+    ...CATEGORIES.map(c => { const el = h('div', { class: 'cat' + (c.id === cat ? ' active' : ''), tabindex: '0', role: 'button', html: icon(c.icon) + `<span>${c.label}</span>` }); const pick = () => { cat = c.id; left.querySelectorAll('.cat').forEach(x => x.classList.remove('active')); el.classList.add('active'); render(); }; el.addEventListener('click', pick); el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } }); return el; }),
     h('div', { class: 'power' },
       h('button', { class: 'btn sm ghost', title: 'Lock', onclick: () => { closeStartMenu(); bus.emit('lock'); } }, 'Lock'),
       h('button', { class: 'btn sm ghost', title: 'Log out', onclick: () => { closeStartMenu(); bus.emit('logout'); } }, 'Logout'),
       h('button', { class: 'btn sm danger', title: 'Exit', onclick: async () => { closeStartMenu(); if (await confirm('Leave Azeroth?', 'Camp here for the night, or log out for good?', 'Exit', 'Stay')) bus.emit('shutdown'); } }, 'Exit')));
   const search = h('input', { class: 'input', placeholder: 'Search spells, apps, quests…', oninput: (e: Event) => { q = (e.target as HTMLInputElement).value.toLowerCase(); render(); } });
-  search.addEventListener('keydown', (e) => { if (e.key === 'Enter') { const first = grid.querySelector('.app') as HTMLElement; first?.click(); } if (e.key === 'Escape') closeStartMenu(); });
+  search.addEventListener('keydown', (e) => { if (e.key === 'Enter') { const first = grid.querySelector('.app') as HTMLElement; first?.click(); } if (e.key === 'ArrowDown') { e.preventDefault(); (grid.querySelector('.app') as HTMLElement)?.focus(); } if (e.key === 'Escape') closeStartMenu(); });
   const right = h('div', { class: 'right' }, h('div', { class: 'search' }, search), grid,
     h('div', { class: 'dim small', style: { marginTop: 'auto', textAlign: 'center', fontSize: '10.5px' } }, `${achievements.points()} / ${achievements.totalPoints()} pts · ${WALLPAPERS.length} vistas · `, h('a', { href: '#', onclick: (e: Event) => { e.preventDefault(); launch('about'); } }, 'About GeekOS')));
   startEl = h('div', { class: 'startmenu frame' }, left, right);
@@ -79,7 +81,7 @@ export function classIcon(cls: string): string {
 
 // ---------- pins & desktop icons ----------
 const DEFAULT_PINS = ['console', 'questlog', 'news', 'bags', 'codex', 'mailbox', 'jukebox', 'atlas', 'countdown'];
-const DEFAULT_DESKTOP = ['countdown', 'news', 'codex', 'questlog', 'bags', 'mailbox', 'console', 'atlas', 'calendar', 'talents', 'achievements', 'sweeper', 'grave'];
+const DEFAULT_DESKTOP = ['countdown', 'news', 'codex', 'chronicle', 'questlog', 'bags', 'mailbox', 'console', 'atlas', 'calendar', 'talents', 'achievements', 'sweeper', 'grave'];
 export const pinned = () => store.get<string[]>('pins', DEFAULT_PINS).filter(id => apps.has(id));
 export const desktopIds = () => store.get<string[]>('desktop', DEFAULT_DESKTOP).filter(id => apps.has(id));
 export function togglePin(id: string) { const p = pinned(); const i = p.indexOf(id); if (i >= 0) p.splice(i, 1); else p.push(id); store.set('pins', p); bus.emit('pins:change'); }
@@ -158,7 +160,7 @@ export function mountActionBar(root: HTMLElement) {
   const renderRunning = () => {
     running.innerHTML = '';
     const pinnedIds = pinned();
-    pinnedIds.forEach(id => { const s = slots.querySelector(`[data-app="${id}"]`); if (s) { s.classList.toggle('run', wm.byApp(id).length > 0); s.classList.toggle('active', wm.focused()?.appId === id); } });
+    pinnedIds.forEach(id => { const s = slots.querySelector(`[data-app="${id}"]`); if (s) { s.classList.toggle('run', wm.byApp(id).length > 0); s.classList.toggle('active', wm.focused()?.appId === id); if (id === 'news') { s.querySelector('.badge-n')?.remove(); const n = content.unseenNews().filter(x => x.forever).length; if (n) s.append(h('span', { class: 'badge-n', title: `${n} new Forever article${n > 1 ? 's' : ''}` }, String(n))); } } });
     const others = wm.list().filter(w => !pinnedIds.includes(w.appId));
     if (others.length) running.append(h('div', { class: 'slot sep' }));
     for (const w of others) {
@@ -169,7 +171,7 @@ export function mountActionBar(root: HTMLElement) {
       running.append(s);
     }
   };
-  ['win:open', 'win:close', 'win:focus', 'win:min', 'win:title'].forEach(ev => shellOffs.push(bus.on(ev, renderRunning)));
+  ['win:open', 'win:close', 'win:focus', 'win:min', 'win:title', 'content:update'].forEach(ev => shellOffs.push(bus.on(ev, renderRunning)));
   shellOffs.push(bus.on('pins:change', renderSlots));
 
   const soundTray = h('div', { class: 'ti', html: icon('audio'), title: 'Sound' });
@@ -194,6 +196,7 @@ export function mountActionBar(root: HTMLElement) {
   bindTooltip(xp, () => { const uu = session.user!; return { name: `Level ${uu.level}`, sub: `${uu.xp} / ${xpToLevel(uu.level)} XP`, lines: [uu.level >= 60 ? '<span class="gold">You are Forever Ready.</span>' : '<span class="dim">Use GeekOS to gain experience.</span>'] }; });
 
   const bar = h('div', { class: 'actionbar' }, xp, h('div', { class: 'end left' }, hearth), slots, running, h('div', { class: 'end right' }, tray, clock));
+  bar.addEventListener('contextmenu', (e) => { if ((e.target as HTMLElement).closest('.slot')) return; e.preventDefault(); contextMenu(e.clientX, e.clientY, [{ label: 'Show desktop', icon: 'min', key: 'Alt+D', action: () => wm.minimizeAll() }, { label: 'Cascade windows', icon: 'list', action: () => wm.cascade() }, { sep: true }, { label: 'Settings', icon: 'star', action: () => launch('settings') }]); });
   root.append(bar);
   renderSlots();
 
@@ -207,7 +210,7 @@ export function mountHotkeys() {
   if (hotkeysMounted) return; hotkeysMounted = true;
   const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a']; let ki = 0;
   addEventListener('keydown', (e) => {
-    if (!document.querySelector('.actionbar') || document.querySelector('.lock')) return; // no session, or locked
+    if (!document.querySelector('.actionbar') || document.querySelector('.lock') || document.querySelector('.modal-bg')) return; // no session, locked, or a dialog is up
     // konami
     if (e.key === konami[ki] || e.key.toLowerCase() === konami[ki]) { ki++; if (ki === konami.length) { ki = 0; achievements.unlock('konami'); bus.emit('leeroy'); } } else ki = e.key === konami[0] ? 1 : 0;
 

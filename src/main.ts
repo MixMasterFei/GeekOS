@@ -65,9 +65,9 @@ async function startSession(fastBoot = false) {
 
   const offContent = bus.on('content:update', ({ fresh }: any) => { if (fresh?.length) { const f = fresh.filter((n: any) => n.forever); notify(f.length ? 'Forever news from Blizzard' : 'News from Azeroth', `<b>${(f[0] ?? fresh[0]).title}</b>${fresh.length > 1 ? ` and ${fresh.length - 1} more` : ''}`, 'bell', { onClick: () => launch('news'), timeout: 10000 }); } });
   const teardown = () => { offContent(); content.stop(); unmountShell(); clearInterval(whisperTimer); clearInterval(restedTimer); clearInterval(saveTimer); session.save(); stopMusic(); wm.closeAll(); closeStartMenu(); };
-  bus.once('logout', () => { teardown(); startSession(true); });
-  bus.once('shutdown', async () => {
-    teardown();
+  const offLogout = bus.once('logout', () => { offShutdown(); teardown(); startSession(true); });
+  const offShutdown = bus.once('shutdown', async () => {
+    offLogout(); teardown();
     root.innerHTML = '';
     const el = h('div', { class: 'boot' }, h('div', { class: 'sigil', html: icon('hearth'), style: { width: '120px', height: '120px', border: '2px solid var(--gold-500)', borderRadius: '6px', overflow: 'hidden' } }), h('div', { class: 'title display' }, 'Until next time'), h('div', { class: 'sub' }, 'Adventure. Forever.'), h('div', { class: 'status' }, `Time played this session: ${Math.floor((Date.now() - session.bootedAt) / 60000)} min`), h('button', { class: 'btn gold', style: { marginTop: '10px' }, onclick: () => startSession(true) }, 'Return to Azeroth'));
     root.append(el); sound.hearth();
@@ -83,9 +83,10 @@ function lockScreen(name: string) {
   const t = h('div', { class: 'big' }); const d = h('div', { class: 'dd' });
   const upd = () => { const n = new Date(); t.textContent = n.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); d.textContent = n.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }); };
   upd(); const iv = setInterval(upd, 1000);
-  const el = h('div', { class: 'lock' }, h('div', { class: 'card frame' }, h('div', { style: { width: '80px', height: '80px', margin: '0 auto 10px' }, html: icon('lock') }), t, d, h('div', { class: 'hr' }), h('div', { class: 'eyebrow' }, `${name} is away from keyboard`), h('button', { class: 'btn gold', style: { marginTop: '14px' }, onclick: () => { clearInterval(iv); el.remove(); sound.open(); } }, 'Return')));
+  const unlock = () => { clearInterval(iv); el.remove(); removeEventListener('keydown', key); sound.open(); };
+  const el = h('div', { class: 'lock' }, h('div', { class: 'card frame' }, h('div', { style: { width: '80px', height: '80px', margin: '0 auto 10px' }, html: icon('lock') }), t, d, h('div', { class: 'hr' }), h('div', { class: 'eyebrow' }, `${name} is away from keyboard`), h('button', { class: 'btn gold', style: { marginTop: '14px' }, onclick: unlock }, 'Return')));
   root.append(el);
-  const key = (e: KeyboardEvent) => { if (e.key === 'Enter' || e.key === 'Escape') { clearInterval(iv); el.remove(); removeEventListener('keydown', key); } }; addEventListener('keydown', key);
+  const key = (e: KeyboardEvent) => { if (e.key === 'Enter' || e.key === 'Escape') unlock(); }; addEventListener('keydown', key);
 }
 
 // global error surface (a fizzled spell should never take the desktop down)

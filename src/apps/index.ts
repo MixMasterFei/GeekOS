@@ -3,7 +3,7 @@ import { consoleApp } from './console';
 import { questlogApp } from './questlog';
 import { bagsApp, graveApp } from './bags';
 import { mailboxApp } from './mailbox';
-import { codexApp } from './codex';
+import { codexApp, chronicleApp } from './codex';
 import { calendarApp } from './calendar';
 import { countdownApp } from './countdown';
 import { atlasApp } from './atlas';
@@ -26,7 +26,7 @@ import { portalApp } from './portal';
 import { newsApp } from './news';
 
 export function registerAllApps() {
-  [countdownApp, newsApp, codexApp, questlogApp, atlasApp, dungeonsApp, hearthApp, achievementsApp,
+  [countdownApp, newsApp, codexApp, chronicleApp, questlogApp, atlasApp, dungeonsApp, hearthApp, achievementsApp,
     bagsApp, graveApp, scribeApp, calendarApp, abacusApp, campApp, portalApp,
     mailboxApp, guildApp, jukeboxApp, armoryApp,
     sweeperApp, chessApp,

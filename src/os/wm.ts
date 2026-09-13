@@ -5,7 +5,7 @@ import { h, bus, store, type AppDef, type AppContext } from './kernel';
 import { icon, glyph } from './icons';
 import { sound } from './sound';
 import { bump, achievements } from './achievements';
-import { hideTooltip } from './ui';
+import { hideTooltip, contextMenu } from './ui';
 
 let z = 20;
 const wins: Win[] = [];
@@ -43,6 +43,7 @@ export class Win {
     this.el.addEventListener('mousedown', () => this.focus());
     this.drag(tb);
     tb.addEventListener('dblclick', (e) => { if ((e.target as HTMLElement).closest('.ctl')) return; this.toggleMax(); });
+    tb.addEventListener('contextmenu', (e) => { e.preventDefault(); e.stopPropagation(); contextMenu(e.clientX, e.clientY, [{ label: 'Minimize', icon: 'min', action: () => this.minimize() }, { label: this.maximized ? 'Restore' : 'Maximize', icon: 'max', action: () => this.toggleMax() }, { sep: true }, { label: 'Close', icon: 'close', key: 'Alt+F4', action: () => this.close() }]); });
     this.resizers();
 
     document.querySelector('.desktop')!.append(this.el);
@@ -101,17 +102,15 @@ export class Win {
   private drag(handle: HTMLElement) {
     handle.addEventListener('mousedown', (e) => {
       if (e.button !== 0 || (e.target as HTMLElement).closest('.ctl')) return;
-      if (this.maximized && e.detail > 1) return; // let dblclick toggle maximize
       e.preventDefault();
       let sx = e.clientX, sy = e.clientY;
-      if (this.maximized) { // un-maximize while dragging
-        const ratio = e.clientX / innerWidth; this.maximized = false; Object.assign(this, this.restore); this.x = e.clientX - this.w * ratio; this.y = e.clientY - 16; this.apply();
-      }
-      const ox = this.x, oy = this.y;
+      const wasMax = this.maximized; let started = false;
+      let ox = this.x, oy = this.y;
       const snap = h('div', { style: { position: 'absolute', border: '2px dashed rgba(233,200,116,.6)', background: 'rgba(233,200,116,.06)', zIndex: '9', pointerEvents: 'none', display: 'none' } });
       document.querySelector('.desktop')!.append(snap);
       let edge: 'l' | 'r' | 't' | null = null;
       const mv = (ev: MouseEvent) => {
+        if (!started) { if (Math.abs(ev.clientX - sx) + Math.abs(ev.clientY - sy) < 4) return; started = true; if (wasMax) { const ratio = ev.clientX / innerWidth; this.maximized = false; Object.assign(this, this.restore); this.x = ev.clientX - this.w * ratio; this.y = ev.clientY - 16; this.apply(); ox = this.x - (ev.clientX - sx); oy = this.y - (ev.clientY - sy); } }
         this.x = Math.min(Math.max(ox + ev.clientX - sx, -this.w + 80), innerWidth - 80); this.y = Math.min(Math.max(0, oy + ev.clientY - sy), innerHeight - 64 - 34); this.apply();
         edge = ev.clientX <= 4 ? 'l' : ev.clientX >= innerWidth - 4 ? 'r' : ev.clientY <= 2 ? 't' : null;
         if (edge) { snap.style.display = ''; const half = innerWidth / 2; const H = innerHeight - 64; Object.assign(snap.style, edge === 'l' ? { left: '0', top: '0', width: half + 'px', height: H + 'px' } : edge === 'r' ? { left: half + 'px', top: '0', width: half + 'px', height: H + 'px' } : { left: '0', top: '0', width: '100%', height: H + 'px' }); }
@@ -119,7 +118,8 @@ export class Win {
       };
       const up = () => {
         removeEventListener('mousemove', mv); removeEventListener('mouseup', up); snap.remove();
-        if (edge === 't') { this.maximized = false; this.toggleMax(); }
+        if (!started) return;
+        if (edge === 't') { this.maximized = false; this.x = ox; this.y = oy; this.toggleMax(); }
         else if (edge) { this.maximized = false; this.x = edge === 'l' ? 0 : innerWidth / 2; this.y = 0; this.w = innerWidth / 2; this.h = innerHeight - 64; this.apply(); }
         this.persist();
       };
@@ -146,6 +146,8 @@ export class Win {
     });
   }
 }
+
+addEventListener('resize', () => { for (const w of wins) { if (w.maximized) continue; const nx = Math.min(w.x, innerWidth - 80), ny = Math.min(w.y, innerHeight - 64 - 34); if (nx !== w.x || ny !== w.y) w.moveTo(Math.max(-w.w + 80, nx), Math.max(0, ny)); } });
 
 export const wm = {
   open(def: AppDef, args?: any): Win {

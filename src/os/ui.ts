@@ -126,6 +126,7 @@ export function achievementBanner(name: string, desc: string, points: number, ic
     h('div', { class: 'shield', html: icon(iconName) }),
     h('div', {}, h('div', { class: 'k' }, 'ACHIEVEMENT EARNED'), h('div', { class: 'n' }, name), h('div', { class: 'd' }, desc)),
     h('div', { class: 'pts' }, String(points)));
+  const others = document.querySelectorAll('.ach:not(.out)').length; el.style.top = `calc(18% + ${others * 96}px)`;
   document.getElementById('os')!.append(el);
   sound.achievement();
   setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 700); }, 4600);

@@ -1,12 +1,28 @@
-/* GeekOS desktop shell (Electron). Loads the built app, hosts the Battle.net proxy in the main process,
-   and keeps itself updated from GitHub Releases (electron-updater). */
-const { app, BrowserWindow, ipcMain, shell, safeStorage } = require('electron');
+/* GeekOS desktop shell (Electron). Serves the built app over a private app:// scheme (so absolute
+   asset paths and fetch work exactly like on the web), hosts the Battle.net proxy in the main
+   process, and keeps itself updated from GitHub Releases (electron-updater). */
+const { app, BrowserWindow, ipcMain, shell, safeStorage, protocol, net } = require('electron');
 const path = require('node:path');
 const fs = require('node:fs');
+const { pathToFileURL } = require('node:url');
 
 const isDev = !!process.env.GEEKOS_DEV_URL;
+const DIST = path.join(__dirname, '..', 'dist');
 let win = null;
 const tokens = new Map();
+
+// ---------- app:// scheme serving ./dist ----------
+protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { standard: true, secure: true, supportFetchAPI: true, corsEnabled: true, stream: true } }]);
+function serveDist() {
+  protocol.handle('app', (req) => {
+    const u = new URL(req.url);
+    let p = decodeURIComponent(u.pathname); if (p === '/' || p === '') p = '/index.html';
+    const file = path.normalize(path.join(DIST, p));
+    if (!file.startsWith(DIST)) return new Response('forbidden', { status: 403 });
+    if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return new Response('not found', { status: 404 });
+    return net.fetch(pathToFileURL(file).toString());
+  });
+}
 
 // ---------- Battle.net proxy ----------
 function credsFile() { return path.join(app.getPath('userData'), 'bnet.cred'); }
@@ -56,6 +72,7 @@ ipcMain.handle('update:check', async () => {
   const v = r?.updateInfo?.version; const cur = app.getVersion();
   return { message: v && v !== cur ? `Version ${v} is available and will install on restart (you have ${cur}).` : `GeekOS ${cur} is the latest version.` };
 });
+ipcMain.handle('app:version', () => app.getVersion());
 
 function create() {
   win = new BrowserWindow({
@@ -63,9 +80,22 @@ function create() {
     autoHideMenuBar: true, icon: path.join(__dirname, '..', 'build', 'icon.png'),
     webPreferences: { preload: path.join(__dirname, 'preload.cjs'), contextIsolation: true, nodeIntegration: false, sandbox: false },
   });
-  win.once('ready-to-show', () => { win.show(); if (!isDev) win.maximize(); setupUpdater(); });
+  win.once('ready-to-show', () => { win.show(); if (!isDev && !process.env.GEEKOS_SMOKE) win.maximize(); setupUpdater(); });
   win.webContents.setWindowOpenHandler(({ url }) => { shell.openExternal(url); return { action: 'deny' }; });
-  if (isDev) win.loadURL(process.env.GEEKOS_DEV_URL); else win.loadFile(path.join(__dirname, '..', 'dist', 'index.html'));
+  win.webContents.on('console-message', (_e, level, msg) => { if (level >= 2 || process.env.GEEKOS_SMOKE) console.log(`[renderer:${level}] ${msg}`); });
+  if (isDev) win.loadURL(process.env.GEEKOS_DEV_URL); else win.loadURL('app://geekos/' + (process.env.GEEKOS_SMOKE ? '?fast' : ''));
+  // Smoke mode (CI / self-test): capture a screenshot after boot and exit.
+  if (process.env.GEEKOS_SMOKE) {
+    const out = process.env.GEEKOS_SMOKE;
+    setTimeout(async () => {
+      try {
+        const ok = await win.webContents.executeJavaScript(`(() => { const b = document.querySelector('.login,.boot,.desktop'); const imgs = [...document.images]; const broken = imgs.filter(i => i.complete && i.naturalWidth === 0).length; return { stage: b ? b.className : 'none', images: imgs.length, broken }; })()`);
+        console.log('[smoke]', JSON.stringify(ok));
+        const img = await win.webContents.capturePage(); fs.writeFileSync(out, img.toPNG()); console.log('[smoke] screenshot', out);
+      } catch (e) { console.error('[smoke] failed', e); }
+      app.quit();
+    }, 7000);
+  }
 }
-app.whenReady().then(create);
+app.whenReady().then(() => { serveDist(); create(); });
 app.on('window-all-closed', () => app.quit());

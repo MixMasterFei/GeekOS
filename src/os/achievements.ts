@@ -19,6 +19,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   { id: 'level-10', icon: 'sparkles', name: 'Getting Started', desc: 'Reach level 10.', points: 10 },
   { id: 'level-60', icon: 'legacy', name: 'Forever Ready', desc: 'Reach level 60. The journey was the point.', points: 100 },
   { id: 'codex-all', icon: 'codex', name: 'Explorer', desc: 'Read every entry in the Forever Codex.', points: 25 },
+  { id: 'chronicle-all', icon: 'tome', name: 'Loremaster', desc: 'Read every entry in the Chronicle. You remember now.', points: 25 },
   { id: 'calendar-launch', icon: 'calendar', name: 'Save the Date', desc: 'Find the Forever launch on the Calendar.', points: 10 },
   { id: 'camp', icon: 'camp', name: 'By the Fire', desc: 'Pitch a camp with the Camping app.', points: 10 },
   { id: 'night-owl', icon: 'time', name: 'Night Owl', desc: 'Use GeekOS between 3:00 and 4:00 in the morning.', points: 10, hidden: true, hint: 'Insomnia rewards the patient.' },
