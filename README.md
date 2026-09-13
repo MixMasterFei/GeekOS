@@ -2,11 +2,15 @@
 
 A fan-made desktop operating system built as a love letter to the original world of Azeroth and to **World of Warcraft: Forever**, launching **November 4, 2026 at 3:00 PM PST**.
 
-It boots, you pick a character, and you get a full desktop: window manager, action bar, Hearth menu, 25 apps, official Blizzard key art as living vistas, official game icons, a generative tavern band, a Battle.net Armory, and 33 achievements (14 of them hidden).
+It boots, you pick a character, and you get a full desktop: window manager, action bar, Hearth menu, 26 apps, official Blizzard key art as living vistas, official game icons, a generative tavern band, a Battle.net Armory, and 33 achievements (14 of them hidden).
 
 ![GeekOS](public/art/key-art-wide.jpg)
 
-## Run it
+## Download
+
+Grab the latest desktop build from the [Releases page](https://github.com/MixMasterFei/GeekOS/releases/latest): `GeekOS-Setup-<version>.exe` (Windows installer, auto-updates), the portable `GeekOS-<version>.exe`, the macOS `.dmg` (Apple Silicon) or the Linux `.AppImage`.
+
+## Run it from source
 
 ```bash
 npm install
@@ -26,6 +30,7 @@ npm run dist         # produces a Windows installer + portable .exe in ./release
 | --- | --- |
 | Herald | Official Blizzard news, refreshed automatically by the content cron; Forever posts highlighted |
 | Forever Countdown | Live countdown to launch, progress from reveal to launch, next roadmap milestones |
+| Chronicle | Spoiler-free refresher for returning players: the world, factions, classes, timeline up to Forever's era, people, how the game plays, glossary, and a launch checklist |
 | Forever Codex | Everything Blizzard announced (zones, 9 dungeons, raids, Skyborne, systems, editions, dates) with official screenshots |
 | Atlas of Azeroth | Stylised map with every Forever location pinned, zoom and pan, links into the Codex |
 | Dungeon Journal | The nine dungeons and two raids, official screenshots, a loot-roll toy |
