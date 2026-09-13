@@ -61,6 +61,8 @@
     "collectionLine": "Warcraft Forever Collection will be available through January 11, 2027.",
     "heroLine": "World of Warcraft: Forever is coming November 4!"
   },
-  "events": [],
+  "events": [
+    { "id": "qa-live", "date": "2026-09-17", "title": "World of Warcraft Live Q&A", "kind": "info", "desc": "Live Q&A with the WoW development team on BlizzCon 2026 reveals, 10:00 a.m. PDT on the official Warcraft Twitch and YouTube channels." }
+  ],
   "notice": null
 }
