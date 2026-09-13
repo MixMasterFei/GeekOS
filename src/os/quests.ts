@@ -95,12 +95,15 @@ function onEvent(event: string, payload?: any) {
   if (changed) save();
 }
 
+let wired = false;
 export const questEngine = {
   all: () => quests,
   active: () => quests.filter(q => !q.done),
   init() {
+    quests = store.get<Quest[]>('quests2', []);
     if (!quests.length || !quests.some(q => q.kind === 'story')) offerStory('s1');
     rollDailies();
+    if (wired) return; wired = true;
     // route real activity into objectives
     bus.on('win:open', (w: any) => onEvent('win:open', w?.appId));
     ['console:cmd', 'wall:change', 'codex:read', 'calendar:launch', 'atlas:pin', 'dj:roll', 'hearth:use', 'camp:start', 'camp:session', 'jukebox:play', 'mail:read', 'mail:send', 'scribe:save', 'guild:say', 'sweeper:win', 'chess:move', 'chess:win', 'news:read', 'title:set', 'armory:lookup'].forEach(ev => bus.on(ev, (p: any) => onEvent(ev, p)));

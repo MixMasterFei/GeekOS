@@ -15,7 +15,7 @@ const LOCAL_URL = '/data/manifest.json';
 const REFRESH_MS = 6 * 60 * 60 * 1000;
 
 let current: Manifest | null = store.get<Manifest | null>('content.manifest', null);
-let timer = 0;
+let timer = 0; let onlineWired = false;
 
 export const content = {
   get manifest() { return current; },
@@ -42,7 +42,7 @@ export const content = {
     if (due || !current) this.refresh().catch(() => {});
     clearInterval(timer);
     timer = window.setInterval(() => this.refresh().catch(() => {}), 30 * 60 * 1000); // check every 30 min; the manifest itself changes ~every 6h
-    addEventListener('online', () => this.refresh().catch(() => {}));
+    if (!onlineWired) { onlineWired = true; addEventListener('online', () => this.refresh().catch(() => {})); }
   },
   stop() { clearInterval(timer); },
   news(onlyForever = false): NewsItem[] { const n = current?.news ?? []; return onlyForever ? n.filter(x => x.forever) : n; },

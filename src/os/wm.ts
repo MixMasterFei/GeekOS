@@ -156,7 +156,7 @@ export const wm = {
   list(): Win[] { return [...wins]; },
   focused(): Win | undefined { return wins.filter(w => !w.minimized).sort((a, b) => +b.el.style.zIndex - +a.el.style.zIndex)[0]; },
   byApp(id: string) { return wins.filter(w => w.appId === id); },
-  closeAll() { [...wins].forEach(w => w.close()); },
+  closeAll() { [...wins].forEach(w => w.close()); openedThisSession = 0; },
   minimizeAll() { wins.forEach(w => w.minimize()); },
   cascade() { wins.forEach((w, i) => { w.maximized = false; w.moveTo(40 + i * 30, 30 + i * 30); }); },
 };
