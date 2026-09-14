@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-13T19:39:52.864Z",
+  "checkedAt": "2026-09-14T04:53:00.108Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
+    {
+      "id": "24301145",
+      "title": "World of Warcraft at BlizzCon 2026: Discover What’s Next",
+      "summary": "BlizzCon 2026 has begun! We’ll be updating right here throughout the weekend with the latest, announcements, reveals and updates from the convention.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301145",
+      "publishedAt": "2026-09-13T21:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/c8/C8KM5R6G60GK1789239785464.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/rj/RJWLO9LI3H391789239759930.png",
+      "forever": true
+    },
     {
       "id": "24302576",
       "title": "Tales Take a Dark Turn in Midnight’s Talebound",
@@ -14,14 +24,14 @@
       "forever": false
     },
     {
-      "id": "24301145",
-      "title": "World of Warcraft at BlizzCon 2026: Discover What’s Next",
-      "summary": "BlizzCon 2026 has begun! We’ll be updating right here throughout the weekend with the latest, announcements, reveals and updates from the convention.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301145",
-      "publishedAt": "2026-09-12T22:25:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/c8/C8KM5R6G60GK1789239785464.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/rj/RJWLO9LI3H391789239759930.png",
-      "forever": true
+      "id": "24298591",
+      "title": "Midnight What’s Next Panel Recap",
+      "summary": "The World of Warcraft team took to the stage at BlizzCon 2026 to reveal Talebound, share updates on the next chapter of Midnight, including content update 12.1.5 and Eclipse, and offer a look at what’s ahead for Midnight Season 3, Housing, and beyond.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24298591",
+      "publishedAt": "2026-09-12T22:24:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/qu/QUV86P79MDF51789250567177.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/ux/UX5NT9NJQFV71789250551680.png",
+      "forever": false
     },
     {
       "id": "24302093",
@@ -42,16 +52,6 @@
       "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/4f/4FC5K327AVF01789243118942.png",
       "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/ig/IGC43UC4JUYS1789243102496.png",
       "forever": true
-    },
-    {
-      "id": "24295383",
-      "title": "September is a Great Month to Celebrate Friendship at the Trading Post",
-      "summary": "September brings a friendship-themed Trading Post lineup with the Crested Ember Leafmimic mount and special Outlet vendors offering discounted and returning items.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24295383",
-      "publishedAt": "2026-08-24T17:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/tm/TMFVSSW09EMU1787251069322.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/x4/X406FFWOJFWE1787251052436.png",
-      "forever": false
     }
   ],
   "forever": {
@@ -62,7 +62,13 @@
     "heroLine": "World of Warcraft: Forever is coming November 4!"
   },
   "events": [
-    { "id": "qa-live", "date": "2026-09-17", "title": "World of Warcraft Live Q&A", "kind": "info", "desc": "Live Q&A with the WoW development team on BlizzCon 2026 reveals, 10:00 a.m. PDT on the official Warcraft Twitch and YouTube channels." }
+    {
+      "id": "qa-live",
+      "date": "2026-09-17",
+      "title": "World of Warcraft Live Q&A",
+      "kind": "info",
+      "desc": "Live Q&A with the WoW development team on BlizzCon 2026 reveals, 10:00 a.m. PDT on the official Warcraft Twitch and YouTube channels."
+    }
   ],
   "notice": null
 }
