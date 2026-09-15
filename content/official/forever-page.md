@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-09-14T12:42:28.785Z
+Fetched: 2026-09-15T04:51:49.573Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -123,6 +123,26 @@ Forsaken & Human Figurine Decor⁵
 [WoW][Forever] Beta Opt-In - Description
 
 Opt-in for a chance to beta test WoW: Forever before it's released. You'll also receive news and the latest updates about the game.
+
+Carve a New Path with World of Warcraft: Forever
+
+Catch up on everything announced for World of Warcraft: Forever during BlizzCon, including a first look at the next chapter for Azeroth and the adventures waiting on the horizon.
+
+World of Warcraft: Forever What’s Next Panel Recap
+
+For years, players have wondered what new adventures could still unfold in original Azeroth. During the What’s Next panel, Senior Game Director Ion Hazzikostas, Lead Classic Designer Tim Jones, Lead Software Engineer Nora Mills, and Associate Production Director Clay Stone shared how that dream is taking shape in World of Warcraft: Forever, from new regions and dungeons to raids, systems, the new playable Skyborne race, and the road ahead.
+
+World of Warcraft: Forever Deep Dive Panel Recap
+
+Missed the World of Warcraft: Forever Deep Dive? Associate Production Director Clay Stone, Senior Game Designer Josh Greenfield, Lead Software Engineer Ana Resendez, and Principal Game Designer Kris Zierhut shared a closer look at the systems shaping the game, including Camping, Legacy System progression, combat updates, and more.\r
+
+World of Warcraft: Forever Found Photos Panel Recap
+
+Senior Game Designer Josh Greenfield and Lead Content Designer Evan Lee shared how original Azeroth’s forgotten corners, unfinished threads, and long-held player memories helped inspire World of Warcraft: Forever. Learn how the team is expanding the level 1–60 experience with reimagined regions, quests, characters, locations, and stories that build on original Azeroth.
+
+Pre-Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth
+
+Answer the call to a reimagined Azeroth with World of Warcraft: Forever. Pre-purchase the Skyborne Heroic Pack, Skyborne Epic Pack, or Warcraft Forever Collection on the Battle.net Shop to unlock upgrade benefits, prepare for beta, and bring a friend along with Invite-A-Friend Launch Codes when it goes live.
 
 [WoW Armory] No Data Fallback String
 
