@@ -1,17 +1,27 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-15T16:57:20.634Z",
+  "checkedAt": "2026-09-15T21:18:50.208Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
     {
-      "id": "24301145",
-      "title": "World of Warcraft at BlizzCon 2026: Discover What’s Next",
-      "summary": "BlizzCon 2026 has come to a close, and we’ve gathered the latest World of Warcraft announcements, reveals, and updates from the weekend in one place. Catch up on everything shared during the show right here.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301145",
-      "publishedAt": "2026-09-13T21:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/c8/C8KM5R6G60GK1789239785464.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/rj/RJWLO9LI3H391789239759930.png",
-      "forever": true
+      "id": "24276747",
+      "title": "Corruption Calls with the Abyssal Crown Collection",
+      "summary": "Don Azshara’s raiment and take wing on a Zothwing mount steeped the dark influence of the Old Gods. Something ancient summons you.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24276747",
+      "publishedAt": "2026-09-15T18:41:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/rk/RKYWGCNNKZY61776458479940.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/7t/7TL7V80YDTWI1776458696603.png",
+      "forever": false
+    },
+    {
+      "id": "24302544",
+      "title": "Watch the World of Warcraft Live Q&A September 17",
+      "summary": "Now that the doors have closed on BlizzCon 2026, join us this week for a live Q&amp;A as we answer many of the community’s questions following the World of Warcraft reveals. Watch for more insight into the BlizzCon 2026 reveals and a look at what’s ahead for modern WoW and WoW Forever.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24302544",
+      "publishedAt": "2026-09-15T17:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/it/ITQ5NQ3CGKNQ1789241354276.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/xq/XQHA2LAWZ50S1789241337987.png",
+      "forever": false
     },
     {
       "id": "24302576",
