@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-17T16:58:14.885Z",
+  "checkedAt": "2026-09-17T21:20:10.731Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
     {
@@ -11,16 +11,6 @@
       "publishedAt": "2026-09-15T18:41:00.000Z",
       "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/rk/RKYWGCNNKZY61776458479940.png",
       "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/7t/7TL7V80YDTWI1776458696603.png",
-      "forever": false
-    },
-    {
-      "id": "24302544",
-      "title": "Watch the World of Warcraft Live Q&A September 17",
-      "summary": "Now that the doors have closed on BlizzCon 2026, join us this week for a live Q&amp;A as we answer many of the community’s questions following the World of Warcraft reveals. Watch for more insight into the BlizzCon 2026 reveals and a look at what’s ahead for modern WoW and WoW Forever.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24302544",
-      "publishedAt": "2026-09-15T17:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/it/ITQ5NQ3CGKNQ1789241354276.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/xq/XQHA2LAWZ50S1789241337987.png",
       "forever": false
     },
     {
