@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-09-29T12:49:31.730Z
+Fetched: 2026-09-29T22:13:27.347Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -124,21 +124,21 @@ Forsaken & Human Figurine Decor⁵
 
 Opt-in for a chance to beta test WoW: Forever before it's released. You'll also receive news and the latest updates about the game.
 
-Carve a New Path with World of Warcraft: Forever
+Watch the World of Warcraft: Forever Podcast, Ep. 1
 
-Catch up on everything announced for World of Warcraft: Forever during BlizzCon, including a first look at the next chapter for Azeroth and the adventures waiting on the horizon.
+Join Senior Game Designer Josh “Aggrend” Greenfield, Lead Classic Designer Tim Jones, and content creators Countdown To Classic and Xaryu in the first episode of the World of Warcraft: Forever Podcast.
 
-World of Warcraft: Forever What’s Next Panel Recap
+Get to Know the World of Warcraft: Forever Legacy System
 
-For years, players have wondered what new adventures could still unfold in original Azeroth. During the What’s Next panel, Senior Game Director Ion Hazzikostas, Lead Classic Designer Tim Jones, Lead Software Engineer Nora Mills, and Associate Production Director Clay Stone shared how that dream is taking shape in World of Warcraft: Forever, from new regions and dungeons to raids, systems, the new playable Skyborne race, and the road ahead.
+Explore the Legacy System in World of Warcraft: Forever, an account-wide progression system that lets you complete challenges, earn Legacy Points, unlock character-specific perks, and collect cosmetic rewards as you adventure across Azeroth.
 
-World of Warcraft: Forever Deep Dive Panel Recap
+Choose Your Ruleset in World of Warcraft: Forever
 
-Missed the World of Warcraft: Forever Deep Dive? Associate Production Director Clay Stone, Senior Game Designer Josh Greenfield, Lead Software Engineer Ana Resendez, and Principal Game Designer Kris Zierhut shared a closer look at the systems shaping the game, including Camping, Legacy System progression, combat updates, and more.\r
+World of Warcraft: Forever is taking a new approach to where and how players begin their journey. Instead of choosing from a long list of realms, players will select a ruleset—Normal, PvP, Roleplaying, or Hardcore—that matches how they want to experience Azeroth. Each option operates as its own large ecosystem for grouping, dungeons, raids, and community, with Hardcore joining the available lineup sometime after launch.
 
-World of Warcraft: Forever Found Photos Panel Recap
+WoW: Forever Meet the New Skyborne
 
-Senior Game Designer Josh Greenfield and Lead Content Designer Evan Lee shared how original Azeroth’s forgotten corners, unfinished threads, and long-held player memories helped inspire World of Warcraft: Forever. Learn how the team is expanding the level 1–60 experience with reimagined regions, quests, characters, locations, and stories that build on original Azeroth.
+The Skyborne—also known as the shen’dorei, or hidden people—are a new playable race in World of Warcraft: Forever. Their journey begins on Zephras Isle, a level 1–12 starting experience that blends classic Warcraft aesthetics with elemental architecture and a story shaped by wind and ancestry. At character creation, you’ll choose whether your Skyborne joins the proud Horde or the noble Alliance.
 
 Pre-Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth
 
