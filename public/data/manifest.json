@@ -1,36 +1,36 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-01T22:39:31.282Z",
+  "checkedAt": "2026-10-02T05:33:56.953Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
     {
-      "id": "24276747",
-      "title": "Corruption Calls with the Abyssal Crown Collection",
-      "summary": "Don Azshara’s raiment and take wing on a Zothwing mount steeped the dark influence of the Old Gods. Something ancient summons you.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24276747",
-      "publishedAt": "2026-09-15T18:41:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/rk/RKYWGCNNKZY61776458479940.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/7t/7TL7V80YDTWI1776458696603.png",
-      "forever": false
+      "id": "24301514",
+      "title": "World of Warcraft: Forever Class Deep Dives — Priest and Warrior",
+      "summary": "Priests and Warriors are next in our World of Warcraft: Forever class deep dives, with updates that build on the roles, rhythms, and class-defining tools players know. This look covers new and adjusted baseline abilities, refreshed racial Priest spells, Rage and stance updates for Warriors, and talent changes across Discipline, Holy, Shadow, Arms, Fury, and Protection.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301514",
+      "publishedAt": "2026-09-30T21:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/0r/0RWZZTA4YM5I1790725765674.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/ca/CAFWOZ4CKY5X1790725787091.png",
+      "forever": true
     },
     {
-      "id": "24302576",
-      "title": "Tales Take a Dark Turn in Midnight’s Talebound",
-      "summary": "Step into Midnight’s Talebound, a PvE action RPG game mode where macabre stories come to life. Venture solo or with friends through eerie tales filled with enemies, bosses, puzzles, treasure, relics, and cosmetic rewards as you confront the terrors waiting beyond Quillgrave.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24302576",
-      "publishedAt": "2026-09-12T22:30:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/fr/FRL6YF1E44YZ1789246636941.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/c0/C0MIL8HNN9Z21789246620563.png",
-      "forever": false
+      "id": "24301515",
+      "title": "World of Warcraft: Forever Class Deep Dives — Hunter and Druid",
+      "summary": "Answer the call of the wild and take on nature’s many forms in World of Warcraft: Forever. We’re sharing Development Team insights on Hunter and Druid, including how these classes are evolving through talent updates, class-defining abilities, and new ways to play.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301515",
+      "publishedAt": "2026-09-30T19:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/6k/6KDPMU7O014G1790727331617.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/dr/DRJT38SFJ4WU1790727314555.png",
+      "forever": true
     },
     {
-      "id": "24298591",
-      "title": "Midnight What’s Next Panel Recap",
-      "summary": "The World of Warcraft team took to the stage at BlizzCon 2026 to reveal Talebound, share updates on the next chapter of Midnight, including content update 12.1.5 and Eclipse, and offer a look at what’s ahead for Midnight Season 3, Housing, and beyond.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24298591",
-      "publishedAt": "2026-09-12T22:24:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/qu/QUV86P79MDF51789250567177.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/ux/UX5NT9NJQFV71789250551680.png",
+      "id": "24307306",
+      "title": "Midnight’s 12.1.5 Content Update Arrives October 13",
+      "summary": "Midnight’s 12.1.5 content update brings the Labyrinth of Kindo’jan—a massive nine-chamber Delve-like challenge, a new single-boss raid, Season 2&#39;s mid-season refresh, the dramatic conclusion to the saga of Quel’Thalas and Zul’Aman, Aqir Invasions, and more.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24307306",
+      "publishedAt": "2026-09-29T17:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/81/816R15SN49MW1789683343675.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/cy/CYB26X0HCD021789683311131.png",
       "forever": false
     },
     {
