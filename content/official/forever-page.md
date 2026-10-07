@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-10-07T13:19:18.920Z
+Fetched: 2026-10-07T23:03:39.296Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -124,25 +124,25 @@ Forsaken & Human Figurine Decor⁵
 
 Opt-in for a chance to beta test WoW: Forever before it's released. You'll also receive news and the latest updates about the game.
 
-Watch the World of Warcraft: Forever Podcast, Ep. 1
+Watch Now! WoW: Forever Podcast Ep.2, Speedrunning Classes
 
-Join Senior Game Designer Josh “Aggrend” Greenfield, Lead Classic Designer Tim Jones, and content creators Countdown To Classic and Xaryu in the first episode of the World of Warcraft: Forever Podcast.
+Join Host Countdown To Classic, Senior Game Designer Josh “Aggrend” Greenfield, Principal Game Designer Kris Zierhut, and Senior Game Designer Aidan Moon, with special guest and content creator Sodapoppin.
 
-Get to Know the World of Warcraft: Forever Legacy System
+How PvP Progression in World of Warcraft: Forever Works
 
-Explore the Legacy System in World of Warcraft: Forever, an account-wide progression system that lets you complete challenges, earn Legacy Points, unlock character-specific perks, and collect cosmetic rewards as you adventure across Azeroth.
+World of Warcraft: Forever reimagines PvP (Player vs. Player) progression with an approachable system built around Honor, Rank Points, seasonal goals, and familiar original ranks. Players can earn rewards through battlegrounds, PvP quests, weekly journey tasks, and gear upgrades while working toward iconic titles such as High Warlord and Grand Marshal.
 
-Choose Your Ruleset in World of Warcraft: Forever
+Battle for the Darkspear Islands in World of Warcraft: Forever
 
-World of Warcraft: Forever is taking a new approach to where and how players begin their journey. Instead of choosing from a long list of realms, players will select a ruleset—Normal, PvP, Roleplaying, or Hardcore—that matches how they want to experience Azeroth. Each option operates as its own large ecosystem for grouping, dungeons, raids, and community, with Hardcore joining the available lineup sometime after launch.
+Stake your claim in the Darkspear Islands, a new 15v15 battleground in World of Warcraft: Forever where teams fight to control strategic points, capture the flag, and earn reputation rewards with the Darkspear Raiders or Theramore Expeditionary Force.
 
-WoW: Forever Meet the New Skyborne
+World of Warcraft: Forever Class Deep Dives — Hunter and Druid
 
-The Skyborne—also known as the shen’dorei, or hidden people—are a new playable race in World of Warcraft: Forever. Their journey begins on Zephras Isle, a level 1–12 starting experience that blends classic Warcraft aesthetics with elemental architecture and a story shaped by wind and ancestry. At character creation, you’ll choose whether your Skyborne joins the proud Horde or the noble Alliance.
+Answer the call of the wild and take on nature’s many forms in World of Warcraft: Forever. We’re sharing Development Team insights on Hunter and Druid, including how these classes are evolving through talent updates, class-defining abilities, and new ways to play.
 
-Pre-Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth
+World of Warcraft: Forever Class Deep Dives — Priest and Warrior
 
-Answer the call to a reimagined Azeroth with World of Warcraft: Forever. Pre-purchase the Skyborne Heroic Pack, Skyborne Epic Pack, or Warcraft Forever Collection on the Battle.net Shop to unlock upgrade benefits, prepare for beta, and bring a friend along with Invite-A-Friend Launch Codes when it goes live.
+Priests and Warriors are next in our World of Warcraft: Forever class deep dives, with updates that build on the roles, rhythms, and class-defining tools players know. This look covers new and adjusted baseline abilities, refreshed racial Priest spells, Rage and stance updates for Warriors, and talent changes across Discipline, Holy, Shadow, Arms, Fury, and Protection.
 
 [WoW Armory] No Data Fallback String
 
