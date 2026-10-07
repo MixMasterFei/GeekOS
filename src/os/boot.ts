@@ -26,6 +26,8 @@ const TIPS = [
   'Riverglades: frontier rivers, grasslands, trade routes, and more than 150 new quests.',
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
   'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
+  'No more picking from a list of realms. At character creation you choose a ruleset — Normal, PvP, or Roleplaying — with Hardcore joining after launch.',
+  'Talents open at level 10, with a new 16-point milestone joining the classic 11/21/31 rows. Dual Specialization unlocks at level 40.',
 ];
 const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
