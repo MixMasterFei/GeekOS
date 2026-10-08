@@ -1,26 +1,26 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-08T13:25:28.348Z",
+  "checkedAt": "2026-10-08T23:19:14.775Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
     {
-      "id": "24301514",
-      "title": "World of Warcraft: Forever Class Deep Dives — Priest and Warrior",
-      "summary": "Priests and Warriors are next in our World of Warcraft: Forever class deep dives, with updates that build on the roles, rhythms, and class-defining tools players know. This look covers new and adjusted baseline abilities, refreshed racial Priest spells, Rage and stance updates for Warriors, and talent changes across Discipline, Holy, Shadow, Arms, Fury, and Protection.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301514",
-      "publishedAt": "2026-09-30T21:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/0r/0RWZZTA4YM5I1790725765674.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/ca/CAFWOZ4CKY5X1790725787091.png",
-      "forever": true
+      "id": "24310650",
+      "title": "Owltastic Adventures Await",
+      "summary": "Take flight with Whoofle Bramblewing, a bright-eyed owl mount eager to explore hidden wonders, untrodden paths, and distant horizons.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24310650",
+      "publishedAt": "2026-10-08T18:45:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/xf/XFICGSPRI7781791309872673.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/3a/3A7Z8I8BOYP41791309850750.png",
+      "forever": false
     },
     {
-      "id": "24301515",
-      "title": "World of Warcraft: Forever Class Deep Dives — Hunter and Druid",
-      "summary": "Answer the call of the wild and take on nature’s many forms in World of Warcraft: Forever. We’re sharing Development Team insights on Hunter and Druid, including how these classes are evolving through talent updates, class-defining abilities, and new ways to play.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301515",
-      "publishedAt": "2026-09-30T19:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/6k/6KDPMU7O014G1790727331617.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/dr/DRJT38SFJ4WU1790727314555.png",
+      "id": "24302097",
+      "title": "World of Warcraft: Forever Class Deep Dives — Mage and Shaman",
+      "summary": "Our World of Warcraft: Forever class deep dive series continues with developer insights into Mages and Shaman. Learn how Mage updates expand Arcane, Fire, and Frost magic with new hybrid possibilities like Frostfire Bolt, and how Shaman changes make totems easier to manage, weapon imbues longer lasting, and Elemental Combat, Enhancement, and Restoration builds more versatile.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24302097",
+      "publishedAt": "2026-10-07T22:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/t4/T46ED5B4T7V11791309695380.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/w3/W3CHYFXZK02H1791309672171.png",
       "forever": true
     },
     {
