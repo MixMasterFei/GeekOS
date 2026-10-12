@@ -60,6 +60,15 @@ export const CODEX: CodexSection[] = [
     ],
   },
   {
+    id: 'deepdives', title: 'Class Deep Dives', icon: 'tome', blurb: 'Developer insight into talents and baseline abilities, published class by class through the beta.',
+    entries: [
+      { id: 'talentsystem', image: '/art/ui-talents.jpg', name: 'Talents & Dual Spec', sub: 'The structure behind every build', text: 'Talents open up at level 10 and keep the familiar row layout, with one-point milestone talents at 11, 21, and 31 now joined by a new 16-point milestone. Respeccing, Legacy talents included, means a visit to a class trainer in a major city, and Dual Specialization unlocks at level 40.' },
+      { id: 'deepdive-mageshaman', image: '/art/feat-systems.jpg', name: 'Deep Dive: Mage & Shaman', sub: 'Frostfire Bolt, smarter totems', text: "Mages learn Frostfire Bolt at level 40, a slow-casting Fire-and-Frost hybrid built to reward builds that invest in both schools, alongside Comprehension, a new tradeskill for reading scrolls found in the world. Shaman totems gain a tracking UI, weapon imbues now last 60 minutes instead of 5, and new Totemic Recall, Totemic Projection, and Call of the Elements/Spirits/Ancestors abilities cut down on manual totem-dropping." },
+      { id: 'deepdive-hunterdruid', image: '/art/feat-journey.jpg', name: 'Deep Dive: Hunter & Druid', sub: 'Foxes join the stable, forms get polish', text: "Hunters gain Aimed Shot as a baseline ability at level 20, traps can now be thrown mid-fight on a longer cooldown, and Foxes join the roster of tamable pet families. Druids can drink potions and use most consumables without dropping their shapeshift, and melee damage in Bear, Cat, and Dire Bear Form now scales directly off the Druid's equipped weapon." },
+      { id: 'deepdive-priestwarrior', image: '/art/feat-power.jpg', name: 'Deep Dive: Priest & Warrior', sub: 'Baseline utility, steadier Rage', text: 'Fear Ward and Devouring Plague become baseline for every Priest at level 20 regardless of race, with Divine Spirit following at 30 and Shadow Word: Death at 32; racial priest spells were reworked, with new ones added for Gnomes. Warriors see Rage income smoothed out: damage taken now generates Rage without Armor or absorption shields reducing it, critical strikes grant 75% more Rage dealt, and Tactical Mastery at level 14 lets a Warrior keep Rage when switching stances.' },
+    ],
+  },
+  {
     id: 'systems', title: 'Systems', icon: 'talents', blurb: 'Legacy, Camping, professions, honor, and quality of life.',
     entries: [
       { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits. Alt-friendly by design. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
