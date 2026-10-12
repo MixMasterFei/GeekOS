@@ -26,6 +26,9 @@ const TIPS = [
   'Riverglades: frontier rivers, grasslands, trade routes, and more than 150 new quests.',
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
   'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
+  'Forever replaces realm lists with a ruleset choice: Normal, PvP, Roleplaying, or Hardcore. Hardcore joins the lineup after launch.',
+  'Dual Specialization unlocks at level 40, letting you bank two talent builds. Swap talents, Legacy included, at a class trainer.',
+  "The Skyborne are officially also called the shen'dorei — the hidden people.",
 ];
 const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
