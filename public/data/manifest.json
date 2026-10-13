@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-13T14:08:20.827Z",
+  "checkedAt": "2026-10-13T22:42:18.563Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
+    {
+      "id": "24307306",
+      "title": "Midnight's 12.1.5 Content Update is Now Live",
+      "summary": "Midnight’s 12.1.5 content update brings the Labyrinth of Kindo’jan—a massive nine-chamber Delve-like challenge, a new single-boss raid, Season 2&#39;s mid-season refresh, the dramatic conclusion to the saga of Quel’Thalas and Zul’Aman, Aqir Invasions, and more.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24307306",
+      "publishedAt": "2026-10-13T21:51:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/81/816R15SN49MW1789683343675.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/cy/CYB26X0HCD021789683311131.png",
+      "forever": false
+    },
     {
       "id": "24310650",
       "title": "Owltastic Adventures Await",
@@ -22,16 +32,6 @@
       "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/t4/T46ED5B4T7V11791309695380.png",
       "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/w3/W3CHYFXZK02H1791309672171.png",
       "forever": true
-    },
-    {
-      "id": "24307306",
-      "title": "Midnight’s 12.1.5 Content Update Arrives October 13",
-      "summary": "Midnight’s 12.1.5 content update brings the Labyrinth of Kindo’jan—a massive nine-chamber Delve-like challenge, a new single-boss raid, Season 2&#39;s mid-season refresh, the dramatic conclusion to the saga of Quel’Thalas and Zul’Aman, Aqir Invasions, and more.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24307306",
-      "publishedAt": "2026-09-29T17:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/81/816R15SN49MW1789683343675.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/cy/CYB26X0HCD021789683311131.png",
-      "forever": false
     },
     {
       "id": "24302093",
