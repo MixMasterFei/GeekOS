@@ -26,6 +26,9 @@ const TIPS = [
   'Riverglades: frontier rivers, grasslands, trade routes, and more than 150 new quests.',
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
   'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
+  'Frostfire Bolt is a new Mage spell at level 40 that counts as both Fire and Frost damage, built for hybrid talent builds.',
+  'Shaman totems get a tracking UI and raid-wide resistance buffs, and weapon imbues now last 60 minutes instead of 5.',
+  'PvP progression runs on Honor, Rank Points, and seasonal goals, building toward classic titles like High Warlord and Grand Marshal.',
 ];
 const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
