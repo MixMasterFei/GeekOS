@@ -46,7 +46,7 @@ export const CODEX: CodexSection[] = [
     entries: [
       { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
-      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
+      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls. Wins earn reputation with either the Darkspear Raiders or the Theramore Expeditionary Force.' },
       { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
     ],
   },
@@ -57,6 +57,9 @@ export const CODEX: CodexSection[] = [
       { id: 'forsakenpal', image: '/art/forsaken-paladin.jpg', name: 'Forsaken Paladin', sub: 'New combination', faction: 'horde', text: 'The Light, undying. The reveal trailer showed a Forsaken Paladin. GeekOS lets you roll one at the character screen.' },
       { id: 'dwarfsham', image: '/art/dwarf-shaman.jpg', name: 'Dwarf Shaman', sub: 'New combination', faction: 'alliance', text: 'Stone and storm. Wildhammer traditions finally reach the Alliance roster in the Forever era.' },
       { id: 'classes', image: '/art/feat-power.jpg', name: 'Class Revamps', sub: 'Every class and specialisation', text: 'Preserve identity, add meaningful abilities, and update talents to fill gaps without erasing what makes each class unique. Rediscover a favourite or play someone entirely different.' },
+      { id: 'dive-priestwarrior', name: 'Priest & Warrior', sub: 'Class Deep Dive', text: "Priests get Fear Ward and Devouring Plague for everyone at level 20, Divine Spirit baseline at 30, and Shadow Word: Death baseline at 32, widening Discipline, Holy, and Shadow play. Warriors get a Rage overhaul — armour no longer reduces Rage gained from damage taken, and critical strikes grant 75% more Rage dealt — sharpening Arms, Fury, and Protection." },
+      { id: 'dive-hunterdruid', name: 'Hunter & Druid', sub: 'Class Deep Dive', text: "Hunters gain Foxes as a new pet family and Aimed Shot baseline at level 20, built around Beast Mastery, Marksmanship, and Survival. Druids shapeshift more freely — using potions, racials, and more objects without dropping form — with Nature's Grasp and Omen of Clarity now baseline across Balance, Feral Combat, and Restoration." },
+      { id: 'dive-magesham', name: 'Mage & Shaman', sub: 'Class Deep Dive', text: 'Mages learn Frostfire Bolt at level 40, a hybrid Fire/Frost spell built for cross-school builds, alongside a new Comprehension tradeskill for reading scrolls found in the world. Shaman totems gain a tracking UI, longer-lasting buffs and weapon imbues, and new Totemic Recall and Totemic Projection abilities, making Elemental Combat, Enhancement, and Restoration more responsive mid-fight.' },
     ],
   },
   {
@@ -69,13 +72,15 @@ export const CODEX: CodexSection[] = [
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
       { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch', text: 'Dedicated Hardcore realms are on the roadmap. One life, one story.' },
       { id: 'graphics', image: '/art/feat-expanses.jpg', name: 'Rendering Upgrades', sub: 'New lighting, water, shadows', text: 'New lighting and global illumination, volumetric particles, a new water renderer, and real-time shadows, all tuned to preserve the Classic aesthetic.' },
+      { id: 'talents', name: 'Talents & Dual Spec', sub: 'Trainers in every major city', text: 'Talents open up at level 10 and keep the original row structure, with one-point milestone talents at 11, 21, and 31 — now joined by a new 16-point milestone. Dual Specialisation unlocks at level 40, and a class trainer in any major city handles respecs, Legacy talents included.' },
+      { id: 'pvp', name: 'PvP Progression', sub: 'Honor, Rank Points, and Rank', text: 'An approachable PvP ladder built on Honor, Rank Points, and weekly journey tasks, following the game\'s original ranks. Battlegrounds, PvP quests, and gear upgrades lead toward iconic titles like High Warlord and Grand Marshal.' },
     ],
   },
   {
     id: 'editions', title: 'Editions & Dates', icon: 'calendar', blurb: 'What is included, and when things happen.',
     entries: [
       { id: 'heroic', image: '/art/heroic-comp.jpg', name: 'Skyborne Heroic Pack', sub: 'Optional upgrade', text: 'Skyborne race access, the Zephras Isle starting experience, the Cerulean Prideclaw mount, early name reservation, cosmetics, housing decor, and one Invite-A-Friend code.' },
-      { id: 'epic', image: '/art/epic-comp.jpg', name: 'Skyborne Epic Pack', sub: 'Optional upgrade', text: 'Everything in Heroic, plus beta access from September 17, 30 days of Game Time, extra cosmetics, pets, tabards, and three Invite-A-Friend codes.' },
+      { id: 'epic', image: '/art/epic-comp.jpg', name: 'Skyborne Epic Pack', sub: 'Optional upgrade', text: "Everything in Heroic, plus beta access from September 17, 30 days of Game Time, Zergling, Panda, Diablo, and Pachimari pets, Lordaeron and Shen'dorei tabards, and three Invite-A-Friend codes." },
       { id: 'collection', image: '/art/collection.jpg', name: 'Warcraft Forever Collection', sub: 'Limited time · through January 11, 2027', text: 'Everything in Epic, plus Warcraft III: Reforged, the Forsaken Kingdom campaign, and Forsaken and Human figurine housing decor. Made in celebration of BlizzCon 2026.' },
       { id: 'ce', image: '/art/ce-7.jpg', name: "Collector's Edition", sub: 'Blizzard Gear Store', text: 'A 13-inch Dwarf and Bear statue, a Zephras Isle mousepad, art prints, collectible pins, a companion journal, and the Warcraft Forever Collection code. While supplies last.' },
       { id: 'dates', image: '/art/roadmap.jpg', name: 'Key Dates', sub: 'All times Pacific', text: 'September 12: reveal. September 17: beta begins (through October 21). October 20: Invite-A-Friend codes begin arriving. October 27 – November 3: early name reservation. November 4, 3:00 PM PST: global launch. November 4–11: Invite-A-Friend access window. December 9: first raid unlock. January 11, 2027: Warcraft Forever Collection ends.' },
