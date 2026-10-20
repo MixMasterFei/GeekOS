@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-20T17:00:13.706Z",
+  "checkedAt": "2026-10-20T21:35:15.041Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
+    {
+      "id": "24303866",
+      "title": "Claim Your World of Warcraft: Forever Character Names",
+      "summary": "Get ready to make your mark in Azeroth! World of Warcraft: Forever Early Name reservations will be available from October 27 through November 3, offering an early opportunity to reserve names for up to three characters.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24303866",
+      "publishedAt": "2026-10-20T21:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/n7/N7FDT91D4FU61792517477430.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/cj/CJUNEMGJNYPJ1792458573707.png",
+      "forever": true
+    },
+    {
+      "id": "24301455",
+      "title": "Explore the New Dungeons of World of Warcraft: Forever",
+      "summary": "Explore nine new World of Warcraft: Forever dungeons across the Eastern Kingdoms and Kalimdor, with level ranges from 13 to 60. Venture beneath familiar cities, beyond sealed gates, and into long-unexplored corners of Azeroth.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301455",
+      "publishedAt": "2026-10-20T17:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/k6/K6AZH27JFURN1792014024966.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/25/250GH36KBYZ81792014008662.png",
+      "forever": true
+    },
     {
       "id": "24310656",
       "title": "Hallow’s End Brings Frights, Delights, and Haunting Rewards",
@@ -32,26 +52,6 @@
       "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/81/816R15SN49MW1789683343675.png",
       "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/cy/CYB26X0HCD021789683311131.png",
       "forever": false
-    },
-    {
-      "id": "24310650",
-      "title": "Owltastic Adventures Await",
-      "summary": "Take flight with Whoofle Bramblewing, a bright-eyed owl mount eager to explore hidden wonders, untrodden paths, and distant horizons.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24310650",
-      "publishedAt": "2026-10-08T18:45:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/xf/XFICGSPRI7781791309872673.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/3a/3A7Z8I8BOYP41791309850750.png",
-      "forever": false
-    },
-    {
-      "id": "24302093",
-      "title": "Carve a New Path with World of Warcraft: Forever",
-      "summary": "Catch up on everything announced for World of Warcraft: Forever during BlizzCon, including a first look at the next chapter for Azeroth and the adventures waiting on the horizon.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24302093",
-      "publishedAt": "2026-09-12T20:45:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/p9/P9HCAU7X9HSV1789250934116.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/yz/YZRX9YZ5KHDV1789250918244.png",
-      "forever": true
     },
     {
       "id": "24301508",
