@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-10-21T21:40:29.744Z
+Fetched: 2026-10-22T04:40:24.487Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -124,25 +124,25 @@ Forsaken & Human Figurine Decor⁵
 
 Opt-in for a chance to beta test WoW: Forever before it's released. You'll also receive news and the latest updates about the game.
 
-Watch Now! WoW: Forever Podcast Ep.2, Speedrunning Classes
+Claim Your World of Warcraft: Forever Character Names
 
-Join Host Countdown To Classic, Senior Game Designer Josh “Aggrend” Greenfield, Principal Game Designer Kris Zierhut, and Senior Game Designer Aidan Moon, with special guest and content creator Sodapoppin.
+Get ready to make your mark in Azeroth! World of Warcraft: Forever Early Name reservations will be available from October 27 through November 3, offering an early opportunity to reserve names for up to three characters.
 
-How PvP Progression in World of Warcraft: Forever Works
+Explore the New Dungeons of World of Warcraft: Forever
 
-World of Warcraft: Forever reimagines PvP (Player vs. Player) progression with an approachable system built around Honor, Rank Points, seasonal goals, and familiar original ranks. Players can earn rewards through battlegrounds, PvP quests, weekly journey tasks, and gear upgrades while working toward iconic titles such as High Warlord and Grand Marshal.
+Explore nine new World of Warcraft: Forever dungeons across the Eastern Kingdoms and Kalimdor, with level ranges from 13 to 60. Venture beneath familiar cities, beyond sealed gates, and into long-unexplored corners of Azeroth.
 
-Battle for the Darkspear Islands in World of Warcraft: Forever
+World of Warcraft: Forever Raid Overview—Locations, Raid Sizes, and Attunement
 
-Stake your claim in the Darkspear Islands, a new 15v15 battleground in World of Warcraft: Forever where teams fight to control strategic points, capture the flag, and earn reputation rewards with the Darkspear Raiders or Theramore Expeditionary Force.
+Barrow Deeps, Hyjal Summit, and Onyxia’s Lair unlock in World of Warcraft: Forever on December 9. Learn where to find each level 60 raid, how many players you’ll need, and how to earn the Drakefire Amulet required to enter Onyxia’s Lair.
 
-World of Warcraft: Forever Class Deep Dives — Hunter and Druid
+Explore PvP in Episode 4 of the WoW: Forever Podcast
 
-Answer the call of the wild and take on nature’s many forms in World of Warcraft: Forever. We’re sharing Development Team insights on Hunter and Druid, including how these classes are evolving through talent updates, class-defining abilities, and new ways to play.
+Join WoW: Forever Podcast host Countdown To Classic and special guests Savix and Tips Out as they sit down with Senior Game Designer Josh “Aggrend” Greenfield and Lead Designer Tim Jones as they dive into Player-vs-Player (PvP) in World of Warcraft: Forever.
 
-World of Warcraft: Forever Class Deep Dives — Priest and Warrior
+Unlock a Year of World of Warcraft and Get Bonus Treasures
 
-Priests and Warriors are next in our World of Warcraft: Forever class deep dives, with updates that build on the roles, rhythms, and class-defining tools players know. This look covers new and adjusted baseline abilities, refreshed racial Priest spells, Rage and stance updates for Warriors, and talent changes across Discipline, Holy, Shadow, Arms, Fury, and Protection.
+Claim a 12-Month Subscription or 365-Days Game Time and get bonus in-game cosmetic items, including several for use in World of Warcraft: Forever!
 
 [WoW Armory] No Data Fallback String
 
