@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-22T17:07:56.548Z",
+  "checkedAt": "2026-10-22T21:33:14.762Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
     {
@@ -41,16 +41,6 @@
       "publishedAt": "2026-10-15T20:12:00.000Z",
       "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/ui/UI9K0GIEGJPS1791937415682.png",
       "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/h0/H0ZKR5GEHJVG1791937369646.png",
-      "forever": false
-    },
-    {
-      "id": "24307306",
-      "title": "Midnight's 12.1.5 Content Update is Now Live",
-      "summary": "Midnight’s 12.1.5 content update brings the Labyrinth of Kindo’jan—a massive nine-chamber Delve-like challenge, a new single-boss raid, Season 2&#39;s mid-season refresh, the dramatic conclusion to the saga of Quel’Thalas and Zul’Aman, Aqir Invasions, and more.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24307306",
-      "publishedAt": "2026-10-13T21:51:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/81/816R15SN49MW1789683343675.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/cy/CYB26X0HCD021789683311131.png",
       "forever": false
     },
     {
