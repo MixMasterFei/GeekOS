@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-10-23T11:34:49.359Z
+Fetched: 2026-10-23T17:04:12.631Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -40,7 +40,9 @@ Stand with a new race of windswept elves as their once-secluded home faces an ex
 
 Start your journey into WoW: Forever with new mounts, a new Warcraft III campaign, and more with this limited time package made in celebration of BlizzCon 2026.
 
-Explore a new Azeroth as soon as possible with WoW: Forever Beta Access alongside 30-days of game time to play at launch.
+Early Name Reservation & Game Time
+
+Explore a new Azeroth as soon as possible with WoW: Forever Early Name Reservation alongside 30-days of game time to play at launch.
 
 Warcraft III Reforged: Forsaken Kingdom
 
@@ -88,8 +90,6 @@ Veteran Adventurer's Rucksack Back Transmog*
 
 WoW: Forever Early Name Reservation¹
 
-[WoW][Forever] WoW: Forever Beta Access²
-
 [WoW][Forever] Veteran Adventurer's Loyal Companion Ground Mount*
 
 Veteran Adventurer's Loyal Companion Ground Mount*
@@ -104,25 +104,19 @@ Zergling, Panda, Diablo, Pachimari Pets**
 
 [WoW][Forever] Lordaeron & Shen’dorei Tabards**
 
-[WoW][Forever] 30 Days of WoW Game Time⁴
+[WoW][Forever] 30 Days of WoW Game Time³
 
-[WoW][Forever] Warcraft III Reforged: Forsaken Kingdom⁶
+[WoW][Forever] Warcraft III Reforged: Forsaken Kingdom⁵
 
-Warcraft III Reforged: Forsaken Kingdom⁶
+Warcraft III Reforged: Forsaken Kingdom⁵
 
-[WoW][Forever] Forsaken & Human Figurine Decor⁵
+[WoW][Forever] Forsaken & Human Figurine Decor⁴
 
-Forsaken & Human Figurine Decor⁵
+Forsaken & Human Figurine Decor⁴
 
 [WoW][Forever] # Reference - 3
 
 [WoW][Forever] # Reference - 1
-
-[WoW][Forever] Beta Opt-In - Heading
-
-[WoW][Forever] Beta Opt-In - Description
-
-Opt-in for a chance to beta test WoW: Forever before it's released. You'll also receive news and the latest updates about the game.
 
 Claim Your World of Warcraft: Forever Character Names
 

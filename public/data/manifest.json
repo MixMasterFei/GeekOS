@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-23T11:34:49.356Z",
+  "checkedAt": "2026-10-23T17:04:12.628Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
     {
@@ -56,7 +56,7 @@
   ],
   "forever": {
     "launchLine": "World of Warcraft: Forever launches on November 4, 2026.",
-    "betaLine": "Forever Beta begins on September 17, 2026, and is available through October 21, 2026.",
+    "betaLine": null,
     "namesLine": "Early Name Reservation will be available starting October 27 through November 3.",
     "collectionLine": "Warcraft Forever Collection will be available through January 11, 2027.",
     "heroLine": "World of Warcraft: Forever is coming November 4!"
