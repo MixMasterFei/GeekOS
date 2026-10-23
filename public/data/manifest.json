@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-22T21:33:14.762Z",
+  "checkedAt": "2026-10-23T04:45:36.747Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
+    {
+      "id": "24310652",
+      "title": "BCCA: The Gods of Zul'Aman Now Live",
+      "summary": "Journey into the eerie Ghostlands, just south of the once-beautiful elven kingdom of Quel&#39;Thalas, and brave the Amani stronghold of Zul&#39;Aman.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24310652",
+      "publishedAt": "2026-10-22T22:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/fc/FC1I75KX91TN1791323351595.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/5d/5DUOT6XLIF771791323325719.png",
+      "forever": false
+    },
     {
       "id": "24303866",
       "title": "Claim Your World of Warcraft: Forever Character Names",
@@ -22,16 +32,6 @@
       "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/k6/K6AZH27JFURN1792014024966.png",
       "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/25/250GH36KBYZ81792014008662.png",
       "forever": true
-    },
-    {
-      "id": "24310656",
-      "title": "Hallow’s End Brings Frights, Delights, and Haunting Rewards",
-      "summary": "Hallow’s End celebrates the Forsaken&#39;s break from the Scourge. Fun and mischief reign as the Innkeepers of Azeroth dole out treats and tricks to those who partake in the festivities.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24310656",
-      "publishedAt": "2026-10-19T17:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/ax/AXLEIXDSCTVG1760483163616.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/sj/SJ9M6WYWEIQJ1760483144023.png",
-      "forever": false
     },
     {
       "id": "24310658",
