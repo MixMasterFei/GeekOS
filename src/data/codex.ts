@@ -46,7 +46,7 @@ export const CODEX: CodexSection[] = [
     entries: [
       { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
-      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
+      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls. Winning fights earns reputation with the Darkspear Raiders or the Theramore Expeditionary Force.' },
       { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
     ],
   },
@@ -57,6 +57,9 @@ export const CODEX: CodexSection[] = [
       { id: 'forsakenpal', image: '/art/forsaken-paladin.jpg', name: 'Forsaken Paladin', sub: 'New combination', faction: 'horde', text: 'The Light, undying. The reveal trailer showed a Forsaken Paladin. GeekOS lets you roll one at the character screen.' },
       { id: 'dwarfsham', image: '/art/dwarf-shaman.jpg', name: 'Dwarf Shaman', sub: 'New combination', faction: 'alliance', text: 'Stone and storm. Wildhammer traditions finally reach the Alliance roster in the Forever era.' },
       { id: 'classes', image: '/art/feat-power.jpg', name: 'Class Revamps', sub: 'Every class and specialisation', text: 'Preserve identity, add meaningful abilities, and update talents to fill gaps without erasing what makes each class unique. Rediscover a favourite or play someone entirely different.' },
+      { id: 'deepdive-priestwarrior', name: 'Priest & Warrior Deep Dive', sub: 'Class deep dive · Sept 30', text: 'Shadow Word: Death becomes a baseline Priest ability at level 32, a high-risk Shadow nuke that punishes a Priest who fails to finish the kill. Warriors get relief on the front line: Rage gained from taking damage no longer shrinks for wearing Armor or for absorption effects like Power Word: Shield.' },
+      { id: 'deepdive-hunterdruid', name: 'Hunter & Druid Deep Dive', sub: 'Class deep dive · Sept 30', text: "Foxes join the Hunter's stable as a new pet family, bringing the dodge-and-haste ability Trickster's Dance. Druids gain Revive, a new out-of-combat resurrection spell learned at level 12, and can finally drink, eat, and open doors without breaking a shapeshift." },
+      { id: 'deepdive-mageshaman', name: 'Mage & Shaman Deep Dive', sub: 'Class deep dive · Oct 7', text: "Mages learn Frostfire Bolt at level 40, a hybrid Fire-and-Frost spell built to reward builds that invest in both schools. Shaman totems get easier to command: Totemic Projection teleports every active totem to a new spot, Totemic Recall dismisses them all at once, and weapon imbues now last 60 minutes instead of 5." },
     ],
   },
   {
@@ -68,6 +71,7 @@ export const CODEX: CodexSection[] = [
       { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set.' },
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
       { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch', text: 'Dedicated Hardcore realms are on the roadmap. One life, one story.' },
+      { id: 'honor', image: '/art/feat-power.jpg', name: 'Honor & PvP Ranks', sub: 'Original ranks, modern pacing', text: 'PvP progression is built around Honor, Rank Points, and seasonal goals, with battlegrounds, PvP quests, and weekly journey tasks all feeding toward the original rank ladder and its iconic titles, High Warlord and Grand Marshal among them.' },
       { id: 'graphics', image: '/art/feat-expanses.jpg', name: 'Rendering Upgrades', sub: 'New lighting, water, shadows', text: 'New lighting and global illumination, volumetric particles, a new water renderer, and real-time shadows, all tuned to preserve the Classic aesthetic.' },
     ],
   },
