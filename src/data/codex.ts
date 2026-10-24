@@ -15,6 +15,7 @@ export const CODEX: CodexSection[] = [
       { id: 'when', image: '/art/tirisfal-fog.jpg', name: 'Where in the Timeline', sub: 'After Forsaken Kingdom, before Molten Core', text: 'Forever is set after the events of Warcraft III Reforged: Forsaken Kingdom and before the opening of Molten Core. Old threats are still fresh; new ones stalk the edges of familiar zones.' },
       { id: 'quote', image: '/art/cinematic.jpg', name: '"Not a mode, not a season"', sub: 'The team\'s own words', text: 'Blizzard framed Forever as a promise rather than a product line: not a mode, a season, or another version of Classic, but a commitment to keep building this version of the world with the community, through regular content updates for years.' },
       { id: 'team', image: '/art/news-carve-1.jpg', name: 'The People', sub: 'Named at the reveal', text: 'Senior Game Director Ion Hazzikostas, Lead Classic Designer Tim Jones, Lead Software Engineer Nora Mills, and Associate Production Director Clay Stone presented the reveal and the What\'s Next panel at BlizzCon 2026.' },
+      { id: 'podcast', name: 'The Forever Podcast', sub: 'Episode 1', text: 'Blizzard launched an official companion podcast for Forever. Senior Game Designer Josh "Aggrend" Greenfield joined Lead Classic Designer Tim Jones for the first episode, alongside community creators Countdown to Classic and Xaryu.' },
     ],
   },
   {
