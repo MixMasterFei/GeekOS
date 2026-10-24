@@ -46,7 +46,7 @@ export const CODEX: CodexSection[] = [
     entries: [
       { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
-      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
+      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls. Wins earn reputation with the Darkspear Raiders or the Theramore Expeditionary Force, depending on which side you fight for.' },
       { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
     ],
   },
@@ -57,6 +57,7 @@ export const CODEX: CodexSection[] = [
       { id: 'forsakenpal', image: '/art/forsaken-paladin.jpg', name: 'Forsaken Paladin', sub: 'New combination', faction: 'horde', text: 'The Light, undying. The reveal trailer showed a Forsaken Paladin. GeekOS lets you roll one at the character screen.' },
       { id: 'dwarfsham', image: '/art/dwarf-shaman.jpg', name: 'Dwarf Shaman', sub: 'New combination', faction: 'alliance', text: 'Stone and storm. Wildhammer traditions finally reach the Alliance roster in the Forever era.' },
       { id: 'classes', image: '/art/feat-power.jpg', name: 'Class Revamps', sub: 'Every class and specialisation', text: 'Preserve identity, add meaningful abilities, and update talents to fill gaps without erasing what makes each class unique. Rediscover a favourite or play someone entirely different.' },
+      { id: 'deepdives', name: 'Class Deep Dives', sub: 'Mage & Shaman, Priest & Warrior, Hunter & Druid', text: "Blizzard's class deep dive series has covered six classes so far: Mage and Shaman, Priest and Warrior, and Hunter and Druid. Talent trees open at level 10 and keep the familiar milestone structure, with one-point talents at 11, 21, and 31 points joined by a new 16-point milestone. Dual Specialisation becomes available at level 40, letting any class keep two talent builds on hand." },
     ],
   },
   {
@@ -69,6 +70,7 @@ export const CODEX: CodexSection[] = [
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
       { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch', text: 'Dedicated Hardcore realms are on the roadmap. One life, one story.' },
       { id: 'graphics', image: '/art/feat-expanses.jpg', name: 'Rendering Upgrades', sub: 'New lighting, water, shadows', text: 'New lighting and global illumination, volumetric particles, a new water renderer, and real-time shadows, all tuned to preserve the Classic aesthetic.' },
+      { id: 'pvp', name: 'Honor & PvP Progression', sub: 'Built on the original ranks', text: 'PvP progression is approachable and built around Honor, Rank Points, seasonal goals, and the familiar original ranks. Battlegrounds, PvP quests, weekly journey tasks, and gear upgrades all feed toward it, with iconic titles such as High Warlord and Grand Marshal waiting at the top.' },
     ],
   },
   {
