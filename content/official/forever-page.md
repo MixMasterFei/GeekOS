@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-10-28T12:50:12.499Z
+Fetched: 2026-10-28T22:32:54.453Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -122,17 +122,17 @@ Claim Your World of Warcraft: Forever Character Names
 
 Get ready to make your mark in Azeroth! World of Warcraft: Forever Early Name reservations will be available from October 27 through November 3, offering an early opportunity to reserve names for up to three characters.
 
+Dive into the End of Beta Special!
+
+Join WoW: Forever Podcast host Countdown To Classic and special guest Meeix as they sit down with Senior Game Designer Josh “Aggrend” Greenfield, Associate Production Director Clay Stone, Lead Software Engineer Ana Resendez, and Lead Encounter Designer Michael Nuthals for a special episode.
+
+Your Next Adventure in WoW: Forever Starts in the WoW Portal Room
+
+Whether you’re new to Azeroth, returning after a break, or have made World of Warcraft part of your life for years, the WoW Portal Room is a welcoming Discord server where you can meet fellow adventurers and find your next community.
+
 Explore the New Dungeons of World of Warcraft: Forever
 
 Explore nine new World of Warcraft: Forever dungeons across the Eastern Kingdoms and Kalimdor, with level ranges from 13 to 60. Venture beneath familiar cities, beyond sealed gates, and into long-unexplored corners of Azeroth.
-
-World of Warcraft: Forever Raid Overview—Locations, Raid Sizes, and Attunement
-
-Barrow Deeps, Hyjal Summit, and Onyxia’s Lair unlock in World of Warcraft: Forever on December 9. Learn where to find each level 60 raid, how many players you’ll need, and how to earn the Drakefire Amulet required to enter Onyxia’s Lair.
-
-Explore PvP in Episode 4 of the WoW: Forever Podcast
-
-Join WoW: Forever Podcast host Countdown To Classic and special guests Savix and Tips Out as they sit down with Senior Game Designer Josh “Aggrend” Greenfield and Lead Designer Tim Jones as they dive into Player-vs-Player (PvP) in World of Warcraft: Forever.
 
 Unlock a Year of World of Warcraft and Get Bonus Treasures
 
