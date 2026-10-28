@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-10-27T22:10:44.057Z
+Fetched: 2026-10-28T05:38:16.251Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -62,13 +62,13 @@ Start your journey into an Azeroth reborn with new mounts, a Warcraft III campai
 
 [WoW][Forever] Skyborne Epic Pack Image
 
-[WoW][Forever] ROW Skyborne Epic Pre-Purchase CTA
+[WoW][Forever] ROW Skyborne Epic Buy Now CTA
 
 [WoW][Forever] ROW Skyborne Epic Pre-Purchase URL
 
 [WoW][Forever] Warcraft Forever Collection Image
 
-[WoW][Forever] ROW Forever Collection Pre-Purchase CTA
+[WoW][Forever] ROW Forever Collection Buy Now CTA
 
 [WoW][Forever] ROW Forever Collection Pre-Purchase URL
 
@@ -110,9 +110,9 @@ Zergling, Panda, Diablo, Pachimari Pets**
 
 Warcraft III Reforged: Forsaken Kingdom⁵
 
-[WoW][Forever] Forsaken & Human Figurine Decor⁴
+[WoW][Forever] Forsaken & Human Figurine Decor⁵
 
-Forsaken & Human Figurine Decor⁴
+Forsaken & Human Figurine Decor⁵
 
 [WoW][Forever] # Reference - 3
 
