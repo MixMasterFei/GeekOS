@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-10-30T22:15:56.817Z
+Fetched: 2026-10-31T05:36:25.685Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -8,7 +8,7 @@ Included with an Active WoW Subscription
 
 Azeroth, an untamed frontier begging to be explored. Step into World of Warcraft: Forever and quest through an iconic world reimagined with new and expanded zones, new gameplay enhancements, upgraded graphics, and more.
 
-World of Warcraft: Forever is coming November 4!
+World of Warcraft: Forever is coming November 4 PT!
 
 WoW: Forever is an invitation to take your first steps in a legendary world of untamed frontiers, warring factions, untold perils, and unseen mysteries. Experience an Azeroth that grows from the roots of WoW’s first age, continually evolving through regular content patches and updates that promise never-ending adventure.
 
