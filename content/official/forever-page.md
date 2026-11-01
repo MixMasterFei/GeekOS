@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-11-01T13:18:02.729Z
+Fetched: 2026-11-01T21:59:35.706Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
