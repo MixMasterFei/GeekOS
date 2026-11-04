@@ -26,6 +26,10 @@ const TIPS = [
   'Riverglades: frontier rivers, grasslands, trade routes, and more than 150 new quests.',
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
   'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
+  'PvP progression runs on Honor and Rank Points, building toward titles like High Warlord and Grand Marshal.',
+  'Talents open at level 10, with milestone talents at 11, 21, 31, and a new 16-point row. Dual Specialization unlocks at 40.',
+  'Shaman totems get a tracking UI in Forever. Right-click a totem there to unsummon it on the spot.',
+  'Hunters welcome Foxes as a new pet family. Mages learn the hybrid Frostfire Bolt at level 40.',
 ];
 const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
