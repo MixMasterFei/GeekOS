@@ -26,6 +26,8 @@ const TIPS = [
   'Riverglades: frontier rivers, grasslands, trade routes, and more than 150 new quests.',
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
   'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
+  'Talent trees open at level 10, with milestone talents at 11, 21, 31, and a new 16-point row. Dual Specialization arrives at level 40.',
+  'Honor, Rank Points, and seasonal goals drive PvP progression, with titles like High Warlord and Grand Marshal to chase.',
 ];
 const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
