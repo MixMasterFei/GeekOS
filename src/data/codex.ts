@@ -1,6 +1,7 @@
 /**
  * Forever Codex data — compiled from Blizzard's public announcements
- * (Sept 12–13, 2026: reveal post, What's Next panel recap, official Forever page).
+ * (Sept 12–13, 2026 reveal and What's Next panel recap, the official Forever
+ * page, and the Oct 29, 2026 global-launch article).
  * Text is original prose summarising public facts; nothing is copied verbatim.
  */
 export interface CodexEntry { id: string; name: string; sub?: string; text: string; tags?: string[]; level?: string; icon?: string; faction?: 'horde' | 'alliance' | 'neutral'; image?: string; }
@@ -47,13 +48,13 @@ export const CODEX: CodexSection[] = [
       { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
       { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
-      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
+      { id: 'onyxia', image: '/art/darkspear-pirates.jpg', name: "Onyxia's Lair", sub: 'Returning raid · opens December 9', text: "The previously-unannounced iconic raid is confirmed: Onyxia's Lair returns, entered for the first time alongside Hyjal Summit and Barrow Deeps when all three raids open to level 60 players on December 9." },
     ],
   },
   {
     id: 'races', title: 'Races & Classes', icon: 'skyborne', blurb: 'One new race, two new combinations, and revamps to every class.',
     entries: [
-      { id: 'skyborne', image: '/art/skyborne.jpg', name: 'The Skyborne', sub: 'New neutral elven race', faction: 'neutral', text: 'Windswept elves, High Elf exiles, whose secluded home faces an existential threat. Horde-aligned Skyborne follow the Windshaper path with Shaman and elemental traditions; Alliance-aligned Skyborne follow the High Order with Mage and arcane legacy. Both may be Warrior, Hunter, Rogue, or Druid, with exclusive Skyborne druid forms, racials, customisations, voices, and dances. Requires the Skyborne Heroic Pack or higher.' },
+      { id: 'skyborne', image: '/art/skyborne.jpg', name: 'The Skyborne', sub: 'New neutral elven race', faction: 'neutral', text: "Windswept elves, also known as the shen'dorei or hidden people, whose secluded home faces an existential threat. At character creation a Skyborne joins the Horde as a Windshaper, who can become a Shaman, or the Alliance as High Order, who can become a Mage. Requires the Skyborne Heroic Pack or higher." },
       { id: 'forsakenpal', image: '/art/forsaken-paladin.jpg', name: 'Forsaken Paladin', sub: 'New combination', faction: 'horde', text: 'The Light, undying. The reveal trailer showed a Forsaken Paladin. GeekOS lets you roll one at the character screen.' },
       { id: 'dwarfsham', image: '/art/dwarf-shaman.jpg', name: 'Dwarf Shaman', sub: 'New combination', faction: 'alliance', text: 'Stone and storm. Wildhammer traditions finally reach the Alliance roster in the Forever era.' },
       { id: 'classes', image: '/art/feat-power.jpg', name: 'Class Revamps', sub: 'Every class and specialisation', text: 'Preserve identity, add meaningful abilities, and update talents to fill gaps without erasing what makes each class unique. Rediscover a favourite or play someone entirely different.' },
@@ -67,7 +68,10 @@ export const CODEX: CodexSection[] = [
       { id: 'transmog', image: '/art/feat-paths.jpg', name: 'Opt-in Transmog', sub: 'Quality of life', text: 'Transmogrification is available and optional. Modern and Classic visual presets let each player choose how the world looks.' },
       { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set.' },
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
-      { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch', text: 'Dedicated Hardcore realms are on the roadmap. One life, one story.' },
+      { id: 'ruleset', image: '/art/roadmap.jpg', name: 'Choose Your Ruleset', sub: 'Realmless by design', text: 'Forever drops traditional realm selection for a Ruleset chosen at login: Normal, PvP, Roleplay, or Roleplay PvP, each a broad player ecosystem rather than a single server. A Hardcore ruleset, with lasting consequences for death, arrives sometime after launch.' },
+      { id: 'twoname', image: '/art/ui-legacy.jpg', name: 'Two-Name Characters', sub: 'Built for a realmless Azeroth', text: 'Instead of one name tied to a single realm, every character gets two names. Together they form a full name unique within your region, so there is more room to find the name you actually want.' },
+      { id: 'preset', image: '/art/dwarf-hd.jpg', name: 'Experience Preset', sub: 'Classic or Enhanced', text: 'On first login you choose a preset before picking a Ruleset: Classic starts with SD models, no quest POIs, and the Classic screen layout; Enhanced starts with HD models, quest POIs, and a centralised UI. It only sets starting defaults — everything can be changed later in Options.' },
+      { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch ruleset', text: 'A Hardcore ruleset, where death carries lasting consequences, becomes available sometime after launch. One life, one story.' },
       { id: 'graphics', image: '/art/feat-expanses.jpg', name: 'Rendering Upgrades', sub: 'New lighting, water, shadows', text: 'New lighting and global illumination, volumetric particles, a new water renderer, and real-time shadows, all tuned to preserve the Classic aesthetic.' },
     ],
   },
