@@ -26,6 +26,9 @@ const TIPS = [
   'Riverglades: frontier rivers, grasslands, trade routes, and more than 150 new quests.',
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
   'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
+  'Class deep dives are rolling out: Priests get a baseline Shadow Word: Death at level 32, and Warriors keep Rage through stance changes from level 14.',
+  'Hunters gain a baseline Aimed Shot at level 20 and a new Fox pet family. Druids get a level 12 out-of-combat resurrection spell, Revive.',
+  'No more realm lists. Forever has you pick a ruleset instead: Normal, PvP, Roleplaying, or Hardcore (joining after launch).',
 ];
 const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
