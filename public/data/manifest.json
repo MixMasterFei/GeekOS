@@ -1,36 +1,16 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-04T14:34:08.608Z",
+  "checkedAt": "2026-11-04T23:38:39.065Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
     {
       "id": "24315820",
-      "title": "World of Warcraft: Forever Goes Live Globally November 4!",
-      "summary": "Begin your first adventure or return to a new and reimagined Azeroth in World of Warcraft: Forever, launching worldwide November 4 at 3:00 pm PST. Adventure to level 60 across the original continents, discover new stories, and meet fellow adventurers in a permanent home alongside modern and Classic WoW where community comes first and the journey matters as much as the destination.",
+      "title": "World of Warcraft: Forever Now Live!",
+      "summary": "Begin your first adventure or return to a new and reimagined Azeroth in World of Warcraft: Forever, now live worldwide. Adventure to level 60 across the original continents, discover new stories, and meet fellow adventurers in a permanent home alongside modern and Classic WoW where community comes first and the journey matters as much as the destination.",
       "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315820",
-      "publishedAt": "2026-11-03T17:12:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/p9/P9HCAU7X9HSV1789250934116.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/yz/YZRX9YZ5KHDV1789250918244.png",
-      "forever": true
-    },
-    {
-      "id": "24310652",
-      "title": "BCCA: The Gods of Zul'Aman Now Live",
-      "summary": "Journey into the eerie Ghostlands, just south of the once-beautiful elven kingdom of Quel&#39;Thalas, and brave the Amani stronghold of Zul&#39;Aman.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24310652",
-      "publishedAt": "2026-10-22T22:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/fc/FC1I75KX91TN1791323351595.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/5d/5DUOT6XLIF771791323325719.png",
-      "forever": false
-    },
-    {
-      "id": "24303866",
-      "title": "Claim Your World of Warcraft: Forever Character Names",
-      "summary": "Get ready to make your mark in Azeroth! World of Warcraft: Forever Early Name reservations will be available from October 27 through November 3, offering an early opportunity to reserve names for up to three characters.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24303866",
-      "publishedAt": "2026-10-20T21:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/n7/N7FDT91D4FU61792517477430.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/cj/CJUNEMGJNYPJ1792458573707.png",
+      "publishedAt": "2026-11-04T23:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/bx/BXPRPCQR5J551793833689036.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/ex/EXQZ05ZDZ6JV1793833668975.png",
       "forever": true
     },
     {
@@ -45,8 +25,8 @@
     },
     {
       "id": "24301508",
-      "title": "Pre-Purchase World of Warcraft: Forever Upgrades",
-      "summary": "Answer the call to a reimagined Azeroth with World of Warcraft: Forever. Pre-purchase the Skyborne Heroic Pack, Skyborne Epic Pack, or Warcraft Forever Collection on the Battle.net Shop to unlock upgrade benefits, prepare for beta, and bring a friend along with Invite-A-Friend Launch Codes when it goes live.",
+      "title": "Purchase World of Warcraft: Forever Upgrades",
+      "summary": "Answer the call to a reimagined Azeroth with World of Warcraft: Forever. Prurchase the Skyborne Heroic Pack, Skyborne Epic Pack, or Warcraft Forever Collection on the Battle.net Shop to unlock upgrade benefits, prepare for beta, and bring a friend along with Invite-A-Friend Launch Codes when it goes live.",
       "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301508",
       "publishedAt": "2026-09-12T20:17:00.000Z",
       "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/4f/4FC5K327AVF01789243118942.png",
@@ -55,11 +35,11 @@
     }
   ],
   "forever": {
-    "launchLine": "World of Warcraft: Forever launches on November 4, 2026.",
+    "launchLine": null,
     "betaLine": null,
-    "namesLine": "Early Name Reservation will be available starting October 27 through November 3.",
+    "namesLine": null,
     "collectionLine": "Warcraft Forever Collection will be available through January 11, 2027.",
-    "heroLine": "World of Warcraft: Forever is coming November 4 PT!"
+    "heroLine": null
   },
   "events": [
     {

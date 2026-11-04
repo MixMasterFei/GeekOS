@@ -1,14 +1,12 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-11-04T14:34:08.611Z
+Fetched: 2026-11-04T23:38:39.068Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
 Included with an Active WoW Subscription
 
 Azeroth, an untamed frontier begging to be explored. Step into World of Warcraft: Forever and quest through an iconic world reimagined with new and expanded zones, new gameplay enhancements, upgraded graphics, and more.
-
-World of Warcraft: Forever is coming November 4 PT!
 
 WoW: Forever is an invitation to take your first steps in a legendary world of untamed frontiers, warring factions, untold perils, and unseen mysteries. Experience an Azeroth that grows from the roots of WoW’s first age, continually evolving through regular content patches and updates that promise never-ending adventure.
 
@@ -40,10 +38,6 @@ Stand with a new race of windswept elves as their once-secluded home faces an ex
 
 Start your journey into WoW: Forever with new mounts, a new Warcraft III campaign, and more with this limited time package made in celebration of BlizzCon 2026.
 
-Early Name Reservation & Game Time
-
-Explore a new Azeroth as soon as possible with WoW: Forever Early Name Reservation alongside 30-days of game time to play at launch.
-
 Warcraft III Reforged: Forsaken Kingdom
 
 Get access to Warcraft III Reforged: Forsaken Kingdom's new prologue and main story campaign along with a copy of Warcraft III: Reforged.
@@ -56,21 +50,21 @@ Start your journey into an Azeroth reborn with new mounts, a Warcraft III campai
 
 [WoW][Forever] Skyborne Heroic Pack Image
 
-[WoW][Forever] ROW Skyborne Heroic Pre-Purchase CTA
+[WoW][Forever] ROW Skyborne Heroic Buy Now CTA
 
-[WoW][Forever] ROW Skyborne Heroic Pre-Purchase URL
+[WoW][Forever] ROW Skyborne Heroic Buy Now URL
 
 [WoW][Forever] Skyborne Epic Pack Image
 
 [WoW][Forever] ROW Skyborne Epic Buy Now CTA
 
-[WoW][Forever] ROW Skyborne Epic Pre-Purchase URL
+[WoW][Forever] ROW Skyborne Epic Buy Now URL
 
 [WoW][Forever] Warcraft Forever Collection Image
 
 [WoW][Forever] ROW Forever Collection Buy Now CTA
 
-[WoW][Forever] ROW Forever Collection Pre-Purchase URL
+[WoW][Forever] ROW Forever Collection Buy Now URL
 
 [WoW][Forever] Skyborne Race + Zephras Isle Starting Experience¹
 
@@ -104,11 +98,11 @@ Zergling, Panda, Diablo, Pachimari Pets**
 
 [WoW][Forever] Lordaeron & Shen’dorei Tabards**
 
-[WoW][Forever] 30 Days of WoW Game Time³
+[WoW][Forever] 30 Days of WoW Game Time⁴
 
-[WoW][Forever] Warcraft III Reforged: Forsaken Kingdom⁵
+[WoW][Forever] Warcraft III Reforged: Forsaken Kingdom⁶
 
-Warcraft III Reforged: Forsaken Kingdom⁵
+Warcraft III Reforged: Forsaken Kingdom⁶
 
 [WoW][Forever] Forsaken & Human Figurine Decor⁵
 
@@ -118,21 +112,21 @@ Forsaken & Human Figurine Decor⁵
 
 [WoW][Forever] # Reference - 1
 
-Claim Your World of Warcraft: Forever Character Names
+World of Warcraft: Forever Now Live!
 
-Get ready to make your mark in Azeroth! World of Warcraft: Forever Early Name reservations will be available from October 27 through November 3, offering an early opportunity to reserve names for up to three characters.
+Begin your first adventure or return to a new and reimagined Azeroth in World of Warcraft: Forever, now live worldwide. Adventure to level 60 across the original continents, discover new stories, and meet fellow adventurers in a permanent home alongside modern and Classic WoW where community comes first and the journey matters as much as the destination.
 
-Dive into the End of Beta Special!
+New Player’s Starter Guide: Welcome to World of Warcraft: Forever
 
-Join WoW: Forever Podcast host Countdown To Classic and special guest Meeix as they sit down with Senior Game Designer Josh “Aggrend” Greenfield, Associate Production Director Clay Stone, Lead Software Engineer Ana Resendez, and Lead Encounter Designer Michael Nuthals for a special episode.
+World of Warcraft: Forever invites players into a reimagined original Azeroth where exploration, community, and the journey itself take center stage. Begin at level one, shape a character of your own, and learn the essentials for finding your place in a world designed to unfold for years to come.
 
-Your Next Adventure in WoW: Forever Starts in the WoW Portal Room
+Return to Azeroth in World of Warcraft: Forever
 
-Whether you’re new to Azeroth, returning after a break, or have made World of Warcraft part of your life for years, the WoW Portal Room is a welcoming Discord server where you can meet fellow adventurers and find your next community.
+Welcome back to Azeroth. Whether it has been a few years, or many— familiar roads, old friends, and new adventures are waiting for you in World of Warcraft: Forever. To help you get your feet on the ground and begin your adventures in Azeroth once more, we’ve put together some information you may need to return to your hero’s journey.
 
-Explore the New Dungeons of World of Warcraft: Forever
+WoW: Forever—What’s New and What Feels Familiar
 
-Explore nine new World of Warcraft: Forever dungeons across the Eastern Kingdoms and Kalimdor, with level ranges from 13 to 60. Venture beneath familiar cities, beyond sealed gates, and into long-unexplored corners of Azeroth.
+World of Warcraft: Forever has something for explorers, dungeon groups, collectors, roleplayers, and PvP fans alike. See how its interface conveniences, class updates, and progression systems complement a distinct take on original WoW—and what to expect if you also play the modern game.
 
 Unlock a Year of World of Warcraft and Get Bonus Treasures
 
