@@ -46,7 +46,7 @@ export const CODEX: CodexSection[] = [
     entries: [
       { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
-      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
+      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls. Victories earn reputation with the Darkspear Raiders or the Theramore Expeditionary Force.' },
       { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
     ],
   },
@@ -57,6 +57,9 @@ export const CODEX: CodexSection[] = [
       { id: 'forsakenpal', image: '/art/forsaken-paladin.jpg', name: 'Forsaken Paladin', sub: 'New combination', faction: 'horde', text: 'The Light, undying. The reveal trailer showed a Forsaken Paladin. GeekOS lets you roll one at the character screen.' },
       { id: 'dwarfsham', image: '/art/dwarf-shaman.jpg', name: 'Dwarf Shaman', sub: 'New combination', faction: 'alliance', text: 'Stone and storm. Wildhammer traditions finally reach the Alliance roster in the Forever era.' },
       { id: 'classes', image: '/art/feat-power.jpg', name: 'Class Revamps', sub: 'Every class and specialisation', text: 'Preserve identity, add meaningful abilities, and update talents to fill gaps without erasing what makes each class unique. Rediscover a favourite or play someone entirely different.' },
+      { id: 'priestwarrior', name: 'Deep Dive: Priest & Warrior', sub: 'Class update philosophy', text: 'Priests gain universal access to Fear Ward, Devouring Plague, Divine Spirit, and a baseline Shadow Word: Death as they level, plus a new channelled Penance talent that can heal allies or harm enemies. Warriors get a reworked Rage economy — armour no longer blunts the Rage gained from incoming hits, and dealing damage grants Rage scaled by weapon speed with a bonus on critical strikes — alongside a new Victory Rush execute and a Weaponmaster talent that folds every weapon specialisation into one choice.' },
+      { id: 'hunterdruid', name: 'Deep Dive: Hunter & Druid', sub: 'Class update philosophy', text: "Hunters gain a baseline Aimed Shot at level 20, traps they can trigger mid-fight, a new Fox pet family, and pets that scale off their owner's gear with one signature ability per family. Druids can now drink potions, use weapon enchants, and open doors without dropping out of Bear, Cat, or Dire Bear form; Nature's Grasp and Omen of Clarity become baseline, a new Lacerate bleed joins the Feral toolkit, and Revive gives Druids an out-of-combat resurrection at level 12." },
+      { id: 'mageshaman', name: 'Deep Dive: Mage & Shaman', sub: 'Class update philosophy', text: "Mages learn a new hybrid Frostfire Bolt at level 40 that draws on whichever of Fire or Frost is stronger, plus a Comprehension tradeskill for deciphering scrolls found in the world; Arcane Blast is redesigned to empower the Mage's other spells rather than reward spamming itself. Shaman totems get a faster global cooldown, buff totems that last five minutes instead of two, weapon imbues that last an hour, a totem-tracking UI, and new Call of the Elements, Spirits, and Ancestors abilities to drop a whole pre-programmed totem set at once." },
     ],
   },
   {
@@ -69,6 +72,7 @@ export const CODEX: CodexSection[] = [
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
       { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch', text: 'Dedicated Hardcore realms are on the roadmap. One life, one story.' },
       { id: 'graphics', image: '/art/feat-expanses.jpg', name: 'Rendering Upgrades', sub: 'New lighting, water, shadows', text: 'New lighting and global illumination, volumetric particles, a new water renderer, and real-time shadows, all tuned to preserve the Classic aesthetic.' },
+      { id: 'pvp', image: '/art/feat-systems.jpg', name: 'Honor & PvP Progression', sub: 'Battlegrounds, ranks, titles', text: 'PvP runs on an approachable Honor and Rank Points system with seasonal goals and the original rank ladder. Rewards come from battlegrounds, PvP quests, weekly journey tasks, and gear upgrades, building toward iconic titles like High Warlord and Grand Marshal.' },
     ],
   },
   {
