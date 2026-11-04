@@ -17,6 +17,7 @@ const TIPS = [
   'Type /help in the Command Console to see everything it can do. Some commands are not listed.',
   'Right-click the desktop to change the vista. F7 cycles through all of them.',
   'Hyjal Summit is a 20-player raid. Barrow Deeps is a 10-player max-level challenge.',
+  'Onyxia\'s Lair returns on December 9 alongside Hyjal Summit and Barrow Deeps. You\'ll need the Drakefire Amulet to get in.',
   'The Darkspear Islands battleground is 15 versus 15, mixing control points with flag captures.',
   'Beta runs September 17 through October 21. Early name reservation opens October 27.',
   'The first raid unlocks December 9. The Calendar app has the whole roadmap.',
