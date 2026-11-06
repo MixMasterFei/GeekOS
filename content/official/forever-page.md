@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-11-06T06:38:33.898Z
+Fetched: 2026-11-06T19:21:56.041Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -112,6 +112,10 @@ Forsaken & Human Figurine Decor⁵
 
 [WoW][Forever] # Reference - 1
 
+WoW: Forever Hotfixes - November 5, 2026
+
+Here you will find a list of hotfixes that address various issues related to World of Warcraft: Forever.
+
 World of Warcraft: Forever Now Live!
 
 Begin your first adventure or return to a new and reimagined Azeroth in World of Warcraft: Forever, now live worldwide. Adventure to level 60 across the original continents, discover new stories, and meet fellow adventurers in a permanent home alongside modern and Classic WoW where community comes first and the journey matters as much as the destination.
@@ -130,7 +134,7 @@ World of Warcraft: Forever has something for explorers, dungeon groups, collecto
 
 Unlock a Year of World of Warcraft and Get Bonus Treasures
 
-Claim a 12-Month Subscription or 365-Days Game Time and get bonus in-game cosmetic items, including several for use in World of Warcraft: Forever!
+Claim a 12-Month Subscription and get bonus in-game cosmetic items, including several for use in World of Warcraft: Forever!
 
 [WoW Armory] No Data Fallback String
 
