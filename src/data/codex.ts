@@ -1,6 +1,7 @@
 /**
  * Forever Codex data — compiled from Blizzard's public announcements
- * (Sept 12–13, 2026: reveal post, What's Next panel recap, official Forever page).
+ * (Sept 12–13, 2026: reveal post, What's Next panel recap, official Forever page;
+ * Nov 4, 2026: launch-day "Now Live" post and dungeon/naming articles).
  * Text is original prose summarising public facts; nothing is copied verbatim.
  */
 export interface CodexEntry { id: string; name: string; sub?: string; text: string; tags?: string[]; level?: string; icon?: string; faction?: 'horde' | 'alliance' | 'neutral'; image?: string; }
@@ -10,7 +11,7 @@ export const CODEX: CodexSection[] = [
   {
     id: 'overview', title: 'The Promise', icon: 'legacy', blurb: 'What World of Warcraft: Forever is, and what it is not.',
     entries: [
-      { id: 'what', image: '/art/key-art-wide.jpg', name: 'What is Forever?', sub: 'A new permanent home', text: 'World of Warcraft: Forever is Blizzard\'s third permanent way to play WoW, alongside modern and Classic. It anchors the game in its first age: the original continents, a level cap of 60, and a world built to be the main character. It is included with any active subscription or Game Time. It launches worldwide on November 4, 2026 at 3:00 PM PST.', tags: ['launch'] },
+      { id: 'what', image: '/art/key-art-wide.jpg', name: 'What is Forever?', sub: 'A new permanent home', text: 'World of Warcraft: Forever is Blizzard\'s third permanent way to play WoW, alongside modern and Classic. It anchors the game in its first age: the original continents, a level cap of 60, and a world built to be the main character. It is included with any active subscription or Game Time. It went live worldwide on November 4, 2026 at 3:00 PM PST, and GeekOS\'s doors are open.', tags: ['launch'] },
       { id: 'pillars', image: '/art/riverglades-road.jpg', name: 'Four Pillars', sub: 'Design principles from the What\'s Next panel', text: 'Approachable and familiar. The world as the main character. The journey over the destination. Protect social gameplay. In practice: no flying mounts, no level scaling, deliberate challenge, and convenience features chosen only when they bring players together.' },
       { id: 'when', image: '/art/tirisfal-fog.jpg', name: 'Where in the Timeline', sub: 'After Forsaken Kingdom, before Molten Core', text: 'Forever is set after the events of Warcraft III Reforged: Forsaken Kingdom and before the opening of Molten Core. Old threats are still fresh; new ones stalk the edges of familiar zones.' },
       { id: 'quote', image: '/art/cinematic.jpg', name: '"Not a mode, not a season"', sub: 'The team\'s own words', text: 'Blizzard framed Forever as a promise rather than a product line: not a mode, a season, or another version of Classic, but a commitment to keep building this version of the world with the community, through regular content updates for years.' },
@@ -30,24 +31,24 @@ export const CODEX: CodexSection[] = [
   {
     id: 'dungeons', title: 'Nine New Dungeons', icon: 'dungeon', blurb: 'Each dungeon carries its own storyline: reclamation, investigation, titan mysteries, naga and pirates, corruption.',
     entries: [
-      { id: 'thanes', image: '/art/hall-of-thanes.jpg', name: 'Hall of Thanes', sub: 'Beneath Ironforge', text: 'A dwarven hall under the mountain city. Forges, thanes, and the things sealed below them.' },
-      { id: 'lordaeron', image: '/art/tirisfal-fog.jpg', name: 'Ruins of Lordaeron', sub: 'Tirisfal Glades', text: 'The Forsaken reclaim what is theirs in the shattered capital. The throne room is not as quiet as it should be.' },
-      { id: 'whelgar', image: '/art/whelgar-dusk.jpg', name: "Whelgar's Excavation", sub: 'Wetlands', text: 'The dig site becomes a dungeon. Titan mysteries, awakened guardians, and a lot of dust.' },
-      { id: 'dalaran', image: '/art/moonlit-grove.jpg', name: 'City of Dalaran', sub: 'Alterac / Lordaeron', text: 'The domed city of mages, explored from the inside. Magical investigations gone wrong.' },
-      { id: 'blackmaw', image: '/art/blackmaw-hold.jpg', name: 'Blackmaw Hold', sub: 'Location classified', text: 'A stronghold named for the maw it guards. Expect corruption themes and a bad time for the unprepared.' },
-      { id: 'drowned', image: '/art/drowned-city.jpg', name: 'The Drowned City', sub: 'Coastal', text: 'Naga, pirates, and a city under the tide. Bring a swim speed potion for the story, not the mechanics.' },
-      { id: 'kroldok', image: '/art/kroldok.jpg', name: "Krol'dok Stronghold", sub: 'Orcish', text: 'A fortress that did not surrender. Warlords, war drums, and a siege in reverse.' },
-      { id: 'alcaz', image: '/art/alcaz-jungle.jpg', name: 'Alcaz Prison', sub: 'Alcaz Island, Dustwallow Marsh', text: 'The island prison finally opens its cells. Some of the inmates were put there for a reason.' },
-      { id: 'shaper', image: '/art/whelgar-cave.jpg', name: "Shaper's Terrace", sub: 'Titan', text: 'A terrace of the makers, with the machinery that shaped the world still humming.' },
+      { id: 'thanes', image: '/art/hall-of-thanes.jpg', name: 'Hall of Thanes', sub: 'Beneath Ironforge, Dun Morogh', level: '13–18', text: 'A dwarven hall under the mountain city. Forges, thanes, and the things sealed below them.' },
+      { id: 'lordaeron', image: '/art/tirisfal-fog.jpg', name: 'Ruins of Lordaeron', sub: 'Tirisfal Glades', level: '15–20', text: 'The Forsaken reclaim what is theirs in the shattered capital. The throne room is not as quiet as it should be.' },
+      { id: 'whelgar', image: '/art/whelgar-dusk.jpg', name: "Whelgar's Excavation", sub: 'Wetlands', level: '24–29', text: 'The dig site becomes a dungeon. Titan mysteries, awakened guardians, and a lot of dust.' },
+      { id: 'dalaran', image: '/art/moonlit-grove.jpg', name: 'City of Dalaran', sub: 'Alterac Mountains', level: '28–33', text: 'The domed city of mages, explored from the inside. Magical investigations gone wrong.' },
+      { id: 'blackmaw', image: '/art/blackmaw-hold.jpg', name: 'Blackmaw Hold', sub: 'Azshara', level: '55–60', text: 'A furbolg city beyond a long-sealed gate in Azshara, its clan struggling against a spreading corruption. A max-level dungeon with multiple routes and bosses.' },
+      { id: 'drowned', image: '/art/drowned-city.jpg', name: 'The Drowned City', sub: 'Off the coast of Stranglethorn Vale', level: '35–40', text: 'Naga, pirates, and a city under the tide. Bring a swim speed potion for the story, not the mechanics.' },
+      { id: 'kroldok', image: '/art/kroldok.jpg', name: "Krol'dok Stronghold", sub: 'Riverglades', level: '40–45', text: 'A fortress that did not surrender. Warlords, war drums, and a siege in reverse.' },
+      { id: 'alcaz', image: '/art/alcaz-jungle.jpg', name: 'Alcaz Prison', sub: 'Alcaz Island, Dustwallow Marsh', level: '48–53', text: 'The island prison finally opens its cells. Some of the inmates were put there for a reason.' },
+      { id: 'shaper', image: '/art/whelgar-cave.jpg', name: "Shaper's Terrace", sub: "Un'Goro Crater", level: '58–60', text: 'A terrace of the makers, with the machinery that shaped the world still humming.' },
     ],
   },
   {
-    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Two new raids at launch cadence, one new battleground.',
+    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Three new raids opening December 9, one new battleground.',
     entries: [
-      { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
-      { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
+      { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. It opens December 9, alongside Barrow Deeps and Onyxia\'s Lair.' },
+      { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal. Opens December 9.' },
       { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
-      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
+      { id: 'iconic', name: "Onyxia's Lair", sub: 'The revamped iconic raid, confirmed', text: 'The post-launch "revamped iconic raid" teased on the roadmap is Onyxia\'s Lair. It opens December 9 alongside Hyjal Summit and Barrow Deeps, with its own requirements to enter for the first time.' },
     ],
   },
   {
@@ -67,8 +68,11 @@ export const CODEX: CodexSection[] = [
       { id: 'transmog', image: '/art/feat-paths.jpg', name: 'Opt-in Transmog', sub: 'Quality of life', text: 'Transmogrification is available and optional. Modern and Classic visual presets let each player choose how the world looks.' },
       { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set.' },
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
-      { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch', text: 'Dedicated Hardcore realms are on the roadmap. One life, one story.' },
+      { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Coming after launch', text: 'A Hardcore ruleset is planned for sometime after launch, for players who want every decision to carry lasting consequences. One life, one story.' },
       { id: 'graphics', image: '/art/feat-expanses.jpg', name: 'Rendering Upgrades', sub: 'New lighting, water, shadows', text: 'New lighting and global illumination, volumetric particles, a new water renderer, and real-time shadows, all tuned to preserve the Classic aesthetic.' },
+      { id: 'rulesets', name: 'Rulesets, Not Realms', sub: 'How you choose your world', text: 'Forever drops the traditional realm list. At character creation you pick a Ruleset instead: Normal for adventuring with PvP at your discretion, PvP for a world where enemy players are an ever-present risk, and Roleplay or Roleplay PvP for communities with strict naming and behaviour rules. Each Ruleset is a broad shared population rather than a single server.' },
+      { id: 'names', name: 'Two Names, One Hero', sub: 'Naming in a realmless Azeroth', text: 'With no single realm to anchor a name, every character gets two name parts that together form a full name unique within its region. Early Name Reservation, October 27 through November 3, let eligible players lock in up to three names across all their Rulesets ahead of launch.' },
+      { id: 'presets', name: 'Choose Your Experience', sub: 'Classic vs. Enhanced, chosen at first login', text: 'Before picking a Ruleset, new players choose an Experience Preset. Classic starts leaner: Standard Definition models, quest markers off, one-bag off, transmog off. Enhanced starts with HD models and modern conveniences on. Either is just a starting point; every setting, and each character\'s HD/SD model choice, can be changed later.' },
     ],
   },
   {
@@ -78,7 +82,7 @@ export const CODEX: CodexSection[] = [
       { id: 'epic', image: '/art/epic-comp.jpg', name: 'Skyborne Epic Pack', sub: 'Optional upgrade', text: 'Everything in Heroic, plus beta access from September 17, 30 days of Game Time, extra cosmetics, pets, tabards, and three Invite-A-Friend codes.' },
       { id: 'collection', image: '/art/collection.jpg', name: 'Warcraft Forever Collection', sub: 'Limited time · through January 11, 2027', text: 'Everything in Epic, plus Warcraft III: Reforged, the Forsaken Kingdom campaign, and Forsaken and Human figurine housing decor. Made in celebration of BlizzCon 2026.' },
       { id: 'ce', image: '/art/ce-7.jpg', name: "Collector's Edition", sub: 'Blizzard Gear Store', text: 'A 13-inch Dwarf and Bear statue, a Zephras Isle mousepad, art prints, collectible pins, a companion journal, and the Warcraft Forever Collection code. While supplies last.' },
-      { id: 'dates', image: '/art/roadmap.jpg', name: 'Key Dates', sub: 'All times Pacific', text: 'September 12: reveal. September 17: beta begins (through October 21). October 20: Invite-A-Friend codes begin arriving. October 27 – November 3: early name reservation. November 4, 3:00 PM PST: global launch. November 4–11: Invite-A-Friend access window. December 9: first raid unlock. January 11, 2027: Warcraft Forever Collection ends.' },
+      { id: 'dates', image: '/art/roadmap.jpg', name: 'Key Dates', sub: 'All times Pacific', text: 'September 12: reveal. September 17: beta begins (through October 21). October 20: Invite-A-Friend codes begin arriving. October 27 – November 3: early name reservation. November 4, 3:00 PM PST: global launch — Forever is live. November 4–11: Invite-A-Friend access window. December 9: Barrow Deeps, Hyjal Summit, and Onyxia\'s Lair open. January 11, 2027: Warcraft Forever Collection ends.' },
     ],
   },
 ];
