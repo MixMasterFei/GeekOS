@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-11-06T19:21:56.041Z
+Fetched: 2026-11-07T05:55:11.241Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -112,7 +112,7 @@ Forsaken & Human Figurine Decor⁵
 
 [WoW][Forever] # Reference - 1
 
-WoW: Forever Hotfixes - November 5, 2026
+WoW: Forever Hotfixes - November 6, 2026
 
 Here you will find a list of hotfixes that address various issues related to World of Warcraft: Forever.
 
