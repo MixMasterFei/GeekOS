@@ -19,7 +19,7 @@ const PINS: Pin[] = [
   { id: 'darkspear', name: 'Darkspear Islands', kind: 'bg', x: 372, y: 372, sub: '15 vs 15 battleground', codex: 'darkspear', section: 'raids' },
   { id: 'thanes', name: 'Hall of Thanes', kind: 'dungeon', x: 712, y: 300, sub: 'Beneath Ironforge', codex: 'thanes', section: 'dungeons' },
   { id: 'lordaeron', name: 'Ruins of Lordaeron', kind: 'dungeon', x: 700, y: 120, sub: 'Tirisfal Glades', codex: 'lordaeron', section: 'dungeons' },
-  { id: 'whelgar', name: "Whelgar's Excavation", kind: 'dungeon', x: 745, y: 262, sub: 'Wetlands', codex: 'whelgar', section: 'dungeons' },
+  { id: 'whelgar', name: 'Excavation Site', kind: 'dungeon', x: 745, y: 262, sub: 'Wetlands', codex: 'whelgar', section: 'dungeons' },
   { id: 'dalaran', name: 'City of Dalaran', kind: 'dungeon', x: 722, y: 160, sub: 'Alterac', codex: 'dalaran', section: 'dungeons' },
   { id: 'alcaz', name: 'Alcaz Prison', kind: 'dungeon', x: 372, y: 300, sub: 'Dustwallow Marsh', codex: 'alcaz', section: 'dungeons' },
   { id: 'drowned', name: 'The Drowned City', kind: 'dungeon', x: 640, y: 420, sub: 'Coastal · location approximate', codex: 'drowned', section: 'dungeons', approx: true },
