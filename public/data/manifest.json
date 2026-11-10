@@ -1,26 +1,26 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-10T07:13:43.194Z",
+  "checkedAt": "2026-11-10T19:41:29.610Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
-    {
-      "id": "24315820",
-      "title": "World of Warcraft: Forever Now Live!",
-      "summary": "Begin your first adventure or return to a new and reimagined Azeroth in World of Warcraft: Forever, now live worldwide. Adventure to level 60 across the original continents, discover new stories, and meet fellow adventurers in a permanent home alongside modern and Classic WoW where community comes first and the journey matters as much as the destination.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315820",
-      "publishedAt": "2026-11-04T23:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/bx/BXPRPCQR5J551793833689036.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/ex/EXQZ05ZDZ6JV1793833668975.png",
-      "forever": true
-    },
     {
       "id": "24310658",
       "title": "Unlock a Year of World of Warcraft® ",
       "summary": "Claim a 12-Month Subscription and get bonus in-game cosmetic items, including several for use in World of Warcraft: Forever!",
       "url": "https://worldofwarcraft.blizzard.com/en-us/news/24310658",
       "publishedAt": "2026-10-15T20:12:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/ui/UI9K0GIEGJPS1791937415682.png",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/h0/H0ZKR5GEHJVG1791937369646.png",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/zk/ZKIRFN1ZM38U1794270453215.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/qk/QK1EGAYIEFLT1794270430411.png",
+      "forever": false
+    },
+    {
+      "id": "24302576",
+      "title": "Tales Take a Dark Turn in Midnight’s Talebound",
+      "summary": "Step into Midnight’s Talebound, a PvE action RPG game mode where macabre stories come to life. Venture solo or with friends through eerie tales filled with enemies, bosses, puzzles, treasure, relics, and cosmetic rewards as you confront the terrors waiting beyond Quillgrave.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24302576",
+      "publishedAt": "2026-09-12T22:30:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/fr/FRL6YF1E44YZ1789246636941.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/c0/C0MIL8HNN9Z21789246620563.png",
       "forever": false
     },
     {
