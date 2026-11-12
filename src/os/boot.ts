@@ -7,7 +7,7 @@ import { sound } from './sound';
 
 const TIPS = [
   'World of Warcraft: Forever launches November 4, 2026 at 3:00 PM PST. GeekOS keeps count on the desktop.',
-  'The Skyborne are windswept elves. Horde Skyborne walk the Windshaper path; Alliance Skyborne follow the High Order.',
+  'The Skyborne are windswept elves, also called the shen\'dorei. Horde Windshapers can become Shaman; Alliance High Order Skyborne can become Mages.',
   'Forsaken Paladins and Dwarf Shamans are new race and class combinations in Forever. GeekOS lets you roll them at login.',
   'Nine new dungeons, two new raids, three new zones, and more than a thousand new quests. The level cap stays at 60.',
   'The Legacy system rewards account-wide benefits every time a character makes progress. GeekOS grants XP for using it.',
@@ -16,8 +16,10 @@ const TIPS = [
   'Press Alt+Space to open the Hearth menu. Alt+` opens the Command Console.',
   'Type /help in the Command Console to see everything it can do. Some commands are not listed.',
   'Right-click the desktop to change the vista. F7 cycles through all of them.',
-  'Hyjal Summit is a 20-player raid. Barrow Deeps is a 10-player max-level challenge.',
+  'Hyjal Summit is a 20-player raid. Barrow Deeps is a 10-player max-level challenge. Both open December 9 — alongside the returning Onyxia\'s Lair.',
   'The Darkspear Islands battleground is 15 versus 15, mixing control points with flag captures.',
+  'Forever trades realm selection for a Ruleset: Normal, PvP, Roleplay, or Roleplay PvP. Hardcore joins the list after launch.',
+  'Every Forever character gets two names, forming one full name unique within your region — no realm tag required.',
   'Beta runs September 17 through October 21. Early name reservation opens October 27.',
   'The first raid unlocks December 9. The Calendar app has the whole roadmap.',
   'Hidden achievements exist. Some are in the trash. Some are in the clock. One is in an old code.',
