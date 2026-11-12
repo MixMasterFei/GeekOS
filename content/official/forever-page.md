@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-11-11T14:16:27.793Z
+Fetched: 2026-11-12T00:39:05.166Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -80,10 +80,6 @@ Shen'dorei Skyseer's Garb Transmog Set*
 
 Veteran Adventurer's Rucksack Back Transmog*
 
-[WoW][Forever] WoW: Forever Early Name Reservation¹
-
-WoW: Forever Early Name Reservation¹
-
 [WoW][Forever] Veteran Adventurer's Loyal Companion Ground Mount*
 
 Veteran Adventurer's Loyal Companion Ground Mount*
@@ -107,10 +103,6 @@ Warcraft III Reforged: Forsaken Kingdom⁶
 [WoW][Forever] Forsaken & Human Figurine Decor⁵
 
 Forsaken & Human Figurine Decor⁵
-
-[WoW][Forever] # Reference - 3
-
-[WoW][Forever] # Reference - 1
 
 WoW: Forever Hotfixes - November 10, 2026
 
