@@ -28,7 +28,7 @@ export const CODEX: CodexSection[] = [
     ],
   },
   {
-    id: 'dungeons', title: 'Nine New Dungeons', icon: 'dungeon', blurb: 'Each dungeon carries its own storyline: reclamation, investigation, titan mysteries, naga and pirates, corruption.',
+    id: 'dungeons', title: 'Nine New Dungeons', icon: 'dungeon', blurb: 'Each dungeon carries its own storyline: reclamation, investigation, titan mysteries, naga and pirates, corruption. Levels 13 through 60.',
     entries: [
       { id: 'thanes', image: '/art/hall-of-thanes.jpg', name: 'Hall of Thanes', sub: 'Beneath Ironforge', text: 'A dwarven hall under the mountain city. Forges, thanes, and the things sealed below them.' },
       { id: 'lordaeron', image: '/art/tirisfal-fog.jpg', name: 'Ruins of Lordaeron', sub: 'Tirisfal Glades', text: 'The Forsaken reclaim what is theirs in the shattered capital. The throne room is not as quiet as it should be.' },
@@ -42,12 +42,12 @@ export const CODEX: CodexSection[] = [
     ],
   },
   {
-    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Two new raids at launch cadence, one new battleground.',
+    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Three raids — two new, one revamped — unlock December 9, plus one new battleground.',
     entries: [
       { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
-      { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
-      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
-      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
+      { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal, unlocking alongside Hyjal Summit on December 9.' },
+      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence. The Darkspear Raiders face the Theramore Expeditionary Force for control.' },
+      { id: 'onyxia', image: '/art/darkspear-pirates.jpg', name: "Onyxia's Lair", sub: 'Revamped classic raid · Unlocks December 9', text: "Forever's mystery iconic-raid revamp is Onyxia's Lair, confirmed to unlock alongside Hyjal Summit and Barrow Deeps on December 9 — three raids for level 60 adventurers on day one of the raid cycle." },
     ],
   },
   {
@@ -62,7 +62,9 @@ export const CODEX: CodexSection[] = [
   {
     id: 'systems', title: 'Systems', icon: 'talents', blurb: 'Legacy, Camping, professions, honor, and quality of life.',
     entries: [
-      { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits. Alt-friendly by design. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
+      { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits through three pieces: Legacy Challenges, Legacy Perks, and Legacy Rewards. Alt-friendly by design, though every advantage can be unlocked on a single character. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
+      { id: 'naming', image: '/art/key-art-logo.jpg', name: 'Two-Name Identity', sub: 'A realmless Azeroth', text: 'Characters in Forever carry two names rather than one tied to a single realm. Together the two parts form a full name unique within your region, giving players more room for a name that fits their history.' },
+      { id: 'preset', image: '/art/feat-systems.jpg', name: 'Experience Preset', sub: 'Chosen before your Ruleset', text: 'Before picking a Ruleset, new players choose an Experience Preset: Classic for simpler visuals and fewer modern interface defaults, or Enhanced for higher-fidelity models and more onboarding guidance. The choice is a starting point, not a lock — everything can be changed later in Options.' },
       { id: 'camping', image: '/art/camping.jpg', name: 'Camping', sub: 'Crafted campfires outdoors', text: 'Pitch a crafted campfire in the open world, let professions contribute, and share buffs with the people around you. The Camp app in GeekOS is a focus timer built on the same idea.' },
       { id: 'transmog', image: '/art/feat-paths.jpg', name: 'Opt-in Transmog', sub: 'Quality of life', text: 'Transmogrification is available and optional. Modern and Classic visual presets let each player choose how the world looks.' },
       { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set.' },
