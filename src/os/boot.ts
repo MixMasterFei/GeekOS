@@ -16,7 +16,7 @@ const TIPS = [
   'Press Alt+Space to open the Hearth menu. Alt+` opens the Command Console.',
   'Type /help in the Command Console to see everything it can do. Some commands are not listed.',
   'Right-click the desktop to change the vista. F7 cycles through all of them.',
-  'Hyjal Summit is a 20-player raid. Barrow Deeps is a 10-player max-level challenge.',
+  'Three raids open December 9: Hyjal Summit, Barrow Deeps, and a returning Onyxia\'s Lair.',
   'The Darkspear Islands battleground is 15 versus 15, mixing control points with flag captures.',
   'Beta runs September 17 through October 21. Early name reservation opens October 27.',
   'The first raid unlocks December 9. The Calendar app has the whole roadmap.',
@@ -26,6 +26,8 @@ const TIPS = [
   'Riverglades: frontier rivers, grasslands, trade routes, and more than 150 new quests.',
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
   'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
+  'First login asks you to choose an Experience Preset, Classic or Enhanced, before you pick a Ruleset.',
+  'No more realms: Forever uses Rulesets (Normal, PvP, Roleplay, Roleplay PvP) and two-part character names instead.',
 ];
 const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
