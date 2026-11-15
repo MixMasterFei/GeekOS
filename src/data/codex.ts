@@ -28,7 +28,7 @@ export const CODEX: CodexSection[] = [
     ],
   },
   {
-    id: 'dungeons', title: 'Nine New Dungeons', icon: 'dungeon', blurb: 'Each dungeon carries its own storyline: reclamation, investigation, titan mysteries, naga and pirates, corruption.',
+    id: 'dungeons', title: 'Nine New Dungeons', icon: 'dungeon', blurb: 'Levels 13 through 60. Each dungeon carries its own storyline: reclamation, investigation, titan mysteries, naga and pirates, corruption.',
     entries: [
       { id: 'thanes', image: '/art/hall-of-thanes.jpg', name: 'Hall of Thanes', sub: 'Beneath Ironforge', text: 'A dwarven hall under the mountain city. Forges, thanes, and the things sealed below them.' },
       { id: 'lordaeron', image: '/art/tirisfal-fog.jpg', name: 'Ruins of Lordaeron', sub: 'Tirisfal Glades', text: 'The Forsaken reclaim what is theirs in the shattered capital. The throne room is not as quiet as it should be.' },
@@ -42,28 +42,33 @@ export const CODEX: CodexSection[] = [
     ],
   },
   {
-    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Two new raids at launch cadence, one new battleground.',
+    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Three raids unlock December 9 for level 60 groups, plus one new battleground.',
     entries: [
       { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
-      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
-      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
+      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground off the coast of Dustwallow Marsh: Darkspear Raiders and Theramore Expeditionary Force clash over strategic control points and an Arathi Basin-style central flag.' },
+      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: "Onyxia's Lair Returns", sub: 'Third raid · Opens December 9', text: "The mystery iconic raid on the roadmap is confirmed: Onyxia's Lair joins Hyjal Summit and Barrow Deeps as the third raid level 60 groups can enter on December 9, with a first-time entry experience distinct from the original encounter." },
     ],
   },
   {
-    id: 'races', title: 'Races & Classes', icon: 'skyborne', blurb: 'One new race, two new combinations, and revamps to every class.',
+    id: 'races', title: 'Races & Classes', icon: 'skyborne', blurb: 'One new race, six new race/class combinations, and revamps to every class.',
     entries: [
       { id: 'skyborne', image: '/art/skyborne.jpg', name: 'The Skyborne', sub: 'New neutral elven race', faction: 'neutral', text: 'Windswept elves, High Elf exiles, whose secluded home faces an existential threat. Horde-aligned Skyborne follow the Windshaper path with Shaman and elemental traditions; Alliance-aligned Skyborne follow the High Order with Mage and arcane legacy. Both may be Warrior, Hunter, Rogue, or Druid, with exclusive Skyborne druid forms, racials, customisations, voices, and dances. Requires the Skyborne Heroic Pack or higher.' },
       { id: 'forsakenpal', image: '/art/forsaken-paladin.jpg', name: 'Forsaken Paladin', sub: 'New combination', faction: 'horde', text: 'The Light, undying. The reveal trailer showed a Forsaken Paladin. GeekOS lets you roll one at the character screen.' },
       { id: 'dwarfsham', image: '/art/dwarf-shaman.jpg', name: 'Dwarf Shaman', sub: 'New combination', faction: 'alliance', text: 'Stone and storm. Wildhammer traditions finally reach the Alliance roster in the Forever era.' },
       { id: 'classes', image: '/art/feat-power.jpg', name: 'Class Revamps', sub: 'Every class and specialisation', text: 'Preserve identity, add meaningful abilities, and update talents to fill gaps without erasing what makes each class unique. Rediscover a favourite or play someone entirely different.' },
+      { id: 'combos', image: '/art/feat-paths.jpg', name: 'Six New Combinations', sub: 'Race and class, opened up', text: 'Beyond the Skyborne, Forever opens six new race/class combinations: Orc Mage, Troll Warlock, Undead Paladin, Human Hunter, Gnome Priest, and Dwarf Shaman.' },
     ],
   },
   {
     id: 'systems', title: 'Systems', icon: 'talents', blurb: 'Legacy, Camping, professions, honor, and quality of life.',
     entries: [
-      { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits. Alt-friendly by design. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
-      { id: 'camping', image: '/art/camping.jpg', name: 'Camping', sub: 'Crafted campfires outdoors', text: 'Pitch a crafted campfire in the open world, let professions contribute, and share buffs with the people around you. The Camp app in GeekOS is a focus timer built on the same idea.' },
+      { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits through three pieces — Legacy Challenges, Legacy Perks, and Legacy Rewards. Alt-friendly by design, though every advantage can also be earned on a single character. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
+      { id: 'camping', image: '/art/camping.jpg', name: 'Camping', sub: 'Crafted campfires outdoors', text: "Pitch the Cooking profession's Basic Campfire in the open world and let up to three nearby players each contribute a profession-crafted Camp Feature. Sit or craft at the site for at least a minute to pick up its buffs, which replace rather than stack with the matching class buff. The Camp app in GeekOS is a focus timer built on the same idea." },
+      { id: 'preset', image: '/art/feat-stories.jpg', name: 'Experience Preset', sub: 'Classic or Enhanced, chosen at first login', text: 'Before picking a Ruleset, every account chooses an Experience Preset. Classic defaults to Standard Definition models, points-of-interest and objective blobs off, and the original screen layout. Enhanced defaults to High Definition models, points-of-interest on, and a centralized UI layout. Either is a starting point, not a lock — every setting can be changed later in Options or at a Barbershop.' },
+      { id: 'ruleset', image: '/art/feat-expanses.jpg', name: 'Choose Your Ruleset', sub: 'Replaces realm selection', text: 'Forever drops traditional realm selection for a Ruleset chosen at character creation: Normal, PvP, Roleplay, and Roleplay PvP, each its own broad player ecosystem with its own naming and behaviour rules. A dedicated Hardcore ruleset is coming after launch.' },
+      { id: 'names', image: '/art/feat-power.jpg', name: 'Two-Part Character Names', sub: 'A realmless Azeroth', text: "Characters no longer carry a single realm-bound name. Each one has two name parts that together form a full name unique within its region, giving more room for a name that fits a character's story in a world without separate realms." },
+      { id: 'discord', image: '/art/feat-stories.jpg', name: 'Discord Integration', sub: 'Account linking & guild chat mirroring', text: 'Linking a Discord account mirrors guild chat between Discord and the game, so raid coordination, recruiting, and catching up with guildmates can happen from either app.' },
       { id: 'transmog', image: '/art/feat-paths.jpg', name: 'Opt-in Transmog', sub: 'Quality of life', text: 'Transmogrification is available and optional. Modern and Classic visual presets let each player choose how the world looks.' },
       { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set.' },
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
