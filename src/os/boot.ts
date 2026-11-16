@@ -6,10 +6,10 @@ import { LOGO_URL } from './icons';
 import { sound } from './sound';
 
 const TIPS = [
-  'World of Warcraft: Forever launches November 4, 2026 at 3:00 PM PST. GeekOS keeps count on the desktop.',
+  'World of Warcraft: Forever launched November 4, 2026 at 3:00 PM PST, and is now live. GeekOS keeps the Codex up to date.',
   'The Skyborne are windswept elves. Horde Skyborne walk the Windshaper path; Alliance Skyborne follow the High Order.',
-  'Forsaken Paladins and Dwarf Shamans are new race and class combinations in Forever. GeekOS lets you roll them at login.',
-  'Nine new dungeons, two new raids, three new zones, and more than a thousand new quests. The level cap stays at 60.',
+  'Forsaken Paladin, Dwarf Shaman, Orc Mage, Troll Warlock, Human Hunter, Gnome Priest — new race and class combinations in Forever. GeekOS lets you roll one at login.',
+  'Nine new dungeons, three new raids, three new zones, and more than a thousand new quests. The level cap stays at 60.',
   'The Legacy system rewards account-wide benefits every time a character makes progress. GeekOS grants XP for using it.',
   'The Camping system lets you pitch a crafted campfire outdoors and share buffs with friends. Try the Camp app.',
   'No flying mounts. No level scaling. The journey matters as much as the destination.',
@@ -17,15 +17,16 @@ const TIPS = [
   'Type /help in the Command Console to see everything it can do. Some commands are not listed.',
   'Right-click the desktop to change the vista. F7 cycles through all of them.',
   'Hyjal Summit is a 20-player raid. Barrow Deeps is a 10-player max-level challenge.',
-  'The Darkspear Islands battleground is 15 versus 15, mixing control points with flag captures.',
-  'Beta runs September 17 through October 21. Early name reservation opens October 27.',
-  'The first raid unlocks December 9. The Calendar app has the whole roadmap.',
+  'The Darkspear Islands battleground is 15 versus 15: Darkspear Raiders versus the Theramore Expeditionary Force.',
+  'Beta ran September 17 through October 21. Early name reservation ran October 27 through November 3.',
+  'Hyjal Summit, Barrow Deeps, and Onyxia\'s Lair all open December 9. The Calendar app has the whole roadmap.',
   'Hidden achievements exist. Some are in the trash. Some are in the clock. One is in an old code.',
   'GeekOS levels you up as you use it. Reach 60 and something changes.',
   'Mount Hyjal is set after the Third War. Darkwhisper Gorge is still smouldering.',
   'Riverglades: frontier rivers, grasslands, trade routes, and more than 150 new quests.',
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
-  'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
+  'Classic and Enhanced experience presets are chosen at first login, then adjustable in Options. GeekOS has a Classic UI mode in Settings.',
+  'There are no realms in Forever. Pick a Ruleset — Normal, PvP, Roleplay, or Roleplay PvP — and a two-part name instead.',
 ];
 const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
