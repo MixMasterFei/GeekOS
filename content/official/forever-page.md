@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-11-20T07:10:14.408Z
+Fetched: 2026-11-20T20:11:43.169Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -108,21 +108,21 @@ WoW: Forever Hotfixes - November 19, 2026
 
 Here you will find a list of hotfixes that address various issues related to World of Warcraft: Forever.
 
+Watch the WoW: Forever Podcast – Catching up on Classes
+
+Join WoW: Forever Podcast host Countdown To Classic for a conversation with Senior Game Designer Aidan Moon and Principal Game Designer Kris Zierhut as they take careful aim on class design.
+
 World of Warcraft: Forever Now Live!
 
 Begin your first adventure or return to a new and reimagined Azeroth in World of Warcraft: Forever, now live worldwide. Adventure to level 60 across the original continents, discover new stories, and meet fellow adventurers in a permanent home alongside modern and Classic WoW where community comes first and the journey matters as much as the destination.
-
-New Player’s Starter Guide: Welcome to World of Warcraft: Forever
-
-World of Warcraft: Forever invites players into a reimagined original Azeroth where exploration, community, and the journey itself take center stage. Begin at level one, shape a character of your own, and learn the essentials for finding your place in a world designed to unfold for years to come.
 
 Return to Azeroth in World of Warcraft: Forever
 
 Welcome back to Azeroth. Whether it has been a few years, or many— familiar roads, old friends, and new adventures are waiting for you in World of Warcraft: Forever. To help you get your feet on the ground and begin your adventures in Azeroth once more, we’ve put together some information you may need to return to your hero’s journey.
 
-WoW: Forever—What’s New and What Feels Familiar
+New Player’s Starter Guide: Welcome to World of Warcraft: Forever
 
-World of Warcraft: Forever has something for explorers, dungeon groups, collectors, roleplayers, and PvP fans alike. See how its interface conveniences, class updates, and progression systems complement a distinct take on original WoW—and what to expect if you also play the modern game.
+World of Warcraft: Forever invites players into a reimagined original Azeroth where exploration, community, and the journey itself take center stage. Begin at level one, shape a character of your own, and learn the essentials for finding your place in a world designed to unfold for years to come.
 
 Unlock a Year of World of Warcraft and Get Bonus Treasures
 
