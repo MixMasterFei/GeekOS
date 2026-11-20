@@ -6,10 +6,14 @@ import { LOGO_URL } from './icons';
 import { sound } from './sound';
 
 const TIPS = [
-  'World of Warcraft: Forever launches November 4, 2026 at 3:00 PM PST. GeekOS keeps count on the desktop.',
+  'World of Warcraft: Forever launched worldwide on November 4, 2026 at 3:00 PM PST — and is now live.',
   'The Skyborne are windswept elves. Horde Skyborne walk the Windshaper path; Alliance Skyborne follow the High Order.',
   'Forsaken Paladins and Dwarf Shamans are new race and class combinations in Forever. GeekOS lets you roll them at login.',
-  'Nine new dungeons, two new raids, three new zones, and more than a thousand new quests. The level cap stays at 60.',
+  'Nine new dungeons, three new raids, three new zones, and more than a thousand new quests. The level cap stays at 60.',
+  "December 9 unlocks three raids at once: Barrow Deeps, Hyjal Summit, and Onyxia's Lair.",
+  'Forever swaps realm selection for a Ruleset: Normal, PvP, Roleplay, or Roleplay PvP. Hardcore joins as a ruleset after launch.',
+  'Character names in Forever are two parts now, forming a full name unique within your region — no realm required.',
+  'Before your first login you choose an Experience Preset: Classic for the original feel, Enhanced for HD models and modern UI on by default.',
   'The Legacy system rewards account-wide benefits every time a character makes progress. GeekOS grants XP for using it.',
   'The Camping system lets you pitch a crafted campfire outdoors and share buffs with friends. Try the Camp app.',
   'No flying mounts. No level scaling. The journey matters as much as the destination.',

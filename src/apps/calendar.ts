@@ -15,9 +15,9 @@ export const FOREVER_EVENTS: CalEvent[] = [
   { id: 'beta', date: '2026-09-17', endDate: '2026-10-21', title: 'Forever Beta', kind: 'beta', desc: 'Beta runs September 17 through October 21 (Epic Pack and Collection include access).' },
   { id: 'iaf', date: '2026-10-20', title: 'Invite-A-Friend codes arrive', kind: 'info', desc: 'Codes emailed to qualifying purchasers starting today.' },
   { id: 'names', date: '2026-10-27', endDate: '2026-11-03', title: 'Early name reservation', kind: 'info', desc: 'Reserve your character name before launch (Heroic Pack or higher).' },
-  { id: 'launch', date: '2026-11-04', title: 'WORLD OF WARCRAFT: FOREVER LAUNCH', kind: 'launch', desc: 'Global launch at 3:00 PM PST. Included with subscription or Game Time.' },
+  { id: 'launch', date: '2026-11-04', title: 'WORLD OF WARCRAFT: FOREVER LAUNCH', kind: 'launch', desc: 'Launched globally at 3:00 PM PST. Included with subscription or Game Time. Forever is now live.' },
   { id: 'iafwindow', date: '2026-11-04', endDate: '2026-11-11', title: 'Invite-A-Friend access window', kind: 'info', desc: 'Invitees can play Forever November 4–11.' },
-  { id: 'raid1', date: '2026-12-09', title: 'First raid unlock: Hyjal Summit', kind: 'raid', desc: '20-player raid opens. Barrow Deeps follows.' },
+  { id: 'raid1', date: '2026-12-09', title: 'First raids unlock: Barrow Deeps, Hyjal Summit, Onyxia\'s Lair', kind: 'raid', desc: 'All three level-60 raids open the same day: Barrow Deeps, Hyjal Summit, and Onyxia\'s Lair.' },
   { id: 'collection-end', date: '2027-01-11', title: 'Warcraft Forever Collection ends', kind: 'info', desc: 'Last day for the limited-time collection.' },
 ];
 
