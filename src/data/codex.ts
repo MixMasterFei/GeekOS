@@ -42,12 +42,12 @@ export const CODEX: CodexSection[] = [
     ],
   },
   {
-    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Two new raids at launch cadence, one new battleground.',
+    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Three raids unlock together on December 9, plus one new battleground.',
     entries: [
       { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
       { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
-      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
+      { id: 'onyxia', name: "Onyxia's Lair", sub: 'Third Dec. 9 raid · Revamped iconic encounter', text: "The revamped iconic raid teased on the roadmap is Onyxia's Lair. It opens alongside Hyjal Summit and Barrow Deeps on December 9, with its own requirements to face the Broodmother for the first time." },
     ],
   },
   {
@@ -63,6 +63,8 @@ export const CODEX: CodexSection[] = [
     id: 'systems', title: 'Systems', icon: 'talents', blurb: 'Legacy, Camping, professions, honor, and quality of life.',
     entries: [
       { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits. Alt-friendly by design. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
+      { id: 'rulesets', name: 'Rulesets', sub: 'Replaces realm selection', text: "Instead of picking a realm, you pick a Ruleset: a broad player ecosystem rather than a single server. Normal lets you focus on PvE with PvP at your own discretion; PvP keeps you almost always at risk of attack; Roleplay and Roleplay PvP add strict naming and behaviour rules for immersion. A dedicated Hardcore ruleset is coming after launch." },
+      { id: 'names', name: 'Two-Part Names', sub: 'A realmless Azeroth', text: 'Characters now carry two names instead of one tied to a single realm. Together the pair forms a full name unique within your region, giving more room to find the name you want across a realmless Azeroth.' },
       { id: 'camping', image: '/art/camping.jpg', name: 'Camping', sub: 'Crafted campfires outdoors', text: 'Pitch a crafted campfire in the open world, let professions contribute, and share buffs with the people around you. The Camp app in GeekOS is a focus timer built on the same idea.' },
       { id: 'transmog', image: '/art/feat-paths.jpg', name: 'Opt-in Transmog', sub: 'Quality of life', text: 'Transmogrification is available and optional. Modern and Classic visual presets let each player choose how the world looks.' },
       { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set.' },
