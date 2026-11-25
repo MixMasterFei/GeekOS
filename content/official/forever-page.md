@@ -1,6 +1,6 @@
 # World of Warcraft: Forever — official page
 Source: https://worldofwarcraft.blizzard.com/en-us/forever
-Fetched: 2026-11-25T08:28:15.996Z
+Fetched: 2026-11-25T21:39:08.322Z
 
 Take your first steps in an untamed frontier shaped by warring factions and rich with untold perils and unseen mystery.
 
@@ -108,9 +108,9 @@ WoW: Forever Hotfixes - November 23, 2026
 
 Here you will find a list of hotfixes that address various issues related to World of Warcraft: Forever.
 
-Watch the WoW: Forever Podcast – Catching up on Classes
+Get More from World of Warcraft with the WoW Celebration Pass
 
-Join WoW: Forever Podcast host Countdown To Classic for a conversation with Senior Game Designer Aidan Moon and Principal Game Designer Kris Zierhut as they take careful aim on class design.
+As a thank you for the incredible launch of WoW Forever, we’re offering a limited time discount for a full year of game time. Players can purchase the WoW Celebration Pass and open the portal to adventure in every version of the game, including the newly released World of Warcraft: Forever.
 
 World of Warcraft: Forever Now Live!
 

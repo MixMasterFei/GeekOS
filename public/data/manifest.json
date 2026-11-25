@@ -1,16 +1,26 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-25T08:28:15.993Z",
+  "checkedAt": "2026-11-25T21:39:08.318Z",
   "launchUtc": "2026-11-04T23:00:00Z",
   "news": [
     {
-      "id": "24317867",
-      "title": "Get the Grim Goods in Talebound",
-      "summary": "Madness stirs in Talebound’s darkest stories, and a telling tale isn’t without its just reward. Outfit yourself with a dark trove of cosmetic rewards using Bound Silver, a Warband-bound currency earned by completing quests, achievements, and progress in the Tales of the Storyteller.",
-      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24317867",
-      "publishedAt": "2026-11-19T18:00:00.000Z",
-      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/g4/G4A2V7IQCWEU1794608006650.jpg",
-      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/y2/Y2WJJD8GYM5K1794607991501.jpg",
+      "id": "24315646",
+      "title": "Get More from World of Warcraft with the WoW Celebration Pass",
+      "summary": "As a thank you for the incredible launch of WoW Forever, we’re offering a limited time discount for a full year of game time. Players can purchase the WoW Celebration Pass and open the portal to adventure in every version of the game, including the newly released World of Warcraft: Forever.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315646",
+      "publishedAt": "2026-11-25T18:00:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/nn/NNJZQKWB11RB1795218977265.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/rw/RWEUM9PWM01W1795218952407.png",
+      "forever": false
+    },
+    {
+      "id": "24316570",
+      "title": "Twitch Drop: Get the Cuddly Seafoam Grrgle Housing Decor Item December 1!",
+      "summary": "Watch 4 hours of any eligible World of Warcraft stream on Twitch.tv from December 1 at 10:00 am PST until December 29 at 10:00 am PST to claim the Cuddly Seafoam Grrgle Housing decor item.",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24316570",
+      "publishedAt": "2026-11-25T17:59:00.000Z",
+      "header": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/f2/F2Z6ZAJUDEHH1795044165838.png",
+      "thumb": "https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/vf/VFA3W0S46E971795044138046.png",
       "forever": false
     },
     {
