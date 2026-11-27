@@ -1,6 +1,7 @@
 /**
  * Forever Codex data — compiled from Blizzard's public announcements
- * (Sept 12–13, 2026: reveal post, What's Next panel recap, official Forever page).
+ * (Sept 12–13, 2026 reveal and What's Next panel recap; the Nov 4, 2026
+ * launch-day recap; and the official Forever page).
  * Text is original prose summarising public facts; nothing is copied verbatim.
  */
 export interface CodexEntry { id: string; name: string; sub?: string; text: string; tags?: string[]; level?: string; icon?: string; faction?: 'horde' | 'alliance' | 'neutral'; image?: string; }
@@ -10,7 +11,7 @@ export const CODEX: CodexSection[] = [
   {
     id: 'overview', title: 'The Promise', icon: 'legacy', blurb: 'What World of Warcraft: Forever is, and what it is not.',
     entries: [
-      { id: 'what', image: '/art/key-art-wide.jpg', name: 'What is Forever?', sub: 'A new permanent home', text: 'World of Warcraft: Forever is Blizzard\'s third permanent way to play WoW, alongside modern and Classic. It anchors the game in its first age: the original continents, a level cap of 60, and a world built to be the main character. It is included with any active subscription or Game Time. It launches worldwide on November 4, 2026 at 3:00 PM PST.', tags: ['launch'] },
+      { id: 'what', image: '/art/key-art-wide.jpg', name: 'What is Forever?', sub: 'A new permanent home', text: 'World of Warcraft: Forever is Blizzard\'s third permanent way to play WoW, alongside modern and Classic. It anchors the game in its first age: the original continents, a level cap of 60, and a world built to be the main character. It is included with any active subscription or Game Time. It launched worldwide on November 4, 2026, and is live now.', tags: ['launch'] },
       { id: 'pillars', image: '/art/riverglades-road.jpg', name: 'Four Pillars', sub: 'Design principles from the What\'s Next panel', text: 'Approachable and familiar. The world as the main character. The journey over the destination. Protect social gameplay. In practice: no flying mounts, no level scaling, deliberate challenge, and convenience features chosen only when they bring players together.' },
       { id: 'when', image: '/art/tirisfal-fog.jpg', name: 'Where in the Timeline', sub: 'After Forsaken Kingdom, before Molten Core', text: 'Forever is set after the events of Warcraft III Reforged: Forsaken Kingdom and before the opening of Molten Core. Old threats are still fresh; new ones stalk the edges of familiar zones.' },
       { id: 'quote', image: '/art/cinematic.jpg', name: '"Not a mode, not a season"', sub: 'The team\'s own words', text: 'Blizzard framed Forever as a promise rather than a product line: not a mode, a season, or another version of Classic, but a commitment to keep building this version of the world with the community, through regular content updates for years.' },
@@ -42,12 +43,12 @@ export const CODEX: CodexSection[] = [
     ],
   },
   {
-    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Two new raids at launch cadence, one new battleground.',
+    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Two new raids and a returning classic unlock together, plus one new battleground.',
     entries: [
-      { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
+      { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. It unlocks December 9 alongside Barrow Deeps and the returning Onyxia\'s Lair.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
-      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
-      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
+      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground off the coast of Dustwallow Marsh: the Darkspear Raiders and Theramore Expeditionary Force clash in Arathi Basin-style flag captures and defence over strategic control points.' },
+      { id: 'onyxia', image: '/art/darkspear-pirates.jpg', name: "Onyxia's Lair", sub: 'Returning raid · Unlocks December 9', text: 'The black dragon\'s lair returns as the third raid of the December 9 unlock, alongside the two new raids Hyjal Summit and Barrow Deeps.' },
     ],
   },
   {
@@ -62,12 +63,15 @@ export const CODEX: CodexSection[] = [
   {
     id: 'systems', title: 'Systems', icon: 'talents', blurb: 'Legacy, Camping, professions, honor, and quality of life.',
     entries: [
-      { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits. Alt-friendly by design. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
-      { id: 'camping', image: '/art/camping.jpg', name: 'Camping', sub: 'Crafted campfires outdoors', text: 'Pitch a crafted campfire in the open world, let professions contribute, and share buffs with the people around you. The Camp app in GeekOS is a focus timer built on the same idea.' },
+      { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits through three pillars: Legacy Challenges, Legacy Perks, and Legacy Rewards. Alt-friendly by design. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
+      { id: 'camping', image: '/art/camping.jpg', name: 'Camping', sub: 'Crafted campfires outdoors', text: 'Pitch a crafted campfire in the open world. Up to three nearby players can each contribute a profession-crafted Camp Feature, and sitting or crafting at the site for a minute picks up its buffs. The Camp app in GeekOS is a focus timer built on the same idea.' },
+      { id: 'preset', image: '/art/ui-talents.jpg', name: 'Experience Preset', sub: 'Classic or Enhanced, chosen at first login', text: 'Your very first login asks you to choose an Experience Preset, before you even pick a Ruleset. Classic starts you with Standard Definition models and fewer modern conveniences on; Enhanced starts with HD models, quest objective markers, one-bag, and transmog already on. Every setting can be changed later per character, in the Options menu or at a Barbershop.' },
+      { id: 'ruleset', image: '/art/feat-paths.jpg', name: 'Rulesets', sub: 'Replaces realm selection', text: 'Forever drops the old realm-selection screen for Rulesets: Normal, PvP, Roleplay, and Roleplay PvP, each its own shared player ecosystem rather than a single server choice.' },
+      { id: 'names', image: '/art/ui-legacy.jpg', name: 'Two-Part Names', sub: 'A realmless naming system', text: 'Characters are no longer tied to a single realm-bound name. Each one now carries two names that together form a full name unique within its region, giving more room for names that fit a character\'s story.' },
       { id: 'transmog', image: '/art/feat-paths.jpg', name: 'Opt-in Transmog', sub: 'Quality of life', text: 'Transmogrification is available and optional. Modern and Classic visual presets let each player choose how the world looks.' },
       { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set.' },
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
-      { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch', text: 'Dedicated Hardcore realms are on the roadmap. One life, one story.' },
+      { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch ruleset', text: 'A Hardcore ruleset, joining Normal, PvP, Roleplay, and Roleplay PvP, is planned to arrive sometime after launch. One life, one story.' },
       { id: 'graphics', image: '/art/feat-expanses.jpg', name: 'Rendering Upgrades', sub: 'New lighting, water, shadows', text: 'New lighting and global illumination, volumetric particles, a new water renderer, and real-time shadows, all tuned to preserve the Classic aesthetic.' },
     ],
   },
