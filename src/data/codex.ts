@@ -1,6 +1,7 @@
 /**
  * Forever Codex data — compiled from Blizzard's public announcements
- * (Sept 12–13, 2026: reveal post, What's Next panel recap, official Forever page).
+ * (Sept 12–13, 2026 reveal and What's Next panel recap, the official Forever page,
+ * and the Nov 4, 2026 "Now Live" launch-day post).
  * Text is original prose summarising public facts; nothing is copied verbatim.
  */
 export interface CodexEntry { id: string; name: string; sub?: string; text: string; tags?: string[]; level?: string; icon?: string; faction?: 'horde' | 'alliance' | 'neutral'; image?: string; }
@@ -44,10 +45,10 @@ export const CODEX: CodexSection[] = [
   {
     id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Two new raids at launch cadence, one new battleground.',
     entries: [
-      { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
+      { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. It unlocks December 9 alongside Barrow Deeps and Onyxia\'s Lair.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
       { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
-      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
+      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: "Onyxia's Lair Returns", sub: 'Confirmed · Unlocks December 9', text: 'The revamped iconic raid once teased only as a roadmap promise is confirmed: a reworked Onyxia\'s Lair joins Hyjal Summit and Barrow Deeps when the first wave of raids unlocks on December 9.' },
     ],
   },
   {
@@ -64,10 +65,13 @@ export const CODEX: CodexSection[] = [
     entries: [
       { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits. Alt-friendly by design. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
       { id: 'camping', image: '/art/camping.jpg', name: 'Camping', sub: 'Crafted campfires outdoors', text: 'Pitch a crafted campfire in the open world, let professions contribute, and share buffs with the people around you. The Camp app in GeekOS is a focus timer built on the same idea.' },
-      { id: 'transmog', image: '/art/feat-paths.jpg', name: 'Opt-in Transmog', sub: 'Quality of life', text: 'Transmogrification is available and optional. Modern and Classic visual presets let each player choose how the world looks.' },
-      { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set.' },
+      { id: 'transmog', image: '/art/feat-paths.jpg', name: 'Opt-in Transmog', sub: 'Quality of life', text: 'Transmogrification is available and optional, on by default under the Enhanced experience preset and off by default under Classic.' },
+      { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time, per character', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set. The choice is per character and purely cosmetic, changeable later at a Barbershop.' },
+      { id: 'preset', image: '/art/feat-paths.jpg', name: 'Experience Preset', sub: 'Classic or Enhanced · First login', text: 'Before picking a Ruleset, new players choose Classic (simpler visuals, standard-definition models, fewer modern interface conveniences) or Enhanced (high-definition models, quest markers, one-bag, transmog on by default). It is a starting point, not a lock-in: every setting can be changed afterward in the Options menu.' },
+      { id: 'ruleset', image: '/art/roadmap.jpg', name: 'Rulesets, Not Realms', sub: 'Normal · PvP · Roleplay · Roleplay PvP', text: 'Forever replaces traditional realm selection with Rulesets: broad, shared player ecosystems built around playstyle rather than a single server. Normal leaves PvP to player discretion, PvP puts you at near-constant risk of attack, and Roleplay (and Roleplay PvP) add naming and behavior conventions for in-character play. A Hardcore ruleset is planned to follow sometime after launch.' },
+      { id: 'twoname', image: '/art/key-art-wide.jpg', name: 'Two-Part Names', sub: 'Realmless identity', text: 'With no single realm to tie a name to, each character in Forever takes two names that together form a full name unique within its region, giving players more room for a name that fits their character\'s story.' },
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
-      { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch', text: 'Dedicated Hardcore realms are on the roadmap. One life, one story.' },
+      { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'A ruleset, not a separate realm', text: 'Hardcore is confirmed as a Ruleset option alongside Normal, PvP, and Roleplay, arriving sometime after launch rather than at launch itself. One life, one story.' },
       { id: 'graphics', image: '/art/feat-expanses.jpg', name: 'Rendering Upgrades', sub: 'New lighting, water, shadows', text: 'New lighting and global illumination, volumetric particles, a new water renderer, and real-time shadows, all tuned to preserve the Classic aesthetic.' },
     ],
   },
@@ -78,7 +82,7 @@ export const CODEX: CodexSection[] = [
       { id: 'epic', image: '/art/epic-comp.jpg', name: 'Skyborne Epic Pack', sub: 'Optional upgrade', text: 'Everything in Heroic, plus beta access from September 17, 30 days of Game Time, extra cosmetics, pets, tabards, and three Invite-A-Friend codes.' },
       { id: 'collection', image: '/art/collection.jpg', name: 'Warcraft Forever Collection', sub: 'Limited time · through January 11, 2027', text: 'Everything in Epic, plus Warcraft III: Reforged, the Forsaken Kingdom campaign, and Forsaken and Human figurine housing decor. Made in celebration of BlizzCon 2026.' },
       { id: 'ce', image: '/art/ce-7.jpg', name: "Collector's Edition", sub: 'Blizzard Gear Store', text: 'A 13-inch Dwarf and Bear statue, a Zephras Isle mousepad, art prints, collectible pins, a companion journal, and the Warcraft Forever Collection code. While supplies last.' },
-      { id: 'dates', image: '/art/roadmap.jpg', name: 'Key Dates', sub: 'All times Pacific', text: 'September 12: reveal. September 17: beta begins (through October 21). October 20: Invite-A-Friend codes begin arriving. October 27 – November 3: early name reservation. November 4, 3:00 PM PST: global launch. November 4–11: Invite-A-Friend access window. December 9: first raid unlock. January 11, 2027: Warcraft Forever Collection ends.' },
+      { id: 'dates', image: '/art/roadmap.jpg', name: 'Key Dates', sub: 'All times Pacific', text: 'September 12: reveal. September 17: beta begins (through October 21). October 20: Invite-A-Friend codes begin arriving. October 27 – November 3: early name reservation. November 4, 3:00 PM PST: global launch. November 4–11: Invite-A-Friend access window. December 9: Hyjal Summit, Barrow Deeps, and Onyxia\'s Lair raids unlock. January 11, 2027: Warcraft Forever Collection ends.' },
     ],
   },
 ];
