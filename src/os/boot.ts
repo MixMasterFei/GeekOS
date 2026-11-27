@@ -16,6 +16,8 @@ const TIPS = [
   'Press Alt+Space to open the Hearth menu. Alt+` opens the Command Console.',
   'Type /help in the Command Console to see everything it can do. Some commands are not listed.',
   'Right-click the desktop to change the vista. F7 cycles through all of them.',
+  'The nine new dungeons span levels 13 through 60, from the Hall of Thanes beneath Ironforge to Shaper\'s Terrace above Un\'Goro Crater.',
+  'Talents open up at level 10, with milestone talents at 11, 16, 21, and 31 points. Dual Specialization unlocks at level 40.',
   'Hyjal Summit is a 20-player raid. Barrow Deeps is a 10-player max-level challenge.',
   'The Darkspear Islands battleground is 15 versus 15, mixing control points with flag captures.',
   'Beta runs September 17 through October 21. Early name reservation opens October 27.',
