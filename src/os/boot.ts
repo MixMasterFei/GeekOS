@@ -26,6 +26,9 @@ const TIPS = [
   'Riverglades: frontier rivers, grasslands, trade routes, and more than 150 new quests.',
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
   'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
+  'PvP progression runs on Honor and Rank Points, building toward titles like High Warlord and Grand Marshal.',
+  'Darkspear Islands victories earn reputation with the Darkspear Raiders or the Theramore Expeditionary Force.',
+  'Class deep dives have covered Priest, Warrior, Hunter, Druid, Mage, and Shaman so far. More are coming.',
 ];
 const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
