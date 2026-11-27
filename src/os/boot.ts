@@ -6,7 +6,7 @@ import { LOGO_URL } from './icons';
 import { sound } from './sound';
 
 const TIPS = [
-  'World of Warcraft: Forever launches November 4, 2026 at 3:00 PM PST. GeekOS keeps count on the desktop.',
+  'World of Warcraft: Forever launched November 4, 2026, and is live now. GeekOS still keeps the roadmap on the desktop.',
   'The Skyborne are windswept elves. Horde Skyborne walk the Windshaper path; Alliance Skyborne follow the High Order.',
   'Forsaken Paladins and Dwarf Shamans are new race and class combinations in Forever. GeekOS lets you roll them at login.',
   'Nine new dungeons, two new raids, three new zones, and more than a thousand new quests. The level cap stays at 60.',
@@ -19,7 +19,9 @@ const TIPS = [
   'Hyjal Summit is a 20-player raid. Barrow Deeps is a 10-player max-level challenge.',
   'The Darkspear Islands battleground is 15 versus 15, mixing control points with flag captures.',
   'Beta runs September 17 through October 21. Early name reservation opens October 27.',
-  'The first raid unlocks December 9. The Calendar app has the whole roadmap.',
+  'The first raids unlock December 9: Hyjal Summit, Barrow Deeps, and the revamped Onyxia\'s Lair, all together.',
+  'Forever asks you to choose a Ruleset instead of a realm: Normal, PvP, Roleplay, or Roleplay PvP. Hardcore comes later.',
+  'Characters in Forever carry two names instead of one tied to a realm, together forming a name unique within a region.',
   'Hidden achievements exist. Some are in the trash. Some are in the clock. One is in an old code.',
   'GeekOS levels you up as you use it. Reach 60 and something changes.',
   'Mount Hyjal is set after the Third War. Darkwhisper Gorge is still smouldering.',
@@ -27,7 +29,7 @@ const TIPS = [
   "Shen'dralas hides between Mulgore and Desolace and ties to Eldre'Thalas and Dire Maul.",
   'Modern and Classic visual presets can be toggled in-game. GeekOS has a Classic UI mode in Settings.',
 ];
-const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Counting down to November 4…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
+const STEPS = ['Waking the hearth…', 'Loading fonts of the old world…', 'Unrolling vistas…', 'Polishing icons…', 'Tuning the war horn…', 'Reading the Forever Codex…', 'Charting the road to December 9…', 'Hiding secrets…', 'Gilding the frames…', 'Opening the gates…'];
 
 export function runBoot(root: HTMLElement, fast = false): Promise<void> {
   return new Promise(resolve => {
