@@ -1,5 +1,5 @@
 /**
- * Dungeon Journal — the nine new dungeons and two raids, with a loot-roll toy.
+ * Dungeon Journal — the nine new dungeons and three raids, with a loot-roll toy.
  */
 import { h, grantXp, store, bus, type AppDef } from '../os/kernel';
 import { CODEX } from '../data/codex';
@@ -16,9 +16,9 @@ const LOOT = [
 ];
 
 export const dungeonsApp: AppDef = {
-  id: 'dungeons', name: 'Dungeon Journal', subtitle: 'Nine dungeons, two raids', icon: 'dungeon', category: 'adventure', width: 880, height: 580, minWidth: 560, noScroll: true,
+  id: 'dungeons', name: 'Dungeon Journal', subtitle: 'Nine dungeons, three raids', icon: 'dungeon', category: 'adventure', width: 880, height: 580, minWidth: 560, noScroll: true,
   mount(ctx) {
-    const entries = [...CODEX.find(s => s.id === 'dungeons')!.entries.map(e => ({ ...e, kind: 'Dungeon' })), ...CODEX.find(s => s.id === 'raids')!.entries.filter(e => e.id === 'summit' || e.id === 'barrow').map(e => ({ ...e, kind: 'Raid' }))];
+    const entries = [...CODEX.find(s => s.id === 'dungeons')!.entries.map(e => ({ ...e, kind: 'Dungeon' })), ...CODEX.find(s => s.id === 'raids')!.entries.filter(e => e.id === 'summit' || e.id === 'barrow' || e.id === 'iconic').map(e => ({ ...e, kind: 'Raid' }))];
     let sel = ctx.args?.id ?? entries[0].id;
     const list = h('div', { class: 'list', style: { width: '260px', flex: 'none', borderRight: '1px solid var(--gold-700)', padding: '8px', overflow: 'auto', background: 'rgba(0,0,0,.2)' } });
     const pane = h('div', { class: 'grow scroll', style: { padding: '18px 22px' } });
@@ -31,7 +31,7 @@ export const dungeonsApp: AppDef = {
       pane.append(h('div', { class: 'row', style: { alignItems: 'flex-start', gap: '16px' } },
         h('div', { style: { width: '72px', height: '72px', flex: 'none', border: '1px solid var(--gold-500)', background: '#0a1d26', padding: '4px' }, html: icon(e.kind === 'Raid' ? 'guild' : 'dungeon') }),
         h('div', { class: 'grow' }, h('div', { class: 'eyebrow' }, e.kind), h('h2', { class: 'display', style: { fontSize: '26px' } }, e.name), h('div', { class: 'dim' }, e.sub ?? '')),
-        h('span', { class: 'badge ' + (e.kind === 'Raid' ? 'legendary' : 'epic') }, e.kind === 'Raid' ? (e.id === 'barrow' ? '10 players' : '20 players') : '5 players')),
+        h('span', { class: 'badge ' + (e.kind === 'Raid' ? 'legendary' : 'epic') }, e.kind === 'Raid' ? (e.id === 'barrow' ? '10 players' : e.id === 'summit' ? '20 players' : 'Size TBD') : '5 players')),
         h('div', { class: 'hr orn' }),
         h('p', { class: 'quest-font', style: { fontSize: '15px', lineHeight: '1.7', color: 'var(--parch-100)' } }, e.text),
         h('div', { class: 'eyebrow', style: { margin: '14px 0 8px' } }, 'Loot table (GeekOS flavour — not datamined)'),

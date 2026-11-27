@@ -51,7 +51,7 @@ export const WALLPAPERS: Wallpaper[] = [
   mk('darkspear', 'Darkspear Islands', '15 vs 15 battleground', 'darkspear-zeppelin.jpg', 'Dungeons & Raids', 'rgba(255,220,150,A)'),
   mk('pirates', 'Pirates of the Drowned Coast', 'Naga, pirates, and a city under the tide', 'darkspear-pirates.jpg', 'Dungeons & Raids', 'rgba(255,200,120,A)'),
   mk('thanes', 'Hall of Thanes', 'Beneath Ironforge', 'hall-of-thanes.jpg', 'Dungeons & Raids', 'rgba(255,160,80,A)'),
-  mk('whelgar', "Whelgar's Excavation", 'Bones in the Wetlands', 'whelgar-dusk.jpg', 'Dungeons & Raids', 'rgba(200,180,255,A)'),
+  mk('whelgar', 'Excavation Site', 'Bones in the Wetlands', 'whelgar-dusk.jpg', 'Dungeons & Raids', 'rgba(200,180,255,A)'),
   mk('drowned', 'The Drowned City', 'A city under the tide', 'drowned-city.jpg', 'Dungeons & Raids', 'rgba(150,220,255,A)'),
   mk('alcaz', 'Alcaz Prison', 'The island prison opens its cells', 'alcaz-jungle.jpg', 'Dungeons & Raids', 'rgba(200,255,180,A)'),
   mk('kroldok', "Krol'dok Stronghold", 'A fortress that did not surrender', 'kroldok.jpg', 'Dungeons & Raids', 'rgba(255,200,120,A)'),
