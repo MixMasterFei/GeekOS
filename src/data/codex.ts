@@ -46,7 +46,7 @@ export const CODEX: CodexSection[] = [
     entries: [
       { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
-      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
+      { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet flag captures and defence on the islands of the Darkspear trolls, with reputation rewards from either the Darkspear Raiders or the Theramore Expeditionary Force.' },
       { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
     ],
   },
@@ -57,6 +57,7 @@ export const CODEX: CodexSection[] = [
       { id: 'forsakenpal', image: '/art/forsaken-paladin.jpg', name: 'Forsaken Paladin', sub: 'New combination', faction: 'horde', text: 'The Light, undying. The reveal trailer showed a Forsaken Paladin. GeekOS lets you roll one at the character screen.' },
       { id: 'dwarfsham', image: '/art/dwarf-shaman.jpg', name: 'Dwarf Shaman', sub: 'New combination', faction: 'alliance', text: 'Stone and storm. Wildhammer traditions finally reach the Alliance roster in the Forever era.' },
       { id: 'classes', image: '/art/feat-power.jpg', name: 'Class Revamps', sub: 'Every class and specialisation', text: 'Preserve identity, add meaningful abilities, and update talents to fill gaps without erasing what makes each class unique. Rediscover a favourite or play someone entirely different.' },
+      { id: 'deepdives', image: '/art/ui-talents.jpg', name: 'Class Deep Dives', sub: 'Priest, Warrior, Hunter, Druid, Mage, Shaman so far', text: 'Blizzard is publishing the talent and ability changes class by class: Priest and Warrior, then Hunter and Druid, then Mage and Shaman. Talents still unlock at level 10 with one-point milestones at 11, 21, and 31, now joined by a new 16-point tier, and Dual Specialization becomes available at level 40, with every respec, Legacy talents included, handled by a class trainer. Hunters add Foxes as a new pet family, and Mages learn Comprehension, a tradeskill for deciphering scrolls found in the world.' },
     ],
   },
   {
@@ -69,6 +70,7 @@ export const CODEX: CodexSection[] = [
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
       { id: 'hardcore', image: '/art/felwood.jpg', name: 'Hardcore', sub: 'Post-launch', text: 'Dedicated Hardcore realms are on the roadmap. One life, one story.' },
       { id: 'graphics', image: '/art/feat-expanses.jpg', name: 'Rendering Upgrades', sub: 'New lighting, water, shadows', text: 'New lighting and global illumination, volumetric particles, a new water renderer, and real-time shadows, all tuned to preserve the Classic aesthetic.' },
+      { id: 'honor', image: '/art/feat-systems.jpg', name: 'Honor & PvP Ranks', sub: 'Rank Points and the original ladder', text: 'PvP progression runs on Honor and Rank Points, with seasonal goals and the original rank ladder restored. Battlegrounds, PvP quests, weekly journey tasks, and gear upgrades all feed toward iconic titles like High Warlord and Grand Marshal.' },
     ],
   },
   {
