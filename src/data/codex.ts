@@ -42,12 +42,12 @@ export const CODEX: CodexSection[] = [
     ],
   },
   {
-    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Two new raids at launch cadence, one new battleground.',
+    id: 'raids', title: 'Raids & Battlegrounds', icon: 'guild', blurb: 'Two new raids and a returning iconic raid at launch cadence, plus one new battleground.',
     entries: [
-      { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. The first raid unlock is scheduled for December 9.' },
+      { id: 'summit', image: '/art/hyjal-summit.jpg', name: 'Hyjal Summit', sub: '20-player raid · Tier sets · Legendary reward', text: 'The first new raid, at the top of Mount Hyjal. 20-player encounters, tier sets, and a legendary reward whose details are still pending. Opens December 9 alongside Barrow Deeps and Onyxia\'s Lair.' },
       { id: 'barrow', image: '/art/alcaz-hall.jpg', name: 'Barrow Deeps', sub: '10-player max-level challenge', text: 'A tighter, harder 10-player raid for level 60 groups beneath the roots of Hyjal.' },
       { id: 'darkspear', image: '/art/darkspear-zeppelin.jpg', name: 'Darkspear Islands', sub: '15 vs 15 battleground', text: 'A hybrid battleground: strategic control points meet Arathi Basin-style flag captures and defence, on the islands of the Darkspear trolls.' },
-      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: 'A Revamped Iconic Raid', sub: 'Roadmap', text: 'Blizzard listed a revamped iconic raid among post-launch content, alongside Hardcore mode and expanded 1–60 questing. Which raid is not yet announced.' },
+      { id: 'iconic', image: '/art/darkspear-pirates.jpg', name: "Onyxia's Lair", sub: 'Revamped iconic raid · December 9', text: "The classic dragon raid returns as the third of three raids opening December 9, joining Hyjal Summit and Barrow Deeps for level 60 players on day one." },
     ],
   },
   {
@@ -64,6 +64,9 @@ export const CODEX: CodexSection[] = [
     entries: [
       { id: 'legacy', image: '/art/ui-legacy.jpg', name: 'Legacy', sub: 'Account-wide progression', text: 'Every time a character makes progress, the account earns benefits. Alt-friendly by design. GeekOS mirrors this with its own XP bar: using the OS levels you up.' },
       { id: 'camping', image: '/art/camping.jpg', name: 'Camping', sub: 'Crafted campfires outdoors', text: 'Pitch a crafted campfire in the open world, let professions contribute, and share buffs with the people around you. The Camp app in GeekOS is a focus timer built on the same idea.' },
+      { id: 'preset', name: 'Experience Preset', sub: 'Classic or Enhanced, chosen at first login', text: "On your first login, Forever asks you to choose an Experience Preset before picking a Ruleset: Classic (standard-definition models, quest markers and transmog off, classic UI layout) or Enhanced (HD models, markers and transmog on, centralized UI). It is only a starting point — everything can be changed later in Options." },
+      { id: 'ruleset', name: 'Choose Your Ruleset', sub: 'Replaces realm selection', text: 'Forever opens with a Ruleset choice instead of a realm list: Normal, PvP, Roleplay, or Roleplay PvP, each acting as a broad shared player ecosystem rather than a single traditional realm. A Hardcore ruleset is planned to arrive after launch.' },
+      { id: 'naming', name: 'Two-Part Names', sub: 'New character naming', text: 'Characters in Forever carry two names instead of one, together forming a full name unique within the region rather than tied to a single realm — more room to find the name you want in a realmless Azeroth.' },
       { id: 'transmog', image: '/art/feat-paths.jpg', name: 'Opt-in Transmog', sub: 'Quality of life', text: 'Transmogrification is available and optional. Modern and Classic visual presets let each player choose how the world looks.' },
       { id: 'models', image: '/art/dwarf-hd.jpg', name: 'HD and SD Models', sub: 'Toggle any time', text: 'Switch between original (SD) and updated (HD) character models, including NPCs, with restored Classic animations on the HD set.' },
       { id: 'gamepad', image: '/art/feat-stories.jpg', name: 'Gamepad Support', sub: 'Official', text: 'Official controller support arrives with Forever.' },
